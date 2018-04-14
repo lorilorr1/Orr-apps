@@ -1,25 +1,63 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * หน้าจอหลักของระบบ
+ *
+ * @author it
+ */
 class Welcome extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
-	public function index()
-	{
-		$this->load->view('welcome_message');
-	}
+    private $page_value = ['title' => NULL, 'sign_status' => NULL, 'topic' => NULL];
+
+    public function __construct() {
+        parent::__construct();
+        $this->load->helper('url');
+        $this->load->model('authorize_orr');
+    }
+
+    /**
+     * index :
+     * @param String $name Description
+     * @return NULL
+     */
+    public function index() {
+        $sign_data = $this->authorize_orr->sign_data;
+        $this->page_value = array('sign_status' => $sign_data['status'], 'title' => "Orr projects", 'topic' => "Welcome...");
+        $this->set_view();
+    }
+
+    /**
+     * singin : 
+     * 
+     */
+    public function sign_in_page() {
+        $this->page_value['title'] = "Welcome Sign in";
+        $this->set_view("sign_in");
+    }
+
+    /**
+     * ตรวจสอบรหัสผู้ใช้งาน จากหน้าจอเข้าระบบ
+     * 
+     */
+    public function sign_in() {
+        $this->authorize_orr->sign_in($this->input->post('username'), $this->input->post('password'));
+        redirect(site_url("Welcome"));
+    }
+
+    public function sign_out_page() {
+        $this->authorize_orr->sign_out();
+        redirect(site_url("Welcome"));
+    }
+
+    private function set_view($view_name = "welcome_home") {
+        $html_tag_value = ['page_value' => $this->page_value, 'js_files' => array(base_url('assets/jquery/jquery-3.2.1.min.js'), base_url('assets/jquery/jquery-3.2.1.min.js')), 'css_files' => array(base_url('assets/bootstrap/css/bootstrap.min.css'))];
+        $this->load->view($view_name, (array) $html_tag_value);
+    }
+
 }
