@@ -41,10 +41,10 @@ class Project extends CI_Controller {
             $crud->set_theme('datatables');
             $crud->set_table('my_sys');
             $crud->set_subject('โปรแกรม');
-            $crud->columns('sys_id', 'title', 'description');
-            $crud->required_fields(array('sys_id', 'any_use', 'any_user', 'aut_user', 'aut_group', 'aut_any', 'aut_god'));
-            $crud->default_as('any_use', 1)->default_as('aut_user', 3)->default_as('aut_group', 2)->default_as('aut_any', 1)
-                    ->default_as('aut_god', 1);
+            $crud->columns('sys_id', 'title', 'any_user', 'aut_user');
+            $crud->required_fields(array('sys_id', 'any_user', 'aut_user', 'aut_group', 'aut_any', 'aut_god'));
+            $crud->default_as('any_use', 1)->default_as('aut_user', 3)->default_as('aut_group', 2)->default_as('aut_any', 1)->default_as('aut_god', 1);
+            //$crud->default_as('aut_user', '1');
             $crud->display_as('sys_id', 'รหัส')->display_as('aut_user', 'สิทธ์เจ้าของ')->display_as('title', 'ชื่อโปรแกรม');
 
             $crud->field_type('any_use', 'dropdown', $this->use_set)->field_type('aut_user', 'dropdown', $this->aut_set)
@@ -67,7 +67,7 @@ class Project extends CI_Controller {
      */
     public function my_user() {
         try {
-            $crud = new Grocery_CRUD();
+            $crud = new Orr_projects();
             /**
              * 
              */
