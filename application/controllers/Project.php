@@ -23,7 +23,7 @@ class Project extends CI_Controller {
         $this->load->database('orr-projects');
         $this->load->helper('url');
         $this->load->library('grocery_CRUD');
-        $this->load->library('orr_projects');
+        $this->load->library('orr_ACRUD');
     }
 
     private function set_view($output) {
@@ -36,7 +36,7 @@ class Project extends CI_Controller {
 
     public function my_sys() {
         try {
-            $crud = new Orr_projects();
+            $crud = new Orr_ACRUD();
 
             $crud->set_theme('datatables');
             $crud->set_table('my_sys');
@@ -67,7 +67,7 @@ class Project extends CI_Controller {
      */
     public function my_user() {
         try {
-            $crud = new Orr_projects();
+            $crud = new Orr_ACRUD();
             /**
              * 
              */

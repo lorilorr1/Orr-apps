@@ -36,7 +36,7 @@ class Project extends CI_Controller {
 
     public function my_sys() {
         try {
-            $crud = new Orr_projects();
+            $crud = new Orr_ACRUD();
 
             //$crud->set_theme('datatables');
             $crud->set_table('my_sys');

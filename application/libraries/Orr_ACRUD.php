@@ -3,8 +3,8 @@
 /**
  * Orr_projects extends functions from Grocey CRUD
  * API and Functions list
+ * Access Create Read Update Delete
  * 
- *
  * @package Orr-projects
  * @author Suchart Bunhachirat <suchartbu@gmail.com>
  * 
@@ -13,7 +13,7 @@
 /**
  * 
  */
-class Orr_projects extends Grocery_CRUD {
+class Orr_ACRUD extends Grocery_CRUD {
 
     /**
      * default value of input field
