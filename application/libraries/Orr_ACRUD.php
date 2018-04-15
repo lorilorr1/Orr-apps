@@ -14,6 +14,8 @@
  * 
  */
 class Orr_ACRUD extends Grocery_CRUD {
+    
+    public $auth_model = null;
 
     /**
      * default value of input field
@@ -30,6 +32,16 @@ class Orr_ACRUD extends Grocery_CRUD {
     public function __construct() {
         parent::__construct();
         try {
+            /**
+             * Initial Authorize_orr model
+             */
+            $ci = &get_instance();
+            $ci->load->model('Authorize_orr');            
+            $this->auth_model = new Authorize_orr();
+            /**
+             * @todo Check in singin
+             */
+            
             $ci_input = new CI_Input();
             $this->field_type('id', 'readonly')->field_type('sec_time', 'readonly')->field_type('sec_ip', 'readonly')->field_type('sec_script', 'readonly');
             $this->default_as(['sec_ip' => $ci_input->ip_address(), 'sec_time' => date("Y-m-d H:i:s")]);
