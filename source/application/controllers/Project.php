@@ -38,7 +38,7 @@ class Project extends CI_Controller {
         try {
             $crud = new Orr_projects();
 
-            $crud->set_theme('datatables');
+            //$crud->set_theme('datatables');
             $crud->set_table('my_sys');
             $crud->set_subject('โปรแกรม');
             $crud->columns('sys_id', 'title', 'description');

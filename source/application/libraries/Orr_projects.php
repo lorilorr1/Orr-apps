@@ -22,7 +22,7 @@ class Orr_projects extends Grocery_CRUD {
     protected $default_as = [];
 
     /**
-     *
+     * Initial 
      * Constructor
      *
      * @access  public
@@ -30,7 +30,9 @@ class Orr_projects extends Grocery_CRUD {
     public function __construct() {
         parent::__construct();
         try {
-            $this->field_type('id', 'readonly')->field_type('sec_time', 'readonly')->field_type('sec_script', 'readonly');
+            $ci_input = new CI_Input();
+            $this->field_type('id', 'readonly')->field_type('sec_time', 'readonly')->field_type('sec_ip', 'readonly')->field_type('sec_script', 'readonly');
+            $this->default_as(['sec_ip' => $ci_input->ip_address(), 'sec_time' => date("Y-m-d H:i:s")]);
         } catch (Exception $e) {
             show_error($e->getMessage() . ' --- ' . $e->getTraceAsString());
         }
@@ -57,13 +59,13 @@ class Orr_projects extends Grocery_CRUD {
     }
 
     /**
-     * 
+     * Return default value when field value is null.
      * @param object $field_info
      * @param $value
      * @return void
      */
     private function get_value($field_info, $value) {
-        if (isset($this->default_as[$field_info->name]) && empty($value)) {
+        if (isset($this->default_as[$field_info->name]) && is_null($value)) {
             $value = $this->default_as[$field_info->name];
         }
         return $value;
