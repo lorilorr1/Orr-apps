@@ -27,32 +27,9 @@ class Welcome extends CI_Controller {
      * @return NULL
      */
     public function index() {
-        $sign_data = $this->authorize_orr->sign_data;
-        $this->page_value = array('sign_status' => $sign_data['status'], 'title' => "Orr projects", 'topic' => "Welcome...");
+        $sign_data = $this->authorize_orr->get_sign_data();
+        $this->page_value = array('sign_status' => $sign_data['user'] . " - " . $sign_data['status'], 'title' => "Orr projects", 'topic' => "Welcome...");
         $this->set_view();
-    }
-
-    /**
-     * singin : 
-     * 
-     */
-    public function sign_in_page() {
-        $this->page_value['title'] = "Welcome Sign in";
-        $this->set_view("sign_in");
-    }
-
-    /**
-     * ตรวจสอบรหัสผู้ใช้งาน จากหน้าจอเข้าระบบ
-     * 
-     */
-    public function sign_in() {
-        $this->authorize_orr->sign_in($this->input->post('username'), $this->input->post('password'));
-        redirect(site_url("Welcome"));
-    }
-
-    public function sign_out_page() {
-        $this->authorize_orr->sign_out();
-        redirect(site_url("Welcome"));
     }
 
     private function set_view($view_name = "welcome_home") {

@@ -25,7 +25,7 @@ and open the template in the editor.
         <div class="container">
             <div class="panel panel-default">
                 <div class="panel-heading"><div class="jumbotron">
-                        <h1 class="display-4">Welcome Sign in</h1>
+                        <h1 class="display-4"><?php echo $page_value['topic']; ?></h1>
                         <hr class="my-4">
                         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
                         <p class="lead">
@@ -33,7 +33,7 @@ and open the template in the editor.
                         </p>
                     </div></div>
                 <div class="panel-body">
-                    <form action="<?= site_url("Welcome/sign_in"); ?>" method="post" >
+                    <form action="<?= site_url("Signin/set"); ?>" method="post" >
                         <div class="form-group">
                             <label for="username">Username:</label>
                             <input type="text" class="form-control" id="username" name="username" placeholder="Username">

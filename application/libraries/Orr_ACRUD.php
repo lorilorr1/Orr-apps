@@ -14,7 +14,7 @@
  * 
  */
 class Orr_ACRUD extends Grocery_CRUD {
-    
+
     public $auth_model = null;
 
     /**
@@ -36,13 +36,16 @@ class Orr_ACRUD extends Grocery_CRUD {
              * Initial Authorize_orr model
              */
             $ci = &get_instance();
-            $ci->load->model('Authorize_orr');            
+            $ci->load->model('Authorize_orr');
             $this->auth_model = new Authorize_orr();
+            //redirect(site_url("Welcome/sign_in_page"));
             /**
              * @todo Check in singin
              */
-            
             $ci_input = new CI_Input();
+            /**
+             * @todo Default field for orr-apps
+             */
             $this->field_type('id', 'readonly')->field_type('sec_time', 'readonly')->field_type('sec_ip', 'readonly')->field_type('sec_script', 'readonly');
             $this->default_as(['sec_ip' => $ci_input->ip_address(), 'sec_time' => date("Y-m-d H:i:s")]);
         } catch (Exception $e) {

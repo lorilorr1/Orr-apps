@@ -21,7 +21,6 @@ class Project extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->database('orr-projects');
-        //$this->load->model('authorize_orr');
         $this->load->helper('url');
         $this->load->library('grocery_CRUD');
         $this->load->library('orr_ACRUD');
