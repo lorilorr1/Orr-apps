@@ -1,0 +1,30 @@
+class OrDb
+!!!131299.php!!!	OrDb(inout database : string, inout host : string = null, inout user : string = null, inout password : OrProperty = null)
+    global $my_cfg_db;
+    if($host == null)$host=$my_cfg_db[host];
+		if($user == null)$user=$my_cfg_db[user];
+		if($password == null)$password=$my_cfg_db[password];
+		$this->property('database','string',$database);
+		$this->property('host','string',$host);
+		$this->property('user','string',$user);
+		$this->property('password','string',$password);
+		$this->property('sql','string');
+		$this->property('db_error','array');
+		$this->property('total_error','integer');
+	
+!!!131427.php!!!	set_error(inout value : string) : null
+    $value = array($value);
+    $this->OP_[total_error]->set($this->OP_[total_error]->get()+1);
+    $this->OP_[db_error]->set(array_merge($this->OP_[db_error]->get(),$value));
+    return null;
+!!!131555.php!!!	show_error() : null
+    foreach($this->OP_[db_error]->get() as $key=>$val){
+		echo $val."<br>\n";
+	}
+	$this->reset_error();
+	return null;
+!!!131683.php!!!	is_error() : boolean
+    if($this->OP_[total_error]->get()>0)return true;
+!!!131811.php!!!	reset_error() : null
+    $this->OP_[total_error]->set(0);
+	return null;

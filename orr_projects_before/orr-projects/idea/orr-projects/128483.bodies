@@ -1,0 +1,8 @@
+class OrJs
+!!!158691.php!!!	__construct()
+		$this->property('js_function','string');
+		$this->property('js_src','array');
+		$this->property('js_ccs','array');
+!!!158819.php!!!	get_script_event(inout event : string = "onClick") : string
+		 /*คืนค่า คำสั่งเพื่อเรียกใช้ ตามเหตุการณ์*/
+		 return "$event = \"".$this->OP_[js_function]->get()."\"";

@@ -1,0 +1,13 @@
+class OrGui
+!!!156387.php!!!	__construct(inout id : string, inout name :  = null, inout idx :  = null) : null
+	  $this->property('id','string');
+	  $this->property('idx','string');
+	  $this->property('name','string');
+	  
+	  $this->OP_[id]->set($id);
+	  if($name == null){
+		  $this->OP_[name]->set($id);
+	  }else{
+		  $this->OP_[name]->set($name);
+	  }
+	  if($idx != null)$this->OP_[idx]->set($idx);

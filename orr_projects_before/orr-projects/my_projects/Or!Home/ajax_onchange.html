@@ -1,0 +1,48 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title>Dojo Ajax</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="../../lib/dojo/dijit/themes/tundra/tundra.css">
+        <link rel="stylesheet" type="text/css" href="../../lib/dojo/dojo/resources/dojo.css">
+
+        <script src="../../lib/dojo/dojo/dojo.js" data-dojo-config="isDebug: true,parseOnLoad: true"></script>
+        <script type="text/javascript">
+            // Load Dojo's code relating to the Button widget
+           
+            function helloCallback(data,ioArgs) {
+                //alert(data);
+                dojo.byId("helloNode").innerHTML = data;
+            }
+            function helloError(data, ioArgs) {
+                alert('Error when retrieving data from the server!');
+            }
+            function refreshContent(){
+                dojo.xhrGet({
+                    url: 'ajax_content.php',
+                    timeout: 9000,
+                    content: {name: dojo.byId('name').value },
+                    load: helloCallback,
+                    error: helloError
+                }
+            );
+                
+            }
+            
+            dojo.require("dijit.form.Button");
+            dojo.ready(function(){
+                refreshContent();
+                //dojo.connect(dojo.byId("helloButton"),"onclick",refreshContent());
+                //dojo.connect(dojo.byId("name"),"onclick",refreshContent());
+            });
+        </script>
+    </head>
+    <body class="tundra">
+        Please enter your name: <input type="text" id="name" onchange="refreshContent()">
+        <span id="helloNode"></span>
+    </body>
+</html>

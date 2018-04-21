@@ -1,0 +1,13 @@
+Release Notes for 25511118
+
+Release Date: ธ.ค. 2551
+Current Version: 255112
+Previous Version:
+
+General Changes
+
+ปรับโครงสร้างการเก็บโค้คโปรแกรม เป็นแบบรวมการใช้ Or!Lib เดียวกันทุกโครงงาน
+ปรับรวมการเขียนให้ใช้ Dojo Toolkit กับ Class php ของ Or!Lib เพื่อรองรับการเขียน Web 2.0
+
+Bug Fixes and Enhancements
+

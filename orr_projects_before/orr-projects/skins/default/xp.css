@@ -1,0 +1,227 @@
+/*
+Menu related selectors
+*/
+.jsdomenudiv {
+	background-color: #FFFFFF;
+	/*background-image: url(image/office_xp_menu_left.png);
+	background-repeat: repeat-y;*/
+	border: 1px outset;
+	cursor: default;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	position: absolute; /* Do not alter this line! */
+	visibility: hidden;
+	z-index: 10;
+}
+
+.jsdomenuitem {
+	background: transparent;
+	border: none;
+	color: #000000;
+	font-family: sans-serif;
+	font-size: 16px;
+	padding-bottom: 5px;
+	padding-left: 40px;
+	padding-right: 10px;
+	padding-top: 5px;
+	position: relative; /* Do not alter this line! */
+}
+
+.jsdomenuitemover {
+	background-color: #f9e2b5;
+	border: 1px solid #999999;
+	color: #000000;
+	font-family: sans-serif;
+	font-size: 16px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-bottom: 5px;
+	padding-left: 40px;
+	padding-right: 10px;
+	padding-top: 5px;
+	position: relative; /* Do not alter this line! */
+}
+
+.jsdomenuarrow {
+	background-image: url(image/office_xp_arrow.png);
+	background-repeat: no-repeat; /* Do not alter this line! */
+	height: 7px;
+	position: absolute; /* Do not alter this line! */
+	right: 8px;
+	width: 4px;
+}
+
+.jsdomenuarrowover {
+	background-image: url(image/office_xp_arrow_o.png);
+	background-repeat: no-repeat; /* Do not alter this line! */
+	height: 7px;
+	position: absolute; /* Do not alter this line! */
+	right: 8px;
+	width: 4px;
+}
+
+.jsdomenusep {
+	padding-left: 40px;
+}
+
+.jsdomenusep hr {
+}
+
+/*
+Menu bar related selectors
+*/
+.jsdomenubardiv {
+	/*background-color: #EEEAD9;*/
+	background-image: url(image/menu_c.png);
+	background-position: left top;
+	background-repeat: repeat-x;
+	border: 0px solid;
+	cursor: default;
+	padding-bottom: 5px;
+	padding-left: 0px;
+	padding-right: 10px;
+	padding-top: 5px;
+	position: absolute; /* Do not alter this line! */
+	visibility: visible;
+}
+
+.jsdomenubardragdiv {
+	cursor: move;
+	display: inline;
+	font-family: sans-serif;
+	font-size: 16px;
+	padding-bottom: 2px;
+	padding-left: 0px;
+	padding-right: 5px;
+	padding-top: 2px;
+	position: relative; /* Do not alter this line! */
+	visibility: hidden;
+	width: 9px;
+}
+
+.jsdomenubaritem {
+	background-color: transparent;
+	border: none;
+	color: #555555;
+	display: inline;
+	font-family: sans-serif;
+	font-size: 16px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 2px;
+	position: relative; /* Do not alter this line! */
+}
+
+.jsdomenubaritemover {
+	background-color: #EEEEEE;
+	border: 1px solid #999999;
+	color: #000000;
+	display: inline;
+	font-family: sans-serif;
+	font-size: 16px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 2px;
+	position: relative; /* Do not alter this line! */
+}
+
+.jsdomenubaritemclick {
+	background-color: #FFFFFF;
+	border: 1px inset;
+	color: #000000;
+	display: inline;
+	font-family: sans-serif;
+	font-size: 16px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 2px;
+	position: relative; /* Do not alter this line! */
+}
+
+/*
+Example of selectors for icons. Change the height and width to match the actual 
+height and width of the icon image.
+*/
+.icon1 {
+	background-image: url(image/icon/icon1.png);
+	background-repeat: no-repeat; /* Do not alter this line! */
+	height: 16px;
+	left: 4px;
+	position: absolute; /* Do not alter this line! */
+	width: 16px;
+}
+
+.icon2 {
+	background-image: url(image/icon/icon2.png);
+	background-repeat: no-repeat; /* Do not alter this line! */
+	height: 16px;
+	left: 4px;
+	position: absolute; /* Do not alter this line! */
+	width: 16px;
+}
+
+.icon3 {
+	background-image: url(image/icon/icon3.png);
+	background-repeat: no-repeat; /* Do not alter this line! */
+	height: 16px;
+	left: 4px;
+	position: absolute; /* Do not alter this line! */
+	width: 16px;
+}
+
+.icon_my_sys {
+	background-image: url(image/icon/my_sys.png);
+	background-repeat: no-repeat; /* Do not alter this line! */
+	height: 24px;
+	left: 5px;
+	position: absolute; /* Do not alter this line! */
+	width: 24px;
+}
+
+.icon_my_user {
+	background-image: url(image/icon/my_user.png);
+	background-repeat: no-repeat; /* Do not alter this line! */
+	height: 24px;
+	left: 5px;
+	position: absolute; /* Do not alter this line! */
+	width: 24px;
+}
+
+.icon_my_group {
+	background-image: url(image/icon/my_group.png);
+	background-repeat: no-repeat; /* Do not alter this line! */
+	height: 24px;
+	left: 5px;
+	position: absolute; /* Do not alter this line! */
+	width: 24px;
+}
+
+.icon_my_can {
+	background-image: url(image/icon/my_can.png);
+	background-repeat: no-repeat; /* Do not alter this line! */
+	height: 24px;
+	left: 5px;
+	position: absolute; /* Do not alter this line! */
+	width: 24px;
+}
+
+.icon_my_datafield {
+	background-image: url(image/icon/my_datafield.png);
+	background-repeat: no-repeat; /* Do not alter this line! */
+	height: 24px;
+	left: 5px;
+	position: absolute; /* Do not alter this line! */
+	width: 24px;
+}
+
+.icon_login {
+	background-image: url(image/icon/login.png);
+	background-repeat: no-repeat; /* Do not alter this line! */
+	height: 24px;
+	left: 5px;
+	position: absolute; /* Do not alter this line! */
+	width: 24px;
+}

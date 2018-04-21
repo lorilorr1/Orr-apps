@@ -1,0 +1,14 @@
+บันทึกการทำงาน Or!Projects
+อังคาร, พฤศจิกายน 18 2008
+1. ทดสอบการใช้ Dojo ตามตัวอย่างที่ http://sitepen.com/labs/guides/?guide=DojoQuickStart ในโครงงาน Or!Ajax
+2. ปรับรุ่น dojo เป็น Dojo Toolkit 1.2.2
+3. ทำ Dropdown Menu ตามข้อมูล http://dojocampus.org/explorer/#Dijit_Form%20Controls_Button_Dropdown%20Menu
+4. สร้าง Class dojo สำหรับทำหน้าที่เชื่อม OrHtml
+
+เวปข้อมูล
+http://dojotoolkit.org/key-links
+
+เสาร์, กุมภาพันธ์ 12 2011
+1. สร้างระบบการควบคุม หน้าจอที่เปิดใหม่ ให้สามารถส่ง และรับค่าที่เปลี่ยนแปลงได้
+
+https://code.google.com/p/orr-projects/

@@ -1,0 +1,5 @@
+class OrJsCalendar
+!!!158947.php!!!	OrJsCalendar(inout ccs_path : string = './skins/all/calendar.css')
+		$this->OrJs();
+		$this->OP_[js_ccs]->set(array($ccs_path));
+		$this->OP_[js_src]->set(array('../../lib/calendar/calendar.js'));

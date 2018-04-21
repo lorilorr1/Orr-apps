@@ -1,0 +1,16 @@
+.tbl_my { background: #ffffff; border: 1pt; border-spacing: 0pt; vertical-align: top;  width: 100%;}
+.tbl_header {text-align: left; border-bottom: 1pt solid #EEEEEE; vertical-align: middle; width: 100%; }
+.tbl_body { padding-bottom: 5px; padding-top: 5px; width: 90%; }
+.tbl_footer { background: #FFFFFF; text-align: center; border: 0pt; vertical-align: middle; width: 100%;}
+
+.tr_topic {vertical-align: middle}
+.tr_body {vertical-align: middle}
+
+.td_caption { text-align: left}
+.td_data {text-align: left}
+
+.input_normal { color: #000000; background-color : #FFFFFF; }
+.input_need {color: #000000; background-color : #FFCC66; }
+.read_only {border : 0px solid;}
+.toolbar{height: 36px ; width: 36px; margin: 0px  0px; padding: 0px  0px; background: transparent; border: none; vertical-align: middle;}
+

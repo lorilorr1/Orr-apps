@@ -1,0 +1,20 @@
+<script type="text/javascript">
+function popUpWindow(URL, N, W, H, S) { // name, width, height, scrollbars
+	var winleft	=	(screen.width - W) / 2;
+	var winup	=	(screen.height - H) / 2;
+	winProp		=	'width='+W+',height='+H+',left='+winleft+',top='+winup+',scrollbars='+S+',resizable' + ',status=yes'
+	Win			=	window.open(URL, N, winProp)
+	if (parseInt(navigator.appVersion) >= 4) { Win.window.focus(); }
+}
+
+function popUpTextArea() {
+	popUpWindow("popup_textarea.html",'SH1',340,130,'no');
+}
+</script>
+
+<form id="frmTest" name="frmTest" method="post" action="">
+  <div align="center">
+    <input type="text" name="tbTest" id="tbTest" />
+    <input type="button" name="button" id="button" value="Click Me" onclick="popUpTextArea();"/>
+  </div>
+</form>

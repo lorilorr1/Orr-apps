@@ -1,0 +1,18 @@
+class OrImage
+!!!158435.php!!!	__construct(inout id : , inout name :  = null, inout idx :  = null)
+ 		parent :: __construct($id,$name,$idx);
+ 		$this->property('width','integer');
+		$this->property('hight','integer');
+		$this->OP_[read_only]->set(true);
+!!!158563.php!!!	get_tag(inout value :  = "", inout text :  = "")
+ 		$value = $this->get_control_value($value);
+ 		$title = $this->get_control_title($title);
+		$class = $this->get_control_class();
+		$id = $this->get_id_tag();
+		$width=$this->OP_[width]->get();
+		$hight=$this->OP_[hight]->get();
+		if($width!="")$width='width="'.$width.'"';
+		if($hight!="")$hight='hight="'.$hight.'"';
+		$text = 'alt="'.$text.'"';
+		$value = 'src="'.$value.'"';
+ 		return "<img $id $class $name $width $hight $value $text>".$this->get_properties_tag();

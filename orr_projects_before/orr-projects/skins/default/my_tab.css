@@ -1,0 +1,23 @@
+.tbl_my { background: transparent; border: 0pt; border-spacing: 0pt; vertical-align: top;  width: 100%;}
+.tbl_header { font-size: 14px;  text-align: center; border-bottom: 1pt solid #EEEEEE; vertical-align: middle; width: 100%; }
+.tbl_body { background:#FFFFFF; padding-bottom: 5px; padding-top: 5px; font-size: 14px; width: 100%; }
+.tbl_footer { color: #000000; background-image: url(image/bg_footer.png); text-align: center; border: 0pt;  vertical-align: middle; width: 100%}
+
+.tr_topic { height: 30px; vertical-align: middle}
+.tr_caption { color: #000000; background-image: url(image/bg_footer.png); height: 25px; vertical-align: middle;  text-align: center; font-weight: bold}
+
+.tr_body_color { background-image: url(image/bg_body.png); background-repeat: repeat-x ; background-position: left bottom; height: 25px; vertical-align: middle; text-align: right}
+.tr_body { background:#ECE9D8; height: 25px; vertical-align: middle; text-align: right}
+.tr_body_total { color: #000000; background-image: url(image/bg_topic.png); height: 25px; vertical-align: middle; text-align: right; font-weight: bold}
+
+.toolbar{margin: 2px  2px; padding: 0px  0px; background: transparent; border: none; vertical-align: top;}
+.td_ { width: 1%; background:#EEEEEE}
+.btd_ {  width: 1%;  background:#EEEEEE}
+
+.tbl_query_body { background:#FFFFFF; padding-bottom: 5px; padding-top: 5px; font-size: 14px; width: 100%; }
+.tr_query_body { background:#ECE9D8; height: 25px; vertical-align: middle}
+
+.td_query_caption {background:#EEEEEE}
+.td_query_compare {background:#EEEEEE}
+.td_query_value {background:#EEEEEE}
+

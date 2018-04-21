@@ -1,0 +1,4 @@
+class OrPage
+!!!131171.php!!!	__construct(inout title :  = '')
+ 		parent::__construct($title);
+ 		$this->set_skin('../../Or!Lib/ajax/OrPage.html');

@@ -1,0 +1,40 @@
+class OrMysql
+!!!143075.php!!!	OrMysql(inout database : string, inout host : string = null, inout user : string = null, inout password : string = null)
+        $this->OrDb($database, $host, $user, $password);
+!!!143203.php!!!	get_host_conn(inout database : string = null, inout pconnect : boolean = false) : connection
+        global $my_cfg_db;
+        if (!is_null($database))
+            $this->OP_[database]->set($database);
+        if ($pconnect) {
+            $conn = @mysql_pconnect($this->OP_[host]->get(), $this->OP_[user]->get(), $this->OP_[password]->get()) or
+                    die(__FILE__ . " | " . __LINE__ . " |get_host_conn | " . mysql_error());
+        } else {
+            $conn = @mysql_connect($this->OP_[host]->get(), $this->OP_[user]->get(), $this->OP_[password]->get()) or
+                    die(__FILE__ . " | " . __LINE__ . " |get_host_conn | " . mysql_error());
+        }
+        if (!mysql_select_db($this->OP_[database]->get(), $conn))
+            die("ö¡ Database" . mysql_error());
+
+        $charset = "SET NAMES '" . $my_cfg_db[charset] . "'";
+        if ($my_cfg_db[charset] != '')
+            mysql_query($charset, $conn) or die(__FILE__ . " | " . __LINE__ . " |get_host_conn | " . mysql_error());
+
+        return $this->conn = $conn;
+!!!143331.php!!!	get_query(inout sql : string) : result
+        $this->OP_[sql]->set($sql);
+        debug_mode(__FILE__, __LINE__, $sql, 'function get_query');
+        $result = @mysql_query($this->OP_[sql]->get(), $this->get_host_conn());
+        if (!$result)
+            $this->set_error('sql=' . $sql . ' [' . mysql_error() . ']<br>');
+        return $this->result = $result;
+!!!143459.php!!!	get_record() : array
+
+        return $this->record = @mysql_fetch_array($this->result);
+!!!143587.php!!!	get_total_row() : array
+        return @mysql_num_rows($this->result);
+!!!143715.php!!!	get_field_name(inout field_index : int = 0) : string
+        return @mysql_field_name($this->result, $field_index);
+!!!143843.php!!!	get_insert_id() : int
+        return @mysql_insert_id($this->conn);
+!!!143971.php!!!	close_conn() : boolean
+        return @mysql_close($this->conn);

@@ -1,0 +1,3786 @@
+format 74
+"gui" // orr_lib::gui
+  revision 1
+  modified_by 99 "orr"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default show_stereotype_properties default
+  
+  classview 128227 "gui"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 128227 "OrHtml"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "@version php5
+@author Suchart Bunhachirat
+@copyright Copyright &copy; 2007, orr
+Class สร้างไฟล์ HTML
+*****************************************************************"
+      classrelation 132323 // <generalisation>
+	relation 132323 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 132323 // <generalisation>
+	  b parent class_ref 128995 // OrObj
+      end
+
+      attribute 134627 "skin"
+	public explicit_type ""
+	init_value "  nulll"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "skin for create HTML
+@access ${visibility}"
+      end
+
+      attribute 134755 "meta"
+	private explicit_type ""
+	init_value "  array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 134883 "body"
+	private explicit_type ""
+	init_value "  array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 135011 "script"
+	private explicit_type ""
+	init_value "  array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 135139 "script_src"
+	private explicit_type ""
+	init_value "  array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 135267 "ccs_src"
+	private explicit_type ""
+	init_value "  array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 135395 "style"
+	private explicit_type ""
+	init_value "  array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 156515 "__construct"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "title" explicit_type "string"
+	    defaultvalue "'' "
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "__construct : วิธีการทำงานเริ่มต้นของคลาส
+@param ${t0} title Page Title
+@param ${t1}
+@return ${type}"
+      end
+
+      operation 156643 "set_skin"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "skin_src" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนด skin ที่ใช้งาน
+
+@param ${t0} skin_src path skin file
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 156771 "set_meta"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "Head meta ต่างๆ ใน HTML HEADER
+@param ${t0} tag คำสั่ง meta เป็น string
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 156899 "set_script"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "mix"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function set_meta
+
+คำสั่ง Script ต่างๆ ใน HTML HEADER
+@param ${t0} tag คำสั่ง Script ที่ต้องการแสดง สามารถส่งเป็น string หรือ array
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 157027 "set_script_src"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "mix"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function set_script
+
+คำสั่ง Script ต่างๆ ใน HTML HEADER
+@param ${t0} tag คำสั่ง Script ที่ต้องการแสดง สามารถส่งเป็น string หรือ array
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 157155 "set_ccs_src"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "mix"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function set_script
+
+คำสั่ง Script ต่างๆ ใน HTML HEADER
+@param ${t0} tag คำสั่ง Script ที่ต้องการแสดง สามารถส่งเป็น string หรือ array
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 157283 "set_style"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "mix"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function set_script
+
+คำสั่ง Script ต่างๆ ใน HTML HEADER
+@param ${t0} tag คำสั่ง Script ที่ต้องการแสดง สามารถส่งเป็น string หรือ array
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 157411 "set_body"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "mix"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function set_script
+
+กำหนดข้อมูลที่แสดงใน HTML page
+@param ${t0} tag ค่า tag html ที่ต้องการแสดง สามารถส่งเป็น string หรือ array
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 157539 "get_meta"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function set_body
+
+คืนค่า Tag ส่วน meta
+@return ${type}"
+      end
+
+      operation 157667 "get_script_src"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คืนค่า Tag ส่วน script source
+@return ${type}"
+      end
+
+      operation 157795 "get_script"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คืนค่า Tag ส่วน script
+@return ${type}"
+      end
+
+      operation 157923 "get_ccs_src"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คืนค่า Tag ส่วน ccs source
+@return ${type}"
+      end
+
+      operation 158051 "get_style"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คืนค่า Tag ส่วน script
+@return ${type}"
+      end
+
+      operation 158179 "get_body"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คืนค่า Tag ส่วน body
+@return ${type}"
+      end
+
+      operation 158307 "show"
+	public explicit_return_type "null"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คำสั่งแสดง page html
+@return ${type}
+@access ${visibility}"
+      end
+    end
+
+    class 128483 "OrJs"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrJS.php - Copyright
+@author Suchart Bunhachirat
+@version php4 - 5
+************************************************************************
+
+class OrJs
+Class Java Script Function"
+      classrelation 132579 // <generalisation>
+	relation 132579 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 132579 // <generalisation>
+	  b parent class_ref 132323 // OrGui
+      end
+
+      operation 158691 "__construct"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "@return
+@access ${visibility}"
+      end
+
+      operation 158819 "get_script_event"
+	public explicit_return_type "string"
+	nparams 1
+	  param inout name "event" explicit_type "string"
+	    defaultvalue "\"onClick\""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function OrJs
+
+คืนค่าเหตุการณ์ที่ Script จะทำงาน
+
+@param ${t0} event เหตุการณื
+@return ${type} ค่าเหตุการณ์
+@access ${visibility}"
+      end
+    end
+
+    class 129635 "OrForm"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+//Created on 12-Mar-06
+//orgui.php - Copyright 
+//@author Suchart Bunhachirat
+//@version php5
+//*************************************************************************
+//
+//class OrForm
+//สร้าง Form สำหรับ Controls
+//Properties
+//
+//property('id','string');
+//property('idx','string');
+//property('name','string');
+//property('class_name','string');
+//property('method','string','post');
+//property('action','string',$PHP_SELF);
+"
+      classrelation 131939 // <generalisation>
+	relation 131939 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 131939 // <generalisation>
+	  b parent class_ref 132323 // OrGui
+      end
+
+      attribute 133987 "controls"
+	public explicit_type ""
+	init_value " array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Object ของ controls ใน form
+
+@access ${visibility}"
+      end
+
+      attribute 134115 "val_controls"
+	public explicit_type ""
+	init_value " array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "ค่าที่ส่งกลับของ controls ใน form
+
+@access ${visibility}"
+      end
+
+      attribute 134243 "skin"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Object OrSkin ที่ใช้งาน
+
+@access ${visibility}"
+      end
+
+      operation 154979 "__construct"
+	package explicit_return_type ""
+	nparams 2
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "\"\""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 155107 "set_skin"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "skin_src" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนด skin ที่ใช้งาน
+
+@param ${t0} skin_src path skin file
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 155235 "set_body"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "value" explicit_type "mix"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "เพิ่ม html tag ใน form
+
+@param ${t0} value ค่า string หรือ array ของ html tag
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 155363 "set_controls"
+	public explicit_return_type "null"
+	nparams 3
+	  param inout name "obj" explicit_type "obj"
+	  param inout name "caption" explicit_type "string"
+	    defaultvalue "''"
+	  param inout name "is_db_field" explicit_type "boolean"
+	    defaultvalue "true"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนด control object ที่ใช้ใน form
+ TODO : แก้ไขให้รองรับ
+@param ${t0} obj ตัวแปร object กุลุม OrControls
+@param ${t1} caption ข้อความอธิบาย
+@param ${t2} is_db_field เป็น ture กรณีเป็น field ฐานข้อมูล
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 155491 "get_tag"
+	public explicit_return_type "array"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "form tag
+
+@return ${type} ค่า html tag
+@access ${visibility}"
+      end
+
+      operation 155619 "get_datafield"
+	public explicit_return_type "array"
+	nparams 1
+	  param inout name "field_id" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คืนค่า คำอธิบายของ Field
+@param ${t0} field_id
+@return ${type}
+@access ${visibility}"
+      end
+    end
+
+    class 131043 "OrButton"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "@author Suchart Bunhachirat
+@version php5
+@deprecated version 2 - Feb 17, 2007
+************************************************************************
+
+OrButton : ปุ่มคำสั่ง
+***********************************************************************"
+      classrelation 131171 // <generalisation>
+	relation 131171 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 131171 // <generalisation>
+	  b parent class_ref 132579 // OrControls
+      end
+
+      operation 151651 "__construct"
+	public explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "idx" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "@return 
+@access ${visibility}"
+      end
+
+      operation 151779 "set_reset"
+	public explicit_return_type "null"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function OrButton
+
+กำหนดให้เป็นปุ่ม Reset
+
+@param mix value ค่าที่กำหนด
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 151907 "set_image"
+	public explicit_return_type "mix"
+	nparams 1
+	  param inout name "image_source" explicit_type "mix"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนดให้เป็นปุ่ม image
+
+@param ${t0} value ค่าที่กำหนด
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 152035 "get_tag"
+	public explicit_return_type "mix"
+	nparams 1
+	  param inout name "value" explicit_type "mix"
+	    defaultvalue "null "
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "@param ${t0} value ค่าที่กำหนด
+@return ${type}
+@access ${visibility}"
+      end
+    end
+
+    class 131427 "OrSelectbox"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrDbForm.php - Copyright 
+@author Suchart Bunhachirat
+@version php5-2550
+************************************************************************
+
+class OrSelectbox"
+      classrelation 133347 // <generalisation>
+	relation 133347 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 133347 // <generalisation>
+	  b parent class_ref 132579 // OrControls
+      end
+
+      attribute 136035 "use_ajax"
+	public explicit_type ""
+	init_value "  false"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "@return 
+@access ${visibility}"
+      end
+
+      operation 160739 "__construct"
+	package explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "idx" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 160867 "get_tag"
+	public explicit_return_type "mix"
+	nparams 1
+	  param inout name "value" explicit_type "mix"
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "@param ${t0} value ค่าที่กำหนด
+@return ${type}
+@access ${visibility}"
+      end
+    end
+
+    class 131683 "OrTextarea"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "ortextarea.php - Copyright 
+@author Suchart Bunhachirat
+@version php4
+Here you can write a license for your code, some comments or any other
+information you want to have in your generated code. To to this simply
+configure the \"headings\" directory in uml to point to a directory
+where you have your heading files.
+
+or you can just replace the contents of this file with your own.
+If you want to do this, this file is located at
+
+/usr/share/apps/umbrello/headings/heading.php
+
+-->Code Generators searches for heading files based on the file extension
+i.e. it will look for a file name ending in \".h\" to include in C++ header
+files, and for a file name ending in \".java\" to include in all generated
+java code.
+If you name the file \"heading.<extension>\", Code Generator will always
+choose this file even if there are other files with the same extension in the
+directory. If you name the file something else, it must be the only one with that
+extension in the directory to guarantee that Code Generator will choose it.
+
+you can use variables in your heading files which are replaced at generation
+time. possible variables are : author, date, time, filename and filepath.
+just write %variable_name%
+
+This file was generated on %date% at %time%
+The original location of this file is /home/orr/uml-generated-code/ortextarea.php
+************************************************************************
+
+class OrTextarea"
+      classrelation 133987 // <generalisation>
+	relation 133987 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 133987 // <generalisation>
+	  b parent class_ref 132579 // OrControls
+      end
+
+      operation 163939 "__construct"
+	public explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "idx" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " Aggregations: 
+ Compositions: 
+ Attributes: **
+
+
+@return 
+@access ${visibility}"
+      end
+
+      operation 164067 "set_rowcol"
+	package explicit_return_type ""
+	nparams 2
+	  param inout name "rows" explicit_type ""
+	  param inout name "cols" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function OrTextarea"
+      end
+
+      operation 164195 "get_tag"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "value" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 131939 "OrTextbox"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrTextbox.php - Copyright 
+@author Suchart Bunhachirat
+@version php4
+************************************************************************
+
+class OrTextbox"
+      classrelation 134115 // <generalisation>
+	relation 134115 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 134115 // <generalisation>
+	  b parent class_ref 132579 // OrControls
+      end
+
+      operation 164323 "__construct"
+	public explicit_return_type "null"
+	nparams 3
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "idx" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " Aggregations: 
+ Compositions: 
+ Attributes: **
+
+Properties
+$this->property('maxlength','integer');
+$this->property('size','integer');
+$this->property('type','string');
+
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 164451 "set_size"
+	public explicit_return_type "null"
+	nparams 2
+	  param inout name "size" explicit_type "int"
+	  param inout name "maxlength" explicit_type "int"
+	    defaultvalue "0"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function OrTextbox
+
+กำหนดความกว้าง
+
+@param ${t0} size ขนาดที่ต้องการแสดง
+@param ${t1} maxlength จำนวนค่าที่รับได้
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 164579 "get_tag"
+	public explicit_return_type "mix"
+	nparams 1
+	  param inout name "value" explicit_type "mix"
+	    defaultvalue "null "
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function set_size
+
+
+@param ${t0} value ค่าที่กำหนด
+@return ${type}
+@access ${visibility}"
+      end
+    end
+
+    class 132195 "OrAccordionAjax"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "@version php5
+@author Suchart Bunhachirat
+@copyright Copyright &copy; 2007, orr
+Class OrAccordionAjax
+*****************************************************************"
+      classrelation 130915 // <generalisation>
+	relation 130915 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 130915 // <generalisation>
+	  b parent class_ref 132323 // OrGui
+      end
+
+      attribute 133731 "panel"
+	private explicit_type ""
+	init_value "  null"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 150371 "__construct"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "id" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "__construct : วิธีการทำงานเริ่มต้น
+@param ${t0}
+@return ${type}"
+      end
+
+      operation 150499 "get_tag"
+	package explicit_return_type "null"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "__construct : วิธีการทำงานเริ่มต้นของคลาส
+@param string
+@return ${type}"
+      end
+
+      operation 150627 "set_panel"
+	package explicit_return_type "null"
+	nparams 3
+	  param inout name "label" explicit_type "string"
+	  param inout name "tag" explicit_type ""
+	  param inout name "open" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "set_panel : กำหนดหน้าใน Panel
+@param ${t0} tag html
+@return ${type}"
+      end
+    end
+
+    class 132323 "OrGui"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "orgui.php - Copyright 
+@author Suchart Bunhachirat
+@version php4 - php5
+************************************************************************
+
+class OrGui
+Class เริ่มสำหรับกำหนดคุณสมบัติ ร่วมกัน
+Properties
+$this->property('charset','string',$charset);"
+      classrelation 132195 // <generalisation>
+	relation 132195 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 132195 // <generalisation>
+	  b parent class_ref 128995 // OrObj
+      end
+
+      operation 156387 "__construct"
+	public explicit_return_type "null"
+	nparams 3
+	  param inout name "id" explicit_type "string"
+	  param inout name "name" explicit_type ""
+	    defaultvalue "null "
+	  param inout name "idx" explicit_type ""
+	    defaultvalue "null "
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " Aggregations: 
+ Compositions: 
+ Attributes: **
+
+
+@param ${t0} charset รหัสภาษาที่ใช้แสดง
+@return ${type}
+@access ${visibility}"
+      end
+    end
+
+    class 132451 "OrAjax"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "@version php5
+@author Suchart Bunhachirat
+@copyright Copyright &copy; 2007, orr
+Class เรียกใช้ Ajax
+*****************************************************************"
+      classrelation 131043 // <generalisation>
+	relation 131043 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 131043 // <generalisation>
+	  b parent class_ref 132323 // OrGui
+      end
+
+      operation 150755 "__construct"
+	package explicit_return_type "null"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "set_skin_ccs : กำหนดไฟล์ Styles Sheet
+@param string $file_name ชื่อไฟล์ที่อยู่ใน skin path
+@return ${type}"
+      end
+
+      operation 150883 "require_tooltip"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "require_tooltip : Class ที่ต้องเรียกใช้
+@param 
+@return ${type} ค่าสั่งเรียกใช้ tooltip"
+      end
+
+      operation 151011 "require_tooltip_css"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "require_tooltip_css : กำหนดไฟล์ Styles Sheet
+@param 
+@return ${type} ค่าสั่งเรียกใช้ tooltip css"
+      end
+
+      operation 151139 "require_selectbox"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "require_tooltip : Class ที่ต้องเรียกใช้
+@param 
+@return ${type} ค่าสั่งเรียกใช้ tooltip"
+      end
+
+      operation 151267 "require_accordion_css"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "require_tooltip_css : กำหนดไฟล์ Styles Sheet
+@param 
+@return ${type} ค่าสั่งเรียกใช้ tooltip css"
+      end
+
+      operation 151395 "require_accordion"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "require_accordion : Class ที่ต้องเรียกใช้
+@param 
+@return ${type} ค่าสั่งเรียกใช้ accordion"
+      end
+
+      operation 151523 "require_content_panel"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "require_accordion : Class ที่ต้องเรียกใช้
+@param 
+@return ${type} ค่าสั่งเรียกใช้ ContentPane"
+      end
+    end
+
+    class 132579 "OrControls"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "orcontrols.php - Copyright 
+@author Suchart Bunhachirat
+@version php5-2550
+************************************************************************
+
+class OrControls"
+      classrelation 131555 // <generalisation>
+	relation 131555 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 131555 // <generalisation>
+	  b parent class_ref 132323 // OrGui
+      end
+
+      operation 152931 "__construct"
+	package explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "idx" explicit_type ""
+	    defaultvalue "null "
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 153059 "auto_post"
+	public explicit_return_type "null"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function OrControls
+
+คืนค่าเดิม แสดงที่ controls
+
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 153187 "set_clip"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "name" explicit_type "string"
+	    defaultvalue "''"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนดชื่อ clip ที่เก็บข้อมูลใน Session
+@param ${t0} name ชื่อ Clip
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 153315 "clip_value"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "value" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนดค่า Clip ที่ใช้งาน
+@param ${t0} value
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 153443 "set_format"
+	public explicit_return_type "null"
+	nparams 2
+	  param inout name "type" explicit_type "string"
+	  param inout name "option" explicit_type "string"
+	    defaultvalue "''"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ประเภท format ของข้อมูล
+@param ${t0} type
+@param ${t1} option
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 153571 "get_format"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คือค่ารูปแบบข้อมูลที่กำหนด
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 153699 "get_properties_tag"
+	public explicit_return_type "mix"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คืนค่า tag properties ที่กำหนดของ control
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 153827 "get_id_tag"
+	private explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คืนค่า tag properties ที่กำหนดของ control
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 153955 "get_control_value"
+	package explicit_return_type "string"
+	nparams 1
+	  param inout name "value" explicit_type "sting"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ตรวจสอบค่า auto_post , default_value
+@param ${t0} ${p0} ค่าที่ต้องการตรวจสอบ
+@return ${type} ค่าหลังการตรวจสอบ"
+      end
+
+      operation 154083 "get_control_title"
+	package explicit_return_type "string"
+	nparams 1
+	  param inout name "title" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ตรวจสอบสร้าง Title Tag
+@param ${t1} $tile ค่าที่ต้องการแสดง Title
+@return ${type} Tag Title"
+      end
+
+      operation 154211 "get_control_class"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ตรวจสอบสร้าง Control Class Tag
+@return ${type} Control Class Tag"
+      end
+
+      operation 154339 "OE_get_tag"
+	public explicit_return_type "mix"
+	nparams 1
+	  param inout name "param" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "Event get_tag()
+@return ${type}
+@access ${visibility}"
+      end
+    end
+
+    class 132707 "OrCheckbox"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrCheckbox.php
+Class สร้าง control checkbox
+@package    Or!Lib
+@author     Suchart Bunhachirat <suchart.orr@gmail.com>
+@copyright  
+@license    
+@version    2554"
+      classrelation 131299 // <generalisation>
+	relation 131299 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 131299 // <generalisation>
+	  b parent class_ref 132579 // OrControls
+      end
+
+      operation 152163 "__construct"
+	public explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "idx" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "control จะแสดงเครื่องหมายถูก เมื่อค่า value = check_value
+@return
+@access ${visibility}"
+      end
+
+      operation 152291 "get_tag"
+	public explicit_return_type "mix"
+	nparams 1
+	  param inout name "value" explicit_type "mix"
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function OrCheckbox
+
+
+@param ${t0} value ค่าที่กำหนด
+@return ${type}
+@access ${visibility}"
+      end
+    end
+
+    class 132835 "OrContent"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+To change this template, choose Tools | Templates
+and open the template in the editor.
+
+
+Description of OrContent
+ส่งค่ากลับ
+@author orr
+"
+      classrelation 131427 // <generalisation>
+	relation 131427 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 131427 // <generalisation>
+	  b parent class_ref 128995 // OrObj
+      end
+
+      attribute 133859 "body"
+	private explicit_type ""
+	init_value " array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 152419 "__construct"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "text" explicit_type ""
+	    defaultvalue "''"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "put your code here"
+      end
+
+      operation 152547 "set_body"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "$tag"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+set_body : รับค่า tag ที่เป็น array จาก class อื่นๆ เช่น OrSkin
+@param ${t0} ค่าtagที่เป็นarray
+@return ${type}
+"
+      end
+
+      operation 152675 "get_body"
+	package explicit_return_type "null"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+get_body : คืนค่าจาก array เป็น text
+@param null
+@return ${type}
+"
+      end
+
+      operation 152803 "show"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 132963 "OrFieldHidden"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "orfieldhidden.php - Copyright 
+@author Suchart Bunhachirat
+@version php4
+Here you can write a license for your code, some comments or any other
+information you want to have in your generated code. To to this simply
+configure the \"headings\" directory in uml to point to a directory
+where you have your heading files.
+
+or you can just replace the contents of this file with your own.
+If you want to do this, this file is located at
+
+/usr/share/apps/umbrello/headings/heading.php
+
+-->Code Generators searches for heading files based on the file extension
+i.e. it will look for a file name ending in \".h\" to include in C++ header
+files, and for a file name ending in \".java\" to include in all generated
+java code.
+If you name the file \"heading.<extension>\", Code Generator will always
+choose this file even if there are other files with the same extension in the
+directory. If you name the file something else, it must be the only one with that
+extension in the directory to guarantee that Code Generator will choose it.
+
+you can use variables in your heading files which are replaced at generation
+time. possible variables are : author, date, time, filename and filepath.
+just write %variable_name%
+
+This file was generated on %date% at %time%
+The original location of this file is /home/orr/uml-generated-code/orfieldhidden.php
+************************************************************************
+
+class OrFieldHidden"
+      classrelation 131683 // <generalisation>
+	relation 131683 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 131683 // <generalisation>
+	  b parent class_ref 132579 // OrControls
+      end
+
+      operation 154467 "__construct"
+	public explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "idx" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " Aggregations: 
+ Compositions: 
+ Attributes: **
+
+
+@return 
+@access ${visibility}"
+      end
+
+      operation 154595 "get_tag"
+	public explicit_return_type "mix"
+	nparams 1
+	  param inout name "value" explicit_type "mix"
+	    defaultvalue "null "
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function OrFieldHidden
+
+
+@param ${t0} value ค่าที่กำหนด
+@return ${type}
+@access ${visibility}"
+      end
+    end
+
+    class 133091 "OrFieldProperty"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "orfieldproperty.php - Copyright 
+@author Suchart Bunhachirat
+@version php4
+Here you can write a license for your code, some comments or any other
+information you want to have in your generated code. To to this simply
+configure the \"headings\" directory in uml to point to a directory
+where you have your heading files.
+
+or you can just replace the contents of this file with your own.
+If you want to do this, this file is located at
+
+/usr/share/apps/umbrello/headings/heading.php
+
+-->Code Generators searches for heading files based on the file extension
+i.e. it will look for a file name ending in \".h\" to include in C++ header
+files, and for a file name ending in \".java\" to include in all generated
+java code.
+If you name the file \"heading.<extension>\", Code Generator will always
+choose this file even if there are other files with the same extension in the
+directory. If you name the file something else, it must be the only one with that
+extension in the directory to guarantee that Code Generator will choose it.
+
+you can use variables in your heading files which are replaced at generation
+time. possible variables are : author, date, time, filename and filepath.
+just write %variable_name%
+
+This file was generated on %date% at %time%
+The original location of this file is /home/orr/uml-generated-code/orfieldproperty.php
+************************************************************************
+
+class OrFieldProperty"
+      classrelation 131811 // <generalisation>
+	relation 131811 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 131811 // <generalisation>
+	  b parent class_ref 132579 // OrControls
+      end
+
+      operation 154723 "OrFieldProperty"
+	public explicit_return_type "null"
+	nparams 3
+	  param inout name "id" explicit_type "string"
+	  param inout name "property" explicit_type "string"
+	  param inout name "idx" explicit_type "int"
+	    defaultvalue "null "
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " Aggregations: 
+ Compositions: 
+ Attributes: **
+
+
+@param ${t0} id    * @param ${t1} property    * @param ${t2} idx    * @return ${type}
+@access ${visibility}"
+      end
+
+      operation 154851 "get_tag"
+	public explicit_return_type "mix"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function OrFieldProperty
+
+
+@return ${type}
+@access ${visibility}"
+      end
+    end
+
+    class 133219 "OrGraph"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "Created on Mar 17, 2007 OrGraph.php
+@version php5
+@author Suchart Bunhachirat
+@copyright Copyright &copy; 2007, orr
+สร้างกราฟโดยใช้ JpGraph
+มี Font Thai FF_TH_Kodchasal FF_TH_Krub FF_TH_Sarabun"
+      classrelation 132067 // <generalisation>
+	relation 132067 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 132067 // <generalisation>
+	  b parent class_ref 132323 // OrGui
+      end
+
+      attribute 134371 "graph"
+	public explicit_type ""
+	init_value "  null"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Object ของกราฟ
+@access ${visibility}"
+      end
+
+      attribute 134499 "plot"
+	public explicit_type ""
+	init_value "  array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Object Array ของเส้น หรือแท่งกราฟ
+@access ${visibility}"
+      end
+
+      operation 155747 "__construct"
+	package explicit_return_type "null"
+	nparams 6
+	  param inout name "title" explicit_type ""
+	  param inout name "y_title" explicit_type ""
+	  param inout name "x_title" explicit_type ""
+	  param inout name "width" explicit_type "integer"
+	    defaultvalue "300 "
+	  param inout name "height" explicit_type "integer"
+	    defaultvalue "200 "
+	  param inout name "charset" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}, ${p4}${v4}, ${p5}${v5}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนดการสร้างกราฟ
+@param ${t3} ${p3}
+@param ${t4} ${p4}
+@return ${type}"
+      end
+
+      operation 155875 "set_line_plot"
+	package explicit_return_type "null"
+	nparams 4
+	  param inout name "id" explicit_type "string"
+	  param inout name "y_data" explicit_type "array"
+	  param inout name "color" explicit_type ""
+	  param inout name "weight" explicit_type ""
+	    defaultvalue "2 "
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "สร้างกราฟเส้น
+@param ${t0} ${p0} ชื่อเรียก
+@param ${t1} ${p1} ชุดข้อมูลของกราฟ
+@return ${type}"
+      end
+
+      operation 156003 "set_data_array"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "data_array" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "แปลง Array ข้อมูลเป็นกราฟ"
+      end
+
+      operation 156131 "create_image"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 156259 "get_image"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "file_name" explicit_type ""
+	    defaultvalue "'my_graph.png'"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 133347 "OrImage"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "Created on Mar 4, 2007
+
+To change the template for this generated file go to
+Window - Preferences - PHPeclipse - PHP - Code Templates"
+      classrelation 132451 // <generalisation>
+	relation 132451 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 132451 // <generalisation>
+	  b parent class_ref 132579 // OrControls
+      end
+
+      operation 158435 "__construct"
+	package explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "idx" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 158563 "get_tag"
+	package explicit_return_type ""
+	nparams 2
+	  param inout name "value" explicit_type ""
+	    defaultvalue "\"\""
+	  param inout name "text" explicit_type ""
+	    defaultvalue "\"\""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 133475 "OrJsCalendar"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrJsCalendar.php - Copyright 
+@author Suchart Bunhachirat
+@version php4 - 5
+************************************************************************
+
+class OrJs
+Class Java Script Function"
+      classrelation 132707 // <generalisation>
+	relation 132707 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 132707 // <generalisation>
+	  b parent class_ref 128483 // OrJs
+      end
+
+      operation 158947 "OrJsCalendar"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "ccs_path" explicit_type "string"
+	    defaultvalue "'./skins/all/calendar.css'"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนดการใช้ Calendar
+@param ${t0} CCS Path
+@return 
+@access ${visibility}"
+      end
+    end
+
+    class 133603 "OrJsMenu"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrJsMenu.php - Copyright 
+@author Suchart Bunhachirat
+@version php4 - 5
+************************************************************************
+
+class OrJs
+Class Java Script Function"
+      classrelation 132835 // <generalisation>
+	relation 132835 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 132835 // <generalisation>
+	  b parent class_ref 128483 // OrJs
+      end
+
+      operation 159075 "OrJsMenu"
+	public explicit_return_type ""
+	nparams 2
+	  param inout name "jsdomenu_inc" explicit_type "string"
+	  param inout name "ccs_path" explicit_type "string"
+	    defaultvalue "'./Or!Lib/jsDOMenu/themes/office_xp/office_xp.css'"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนดการสร้าง เมนู
+@param ${t0} File Script
+@param ${t1} CCS Path
+@return 
+@access ${visibility}"
+      end
+    end
+
+    class 133731 "OrLabel"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "orlabel.php - Copyright 
+@author Suchart Bunhachirat
+@version php4
+************************************************************************
+
+class OrLabel"
+      classrelation 132963 // <generalisation>
+	relation 132963 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 132963 // <generalisation>
+	  b parent class_ref 132579 // OrControls
+      end
+
+      operation 159203 "__construct"
+	public explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "idx" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "@return
+@access ${visibility}"
+      end
+
+      operation 159331 "get_tag"
+	public explicit_return_type "mix"
+	nparams 2
+	  param inout name "value" explicit_type "mix"
+	    defaultvalue "null"
+	  param inout name "title" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function OrLabel
+
+
+@param ${t0} value ค่าที่กำหนด
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 159459 "get_control_text"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "text" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 159587 "OE_before_text"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "EV_" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "Event on class"
+      end
+    end
+
+    class 133859 "OrLabelAjax"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "Created on Mar 3, 2007
+
+To change the template for this generated file go to
+Window - Preferences - PHPeclipse - PHP - Code Templates"
+      classrelation 133091 // <generalisation>
+	relation 133091 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 133091 // <generalisation>
+	  b parent class_ref 133731 // OrLabel
+      end
+
+      attribute 135523 "tooltip_url"
+	private explicit_type ""
+	init_value "  null"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 135651 "tooltip_style"
+	private explicit_type ""
+	init_value "  'width: 300px;'"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 159715 "__construct"
+	package explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type "string"
+	  param inout name "name" explicit_type "string"
+	    defaultvalue "null "
+	  param inout name "idx" explicit_type "int"
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "@param ${t0} ${p0} Label id
+@param ${t1} ${p1} Label name
+@param ${t2} ${p2} integer id array
+@return"
+      end
+
+      operation 159843 "set_ajax_tooltip"
+	package explicit_return_type "null"
+	nparams 2
+	  param inout name "url" explicit_type "string"
+	  param inout name "style" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "Fucntion สำหรับกำหนดเอกสารที่ต้องการแสดงใน Tooltip
+@param ${t0} ${p0} html url
+@return ${type}"
+      end
+
+      operation 159971 "get_ajax_tooltip"
+	package explicit_return_type "string"
+	nparams 1
+	  param inout name "connectId" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "สร้าง Tag Tooltip
+@param ${t0} ${p0} Span Id
+@return ${type} Tag Ajax Tooltip"
+      end
+
+      operation 160099 "get_tag"
+	package explicit_return_type ""
+	nparams 2
+	  param inout name "value" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "title" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 133987 "OrPicture"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "Created on Mar 4, 2007 OrPicture.php
+@version php5
+@author Suchart Bunhachirat
+@copyright Copyright &copy; 2007, orr
+To change the template for this generated file go to
+Window - Preferences - PHPeclipse - PHP - Code Templates"
+      classrelation 133219 // <generalisation>
+	relation 133219 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 133219 // <generalisation>
+	  b parent class_ref 132323 // OrGui
+      end
+
+      attribute 135779 "file_name"
+	private explicit_type ""
+	init_value " null"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 135907 "image"
+	private explicit_type ""
+	init_value " null"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 160227 "__construct"
+	package explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type ""
+	    defaultvalue "''"
+	  param inout name "name" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "idx" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 160355 "set_image"
+	package explicit_return_type ""
+	nparams 2
+	  param inout name "name" explicit_type ""
+	  param inout name "type" explicit_type ""
+	    defaultvalue "'jpeg'"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 160483 "show_resize"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "percent" explicit_type ""
+	    defaultvalue "0.5"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 160611 "show"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "type" explicit_type ""
+	    defaultvalue "'jpeg'"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 134115 "OrSelectboxAjax"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrSelectboxAjax.php - Copyright 
+@author Suchart Bunhachirat
+@version php5-2550
+************************************************************************"
+      classrelation 133475 // <generalisation>
+	relation 133475 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 133475 // <generalisation>
+	  b parent class_ref 131427 // OrSelectbox
+      end
+
+      operation 160995 "__construct"
+	package explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type "string"
+	  param inout name "name" explicit_type "string"
+	    defaultvalue "null "
+	  param inout name "idx" explicit_type "int"
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "@param ${t0} ${p0} Label id
+@param ${t1} ${p1} Label name
+@param ${t2} ${p2} integer id array
+@return"
+      end
+    end
+
+    class 134243 "OrSkin"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrSkin.php - Copyright 
+@author Suchart Bunhachirat
+@version php4 - php5
+************************************************************************
+
+class OrSkin
+สร้างรูปแบบหน้าจอ จากไฟล์ HTML ที่เป็นต้นแบบ
+Properties
+
+property('skin_src','string') path of file
+property('skin_tag','array') skin tag name"
+      classrelation 133603 // <generalisation>
+	relation 133603 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 133603 // <generalisation>
+	  b parent class_ref 132323 // OrGui
+      end
+
+      operation 161123 "OrSkin"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "skin_src" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนดที่เก็บไฟล์ต้นแบบ
+
+@param ${t0} skin_src path of file
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 161251 "set_skin_tag"
+	public explicit_return_type "null"
+	nparams 2
+	  param inout name "name" explicit_type "string"
+	  param inout name "tag" explicit_type "mix"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนด tag html ที่ต้องการใส่แทนในจุดที่กำหนด
+ใช้แทน set_skin
+
+@param ${t0} name skin tag name
+@param ${t1} tag html tag
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 161379 "get_tag"
+	public explicit_return_type "null"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คืนค่า tag html
+
+@return ${type}
+@access ${visibility}"
+      end
+    end
+
+    class 134371 "OrSkinHtml"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "@version php5
+@author Suchart Bunhachirat
+@copyright Copyright &copy; 2007, orr
+Class สร้างไฟล์ HTML
+*****************************************************************"
+      classrelation 133731 // <generalisation>
+	relation 133731 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 133731 // <generalisation>
+	  b parent class_ref 128995 // OrObj
+      end
+
+      attribute 136163 "html"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "skin for create HTML
+@access ${visibility}"
+      end
+
+      attribute 136291 "meta"
+	private explicit_type ""
+	init_value "  array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 136419 "body"
+	private explicit_type ""
+	init_value "  array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 136547 "script"
+	private explicit_type ""
+	init_value "  array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 136675 "script_src"
+	private explicit_type ""
+	init_value "  array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 136803 "ccs_src"
+	private explicit_type ""
+	init_value "  array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 136931 "style"
+	private explicit_type ""
+	init_value "  array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 161507 "__construct"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "title" explicit_type "string"
+	    defaultvalue "'' "
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "__construct : วิธีการทำงานเริ่มต้นของคลาส
+@param ${t0} title Page Title
+@param ${t1}
+@return ${type}"
+      end
+
+      operation 161635 "set_meta"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "Head meta ต่างๆ ใน HTML HEADER
+@param ${t0} tag คำสั่ง meta เป็น string
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 161763 "set_script"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "mix"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function set_meta
+
+คำสั่ง Script ต่างๆ ใน HTML HEADER
+@param ${t0} tag คำสั่ง Script ที่ต้องการแสดง สามารถส่งเป็น string หรือ array
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 161891 "set_script_src"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "mix"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function set_script
+
+คำสั่ง Script ต่างๆ ใน HTML HEADER
+@param ${t0} tag คำสั่ง Script ที่ต้องการแสดง สามารถส่งเป็น string หรือ array
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 162019 "set_ccs_src"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "mix"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function set_script
+
+คำสั่ง Script ต่างๆ ใน HTML HEADER
+@param ${t0} tag คำสั่ง Script ที่ต้องการแสดง สามารถส่งเป็น string หรือ array
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 162147 "set_style"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "mix"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function set_script
+
+คำสั่ง Script ต่างๆ ใน HTML HEADER
+@param ${t0} tag คำสั่ง Script ที่ต้องการแสดง สามารถส่งเป็น string หรือ array
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 162275 "set_body"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "mix"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function set_script
+
+กำหนดข้อมูลที่แสดงใน HTML page
+@param ${t0} tag ค่า tag html ที่ต้องการแสดง สามารถส่งเป็น string หรือ array
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 162403 "get_meta"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function set_body
+
+คืนค่า Tag ส่วน meta
+@return ${type}"
+      end
+
+      operation 162531 "get_script_src"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คืนค่า Tag ส่วน script source
+@return ${type}"
+      end
+
+      operation 162659 "get_script"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คืนค่า Tag ส่วน script
+@return ${type}"
+      end
+
+      operation 162787 "get_ccs_src"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คืนค่า Tag ส่วน ccs source
+@return ${type}"
+      end
+
+      operation 162915 "get_style"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คืนค่า Tag ส่วน script
+@return ${type}"
+      end
+
+      operation 163043 "get_body"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คืนค่า Tag ส่วน body
+@return ${type}"
+      end
+
+      operation 163171 "show"
+	public explicit_return_type "null"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คำสั่งแสดง page html
+@return ${type}
+@access ${visibility}"
+      end
+    end
+
+    class 134499 "OrTable"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "Class สร้าง Table 
+@package    Or!Lib
+@author     Suchart Bunhachirat <suchart_bu@yahoo.com>
+@copyright  1997-2005 The PHP Group
+@license    http://www.php.net/license/3_0.txt  PHP License 3.0
+@version    2550"
+      classrelation 133859 // <generalisation>
+	relation 133859 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 133859 // <generalisation>
+	  b parent class_ref 132323 // OrGui
+      end
+
+      attribute 137059 "cols"
+	public explicit_type ""
+	init_value "  array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Cols
+
+@access ${visibility}"
+      end
+
+      attribute 137187 "rows"
+	public explicit_type ""
+	init_value "  array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Rows
+
+@access ${visibility}"
+      end
+
+      operation 163299 "OrTable"
+	public explicit_return_type "null"
+	nparams 2
+	  param inout name "id" explicit_type "string"
+	  param inout name "name" explicit_type "string"
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "@param ${t0} id
+@param ${t1} name
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 163427 "set_join_cells"
+	public explicit_return_type "null"
+	nparams 4
+	  param inout name "cell" explicit_type "integer"
+	  param inout name "col" explicit_type "integer"
+	  param inout name "row" explicit_type ""
+	  param inout name "class" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "join cell
+@param ${t0} row  
+@param ${t1} col
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 163555 "set_col"
+	public explicit_return_type "null"
+	nparams 2
+	  param inout name "col" explicit_type "string"
+	    defaultvalue "null "
+	  param inout name "class" explicit_type "string"
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนด Column ในแต่ละ Row
+@param ${t0} col html tag
+@param ${t1} class HTML Class
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 163683 "set_row"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "class" explicit_type "string"
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนด Row ใหม่หลังจากกำหนด Column ครบแล้ว
+@param ${t0} col html tag
+@param ${t1} class HTML Class
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 163811 "get_tag"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 134627 "OrTextCalendar"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrTextCalendar.php
+
+PHP versions 4 and 5
+
+LICENSE: This source file is subject to version 3.0 of the PHP license
+that is available through the world-wide-web at the following URI:
+http://www.php.net/license/3_0.txt.  If you did not receive a copy of
+the PHP License and are unable to obtain it through the web, please
+send a note to license@php.net so we can mail you a copy immediately.
+
+@package    Or!Lib
+@author     Suchart Bunhachirat <suchart_bu@yahoo.com>
+@copyright  1997-2005 The PHP Group
+@license    http://www.php.net/license/3_0.txt  PHP License 3.0
+@version    2550
+
+
+Class ช่องข้อมูลวันที่ เวลา
+@package    Or!Lib
+@author     Suchart Bunhachirat <suchart_bu@yahoo.com>
+@copyright  1997-2005 The PHP Group
+@license    http://www.php.net/license/3_0.txt  PHP License 3.0
+@version    2550"
+      classrelation 134243 // <generalisation>
+	relation 134243 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 134243 // <generalisation>
+	  b parent class_ref 132579 // OrControls
+      end
+
+      operation 164707 "__construct"
+	package explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "idx" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 164835 "get_tag"
+	package explicit_return_type "string"
+	nparams 1
+	  param inout name "value" explicit_type "string"
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "get_tag: html tag Query form
+@param ${t0} ${p0}
+@return ${type} html tag"
+      end
+    end
+
+    class 134755 "OrTextCalendar2"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrTextCalendar2.php
+php5
+
+@package    Or!Lib
+@author     Suchart Bunhachirat <suchart_bu@yahoo.com>
+@copyright  1997-2005 The PHP Group
+@license    http://www.php.net/license/3_0.txt  PHP License 3.0
+@version    2550
+
+
+Class ช่องข้อมูลวันที่ เวลา
+@package    Or!Lib
+@author     Suchart Bunhachirat <suchart_bu@yahoo.com>
+@copyright  1997-2005 The PHP Group
+@license    http://www.php.net/license/3_0.txt  PHP License 3.0
+@version    2550"
+      classrelation 134371 // <generalisation>
+	relation 134371 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 134371 // <generalisation>
+	  b parent class_ref 134627 // OrTextCalendar
+      end
+
+      attribute 137315 "calendar2"
+	public explicit_type ""
+	init_value "  null"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 164963 "__construct"
+	package explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "null "
+	  param inout name "idx" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 165091 "get_tag"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "get_tag: html tag
+@return ${type} html tag"
+      end
+    end
+  end
+
+  deploymentview 128611 "gui"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+    artifact 131555 "OrAccordionAjax"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+ ?>
+"
+      associated_classes
+	class_ref 132195 // OrAccordionAjax
+      end
+    end
+
+    artifact 131683 "OrAjax"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+?>
+"
+      associated_classes
+	class_ref 132451 // OrAjax
+      end
+    end
+
+    artifact 131811 "OrButton"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+ // end of OrButton
+?>
+"
+      associated_classes
+	class_ref 131043 // OrButton
+      end
+    end
+
+    artifact 131939 "OrCheckbox"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+// end of OrCheckbox
+?>
+"
+      associated_classes
+	class_ref 132707 // OrCheckbox
+      end
+    end
+
+    artifact 132067 "OrContent"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+?>
+"
+      associated_classes
+	class_ref 132835 // OrContent
+      end
+    end
+
+    artifact 132195 "OrControls"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+ // end of OrControls
+?>
+"
+      associated_classes
+	class_ref 132579 // OrControls
+      end
+    end
+
+    artifact 132323 "OrFieldHidden"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+ // end of OrFieldHidden
+?>
+"
+      associated_classes
+	class_ref 132963 // OrFieldHidden
+      end
+    end
+
+    artifact 132451 "OrFieldProperty"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+ // end of OrFieldProperty
+?>
+"
+      associated_classes
+	class_ref 133091 // OrFieldProperty
+      end
+    end
+
+    artifact 132579 "OrForm"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+?>
+"
+      associated_classes
+	class_ref 129635 // OrForm
+      end
+    end
+
+    artifact 132707 "OrGraph"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+?>
+"
+      associated_classes
+	class_ref 133219 // OrGraph
+      end
+    end
+
+    artifact 132835 "OrGui"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+ // end of OrGui
+?>
+"
+      associated_classes
+	class_ref 132323 // OrGui
+      end
+    end
+
+    artifact 132963 "OrHtml"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+ ?>
+"
+      associated_classes
+	class_ref 128227 // OrHtml
+      end
+    end
+
+    artifact 133091 "OrImage"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+?>
+"
+      associated_classes
+	class_ref 133347 // OrImage
+      end
+    end
+
+    artifact 133219 "OrJs"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+ // end of OrJs
+
+?>
+"
+      associated_classes
+	class_ref 128483 // OrJs
+      end
+    end
+
+    artifact 133347 "OrJsCalendar"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+ // end of OrJsCalendar
+
+?>
+"
+      associated_classes
+	class_ref 133475 // OrJsCalendar
+      end
+    end
+
+    artifact 133475 "OrJsMenu"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+ // end of OrJsMenu
+
+?>
+"
+      associated_classes
+	class_ref 133603 // OrJsMenu
+      end
+    end
+
+    artifact 133603 "OrLabel"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+// end of OrLabel
+?>
+"
+      associated_classes
+	class_ref 133731 // OrLabel
+      end
+    end
+
+    artifact 133731 "OrLabelAjax"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+?>
+"
+      associated_classes
+	class_ref 133859 // OrLabelAjax
+      end
+    end
+
+    artifact 133859 "OrPicture"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+?>
+"
+      associated_classes
+	class_ref 133987 // OrPicture
+      end
+    end
+
+    artifact 133987 "OrSelectbox"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+?>
+"
+      associated_classes
+	class_ref 131427 // OrSelectbox
+      end
+    end
+
+    artifact 134115 "OrSelectboxAjax"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+ ?>
+"
+      associated_classes
+	class_ref 134115 // OrSelectboxAjax
+      end
+    end
+
+    artifact 134243 "OrSkin"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+ 
+ 
+?>
+"
+      associated_classes
+	class_ref 134243 // OrSkin
+      end
+    end
+
+    artifact 134371 "OrSkinHtml"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+ ?>
+"
+      associated_classes
+	class_ref 134371 // OrSkinHtml
+      end
+    end
+
+    artifact 134499 "OrTable"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+
+ ?>
+"
+      associated_classes
+	class_ref 134499 // OrTable
+      end
+    end
+
+    artifact 134627 "OrTextarea"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+ // end of OrTextarea
+?>
+"
+      associated_classes
+	class_ref 131683 // OrTextarea
+      end
+    end
+
+    artifact 134755 "OrTextbox"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+ // end of OrTextbox
+?>
+"
+      associated_classes
+	class_ref 131939 // OrTextbox
+      end
+    end
+
+    artifact 134883 "OrTextCalendar"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+?>
+"
+      associated_classes
+	class_ref 134627 // OrTextCalendar
+      end
+    end
+
+    artifact 135011 "OrTextCalendar2"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+?>
+"
+      associated_classes
+	class_ref 134755 // OrTextCalendar2
+      end
+    end
+  end
+end

@@ -1,0 +1,136 @@
+class my_page
+!!!128099.php!!!	__construct(inout title :  = '')
+		global $my_cfg;
+		$my_sec = new OrSec(false);
+		//$caption = 'ทดสอบ Caption';
+		$caption = $my_sec->OP_[title]->get();
+		debug_mode(__FILE__ , __LINE__ , $my_sec->OP_[title]->get() , 'Title');
+		if($title == '')
+		{
+			$title .= $my_cfg[title] . ' : ' . $caption;
+		}
+		parent :: __construct($title);
+		//$this->set_ccs_src($my_cfg[skins_path] . 'my_page.css');
+		$this->set_skin($my_cfg[skins_path] .'default.html');//รูปแบบหน้าจอปกติ
+		//$my_menu = new OrJsMenu('my_menu_utf8.inc.js' , $my_cfg[skins_path] . "xp.css");
+		//$this->set_ccs_src($my_menu->OP_[js_ccs]->get());
+		//$this->set_script_src($my_menu->OP_[js_src]->get());
+		//$my_calendar = new OrJsCalendar();
+		//$this->set_ccs_src($my_calendar->OP_[js_ccs]->get());
+		//$this->set_script_src($my_calendar->OP_[js_src]->get());
+		//$this->OP_[script_event_body]->set($my_menu->get_script_event('OnLoad'));
+		/**
+		 * คำสั่งใช้ Ajax Copy ที่ต้องการใช้งาน
+		 * $ajax = new OrAjax();
+		 * $this->set_script_src($ajax->OP_[ajax_src]->get());
+		 * $this->set_script($ajax->require_tooltip());
+		 * $this->set_ccs_src($ajax->require_tooltip_css());
+		 */
+		$this->set_title( $my_cfg[title]);
+                $this->set_caption($caption);
+                $link_logout = '<a href="welcome.php?val_controls[logout]=logout" >ออกจากระบบ</a>';
+                $this->set_login( $my_sec->get_user_text() . '</b> [ <u>' . $my_sec->OP_[user]->get() . '</u> ]' . $link_logout);
+!!!128227.php!!!	set_skin_ccs(inout file_name : string) : null
+		global $my_cfg;
+		$this->set_ccs_src($my_cfg[skins_path].$file_name);
+		return null;
+!!!128355.php!!!	set_caption(inout tag : string) : null
+		$this->skin->set_skin_tag('my_caption' , $tag);
+		$this->caption = $tag;
+		return null;
+!!!128483.php!!!	set_title(inout tag : string) : null
+		$this->skin->set_skin_tag('my_title' , $tag);
+		$this->caption = $tag;
+		return null;
+!!!128611.php!!!	set_form(inout tag : string) : null
+		$this->skin->set_skin_tag('my_form' , $tag);
+		return null;
+!!!128739.php!!!	set_login(inout tag : string) : null
+		$this->skin->set_skin_tag('my_login' , $tag);
+		return null;
+!!!128867.php!!!	set_leading(inout tag : string) : null
+		$this->skin->set_skin_tag('my_leading' , $tag);
+		return null;
+!!!128995.php!!!	set_subpage(inout url : string, inout width :  = '100%', inout height :  = '99%') : null
+		$tag = '<iframe id="frm_sub" name="frm_sub" style="margin:0px;padding:0px" frameborder="0" height="' . $height . '" width="' . $width . '" scrolling="auto" src="' . $url . '" > Or!Frame</iframe>';
+		$this->skin->set_skin_tag('my_subform' , $tag);
+		return null;
+!!!129123.php!!!	set_status(inout tag : string) : null
+		global $my_cfg;
+		if($tag != '')
+		{
+			$icon = '<img src="skins/default/image/button/info.png" title=" สถานะ : ' . $tag . '">';
+			$this->skin->set_skin_tag('my_status' , $icon );
+		}
+		return null;
+!!!129251.php!!!	set_filter_msg(inout tag : string) : null
+		global $my_cfg;
+		if($tag != '')
+		{
+			/*$icon = '<img src="skins/default/image/button/filter_msg.png" title=" เงื่อนไข : ' . $tag . '">';
+			$this->skin->set_skin_tag('my_filter_msg' , $icon );*/
+			$this->set_caption($this->caption .  ' [ ' . $tag . ' ]');
+		}
+		return null;
+!!!129379.php!!!	set_my_message(inout tag : string) : null
+		global $my_cfg;
+		if($tag != '')
+		{
+			$icon = '<img src="skins/default/image/button/message.png" title=" ข้อมูล : ' . $tag . '">';
+			$this->skin->set_skin_tag('my_message' , $icon );
+		}
+		return null;
+!!!129507.php!!!	set_footer(inout tag : string) : null
+		global $my_cfg;
+		$skin_footer = new OrSkin($my_cfg[skins_path]."my_footer.html");
+		$skin_footer->set_skin_tag('my_footer' ,$tag);
+		$this->skin->set_skin_tag('my_footer' , $skin_footer->get_tag());
+		return null;
+!!!129635.php!!!	get_frame(inout page_url : string) : string
+		return $my_value = '<iframe name="frm_page" frameborder="0" height="100%" width="100%" scrolling="auto" src="' . $page_url . '" > Or!Frame</iframe>';
+!!!129763.php!!!	get_skins_path(inout file_name : string) : string
+		global $my_cfg;
+		$my_value = $my_cfg[skins_path] . $file_name;
+		return $my_value;
+!!!129891.php!!!	get_my_db() : object
+		global $my_cfg;
+		$my_db = new OrMysql($my_cfg[db]);
+		return $my_db;
+!!!130019.php!!!	get_text(inout file_name : string) : string
+		return $my_value = file($file_name);
+!!!130147.php!!!	get_button_filter(inout cmd_filter : string = '') : string
+		echo 'ยกเลิกคำสั่ง get_button_filter ใน my_page';
+		global $my_cfg;
+		$btn_filter=new OrButton('btn_filter','val_msg[btn_filter]');
+		$btn_filter->OP_[class_name]->set("toolbar");
+		$btn_filter->OP_[title]->set("ค้นหา");
+		$btn_filter->OP_[value]->set("Filter");
+		$btn_filter->OP_[image_source]->set($my_cfg[skins_path] . 'image/button/filter.png');
+		$my_tag = $btn_filter->get_tag();
+		
+		$btn_query=new OrButton('btn_query','val_msg[btn_query]');
+		$btn_query->OP_[class_name]->set("toolbar");
+		$btn_query->OP_[title]->set("ตั้งคำถาม");
+		$btn_query->OP_[value]->set("Query");
+		$btn_query->OP_[image_source]->set($my_cfg[skins_path] . 'image/button/query.png');
+		$my_tag .= $btn_query->get_tag();
+		
+		if($cmd_filter != '')
+		{
+			$btn_filter->OP_[title]->set("ยกเลิก ค้นหา");
+			$btn_filter->OP_[value]->set("No Filter");
+			$btn_filter->OP_[image_source]->set($my_cfg[skins_path] . 'image/button/no_filter.png');
+			$my_tag .= $btn_filter->get_tag();
+		}
+		
+		return $my_tag;
+!!!130275.php!!!	get_filter(inout str_filter : string) : string
+		/*ชุดคำสั่งตรวจสอบ รูปแบบการคันหาข้อมูล กรณีใส่ ' ' หมายถึงค้นหาอย่างกำหนดตามเงื่อนไขในเครื่องหมาย */
+		/*แต่ถ้าไม่กำหนดมาให้ค้นหา บ้างส่วนของข้อมูลอย่างอัตโนมัติ สุชาติ บุญหชัยรัตน์ 23/8/2547 */
+		/*ยกเลิกคำสั่งนี้ เพราะได้รวมความสามารถไปไว้ที่ OrSql แทน*/
+		echo "<b>ยกเลิกการใช้คำสั่งนี้แล้ว กรุณาแจ้งผู้ดูแลระบบ !</b> ".__FILE__." | ".__LINE__ ."<br>";
+		return $str_filter;
+!!!130403.php!!!	show() : null
+		//$this->set_body($this->skin->get_tag());
+		parent::show();
+		return null;

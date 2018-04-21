@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title><!--Or_Skin[title]--></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<!--Or_Skin[meta]-->
+<!--Or_Skin[ccs_src]-->
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../lib/dojo/dijit/themes/tundra/tundra.css" />
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../lib/dojo/dojo/resources/dojo.css" />
+<style type="text/css">
+    body, html { font-family:helvetica,arial,sans-serif; font-size:90%; }
+    html, body { width: 100%; height: 100%; margin: 0; }
+<!--Or_Skin[style]-->
+</style>
+<script type="text/javascript" src="../../lib/dojo/dojo/dojo.js" charset="utf-8" djconfig="parseOnLoad: true"></script>
+<!--Or_Skin[script_src]-->
+<script language="JavaScript">
+    <!--
+    dojo.require("dijit.layout.BorderContainer");
+    dojo.require("dijit.layout.TabContainer");
+    dojo.require("dijit.layout.AccordionContainer");
+    dojo.require("dijit.layout.ContentPane");
+    //-->
+<!--Or_Skin[script]-->
+</script>
+</head>
+<body class="tundra">
+    <div dojoType="dijit.layout.BorderContainer" style="width: 100%; height: 100%">
+        <div dojoType="dijit.layout.ContentPane" region="top">
+            หัวข้อเรื่อง + ข้อมูลเกี่ยวกับผู้ใช้ระบบ
+        </div>
+        <div dojoType="dijit.layout.ContentPane" region="leading">
+            รายการที่เกี่ยวข้อง
+        </div>
+        <div dojoType="dijit.layout.ContentPane" region="center">
+            <iframe src ="http://www.google.co.th/" width="100%" height="100%" frameborder="0" >
+                <p>Your browser does not support iframes.</p>
+            </iframe>
+            <!--Or_Skin[body]-->
+        </div>
+        <div dojoType="dijit.layout.ContentPane" region="bottom">
+            รายละเอียดอื่นๆ
+        </div>
+    </div>
+</body>
+</html>

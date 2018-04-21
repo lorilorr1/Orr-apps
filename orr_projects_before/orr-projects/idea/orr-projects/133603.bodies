@@ -1,0 +1,6 @@
+class OrJsMenu
+!!!159075.php!!!	OrJsMenu(inout jsdomenu_inc : string, inout ccs_path : string = './Or!Lib/jsDOMenu/themes/office_xp/office_xp.css')
+		$this->OrJs();
+		$this->OP_[js_ccs]->set(array($ccs_path));
+		$this->OP_[js_src]->set(array('./Or!Lib/jsDOMenu/jsdomenu.js' , './Or!Lib/jsDOMenu/jsdomenubar.js' , $jsdomenu_inc));
+		$this->OP_[js_function]->set("initjsDOMenu()");

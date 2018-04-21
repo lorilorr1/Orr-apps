@@ -1,0 +1,793 @@
+format 74
+"dojo" // orr_lib::dojo
+  revision 1
+  modified_by 99 "orr"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default show_stereotype_properties default
+  
+  classview 128739 "dojo"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 129251 "OrDojoForm"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment " 
+To change this template, choose Tools | Templates
+and open the template in the editor.
+
+
+Description of OrDojoForm
+
+@author orr
+"
+      classrelation 130275 // <generalisation>
+	relation 130275 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 130275 // <generalisation>
+	  b parent class_ref 129635 // OrForm
+      end
+
+      operation 149091 "__construct"
+	package explicit_return_type ""
+	nparams 2
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "\"\""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 149219 "get_tag"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 130915 "OrDojoButton"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment " 
+To change this template, choose Tools | Templates
+and open the template in the editor.
+
+
+Description of OrDojoButton
+
+@author orr
+"
+      classrelation 130019 // <generalisation>
+	relation 130019 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 130019 // <generalisation>
+	  b parent class_ref 131043 // OrButton
+      end
+
+      operation 147427 "__construct"
+	package explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "idx" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 147555 "get_tag"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "value" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 131171 "OrDojoChart"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+my_page.cls.php
+
+PHP versions 5
+
+LICENSE: This source file is subject to version 3.0 of the PHP license
+that is available through the world-wide-web at the following URI:
+http://www.php.net/license/3_0.txt.  If you did not receive a copy of
+the PHP License and are unable to obtain it through the web, please
+send a note to license@php.net so we can mail you a copy immediately.
+
+@package    Or!Lib
+@author     Suchart Bunhachirat <suchart.orr@gmail.com>
+@copyright  1997-2005 The PHP Group
+@license    http://www.php.net/license/3_0.txt  PHP License 3.0
+@version    2554
+
+
+Class สำหรับสร้างหน้าจอกราฟ
+@package    Or!Lib
+@author     Suchart Bunhachirat <suchart.orr@gmail.com>
+@copyright  1997-2005 The PHP Group
+@license    http://www.php.net/license/3_0.txt  PHP License 3.0
+@version    2554
+"
+      classrelation 130147 // <generalisation>
+	relation 130147 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 130147 // <generalisation>
+	  b parent class_ref 128227 // OrHtml
+      end
+
+      attribute 133347 "dojo_require_script"
+	private explicit_type ""
+	init_value " array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 133475 "chart_series"
+	private explicit_type ""
+	init_value " array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 133603 "axis_labels"
+	private explicit_type ""
+	init_value " array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 147683 "__construct"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "title" explicit_type "string"
+	    defaultvalue "''"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+กำหนดค่าที่ต้องการ
+@param ${t0} ${p0} ชื่อไตเติลของกราฟ
+
+"
+      end
+
+      operation 147811 "set_dojo_require"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "tag"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+set_dojo_require : กำหนดคำสั่ง dojo.require
+@param ${t0} ประโยคคำสั่ง
+@return ${type}
+"
+      end
+
+      operation 147939 "dojo_require"
+	package explicit_return_type "null"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+set_dojo_require : กำหนดคำสั่ง dojo.require
+@param null
+@return ${type}
+"
+      end
+
+      operation 148067 "get_dojo_require"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 148195 "set_chart_series"
+	package explicit_return_type "null"
+	nparams 2
+	  param inout name "name" explicit_type "$name"
+	  param inout name "data" explicit_type "$data"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+set_chart_series : กำหนดข้อมูลในกราฟ
+@param ${t0} ชื่อของเส้นกราฟ ตัวอย่างเช่น ยอดขายเดือน ม.ค. 54
+@param ${t1} ข้อมูลของกราฟ ตัวอย่างเช่น [1000,2000,3000,4000]
+@return ${type}
+"
+      end
+
+      operation 148323 "get_chart_series"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 148451 "set_axis_lable"
+	package explicit_return_type "null"
+	nparams 2
+	  param inout name "value" explicit_type "$value"
+	  param inout name "text" explicit_type "$text"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+set_axis_lable : กำหนดข้อมูลในกราฟ
+@param ${t0} ค่าของข้อมูล
+@param ${t1} ตัวอักษรที่ให้แสดงแทน
+@return ${type}
+"
+      end
+
+      operation 148579 "set_axis_thmonth"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "format" explicit_type "$format"
+	    defaultvalue "1"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+set_axis_lable : ด้วยชื่อเดือนภาษาไทย
+@param ${t0} รูปแบบ 0 = แบบเต็ม , 1 = แบบย่อ
+@return ${type}
+"
+      end
+
+      operation 148707 "set_axis_thday"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "format" explicit_type "$format"
+	    defaultvalue "1"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+set_axis_lable : ด้วยชื่อวันภาษาไทย
+@param ${t0} รูปแบบ 0 = แบบเต็ม , 1 = แบบย่อ
+@return ${type}
+"
+      end
+
+      operation 148835 "get_axis_lable"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 148963 "show"
+	package explicit_return_type "null"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+show : แสดงหน้ากราฟ
+@param null
+@return ${type}
+"
+      end
+    end
+
+    class 131299 "OrDojoSelectbox"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment " 
+To change this template, choose Tools | Templates
+and open the template in the editor.
+
+
+Description of OrDojoSelectbox
+
+@author orr
+"
+      classrelation 130403 // <generalisation>
+	relation 130403 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 130403 // <generalisation>
+	  b parent class_ref 131427 // OrSelectbox
+      end
+
+      operation 149347 "__construct"
+	package explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "idx" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 149475 "get_tag"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "value" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 131555 "OrDojoTextarea"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment " 
+To change this template, choose Tools | Templates
+and open the template in the editor.
+
+
+Description of OrDojoTextares
+
+@author orr
+"
+      classrelation 130531 // <generalisation>
+	relation 130531 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 130531 // <generalisation>
+	  b parent class_ref 131683 // OrTextarea
+      end
+
+      operation 149603 "__construct"
+	package explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "idx" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 149731 "get_tag"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "value" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 131811 "OrDojoTextbox"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+To change this template, choose Tools | Templates
+and open the template in the editor.
+
+
+Description of OrDojoTextbox
+ตรวจสอบรูปแบบการคีย์ข้อมูลตาม regExp
+@author orr
+"
+      classrelation 130659 // <generalisation>
+	relation 130659 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 130659 // <generalisation>
+	  b parent class_ref 131939 // OrTextbox
+      end
+
+      operation 149859 "__construct"
+	package explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "idx" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 149987 "get_tag"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "value" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 132067 "OrDojoTextSearch"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment " * ****************************************************************
+@version php5
+@author Suchart Bunhachirat
+@copyright Copyright &copy; 2007, orr
+Class ช่องใส่ข้อมูลที่มีปุ่มกดค้นหาข้อมูล เป็นหน้าต่างใหม่
+***************************************************************** "
+      classrelation 130787 // <generalisation>
+	relation 130787 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 130787 // <generalisation>
+	  b parent class_ref 131811 // OrDojoTextbox
+      end
+
+      operation 150115 "__construct"
+	package explicit_return_type "null"
+	nparams 3
+	  param inout name "id" explicit_type "string"
+	  param inout name "name" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "idx" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+__construct : วิธีการทำงานเริ่มต้นของคลาส
+@param ${t0}
+@return ${type}
+"
+      end
+
+      operation 150243 "get_tag"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "value" explicit_type "string"
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+__construct : วิธีการทำงานเริ่มต้นของคลาส
+@param ${t0}
+@return ${type}
+"
+      end
+    end
+  end
+
+  deploymentview 128483 "dojo"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+    artifact 130659 "OrDojoButton"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+?>
+"
+      associated_classes
+	class_ref 130915 // OrDojoButton
+      end
+    end
+
+    artifact 130787 "OrDojoChart"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+?>
+"
+      associated_classes
+	class_ref 131171 // OrDojoChart
+      end
+    end
+
+    artifact 130915 "OrDojoForm"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+?>
+"
+      associated_classes
+	class_ref 129251 // OrDojoForm
+      end
+    end
+
+    artifact 131043 "OrDojoSelectbox"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+?>
+"
+      associated_classes
+	class_ref 131299 // OrDojoSelectbox
+      end
+    end
+
+    artifact 131171 "OrDojoTextarea"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+?>
+"
+      associated_classes
+	class_ref 131555 // OrDojoTextarea
+      end
+    end
+
+    artifact 131299 "OrDojoTextbox"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+?>
+"
+      associated_classes
+	class_ref 131811 // OrDojoTextbox
+      end
+    end
+
+    artifact 131427 "OrDojoTextSearch"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+?>
+"
+      associated_classes
+	class_ref 132067 // OrDojoTextSearch
+      end
+    end
+  end
+end

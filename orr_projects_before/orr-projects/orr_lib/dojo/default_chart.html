@@ -1,0 +1,86 @@
+<!--
+หน้าเพจของการสร้างกราฟ
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title><!--Or_Skin[title]--></title>
+        <LINK REL="stylesheet" TYPE="text/css" HREF="../../lib/dojo/dijit/themes/claro/claro.css" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../../lib/dojo/dojo/dojo.js" charset="utf-8" data-dojo-config="isDebug: true,parseOnLoad: true"></script>
+        <script language="JavaScript">
+            // Require the basic 2d chart resource: Chart2D
+            //dojo.require("dojox.charting.Chart2D");
+            // Retrieve the Legend, Tooltip, and Magnify classes
+            //dojo.require("dojox.charting.widget.Legend");
+            //dojo.require("dojox.charting.action2d.Tooltip");
+            //dojo.require("dojox.charting.action2d.Magnify");
+
+            // Require the theme of our choosing
+            //"Claro", new in Dojo 1.6, will be used
+            //dojo.require("dojox.charting.themes.Claro");
+
+            <!--Or_Skin[dojo_require]-->
+
+            // Define the data
+            //var chartData1 = [10000,9200,11811,12000,7662,13887,14200,12222,12000,10009,11288,12099];
+            //var chartData2 = [8000,10000,11900,10009,12300,9999,8700,11200,12569,13509,13989,13001];
+            //var chartData3 = [3000,12000,17733,9876,12783,12899,13888,13277,14299,12345,12345,15763].reverse();
+            <!--Or_Skin[dojo_chart_data]-->
+
+            // When the DOM is ready and resources are loaded...
+            dojo.ready(function() {
+
+                // Create the chart within it's "holding" node
+                var chart = new dojox.charting.Chart2D("chartNode");
+
+                // Set the theme
+                chart.setTheme(dojox.charting.themes.Claro);
+                // Add the only/default plot
+                chart.addPlot("default", {
+                    type: "Lines",
+                    markers: true
+                });
+
+                // Add axes
+                /*chart.addAxis("x",{
+                    labels: [{value: 1, text: "Jan"}, {value: 2, text: "Feb"},
+                        {value: 3, text: "Mar"}, {value: 4, text: "Apr"},
+                        {value: 5, text: "May"}, {value: 6, text: "Jun"},
+                        {value: 7, text: "Jul"}, {value: 8, text: "Aug"},
+                        {value: 9, text: "Sep"}, {value: 10, text: "Oct"},
+                        {value: 11, text: "Nov"}, {value: 12, text: "Dec"},]});*/
+                //chart.addAxis("x",{});
+                <!--Or_Skin[chart_axis_x]-->
+                chart.addAxis("y", { vertical: true, fixLower: "major", fixUpper: "major"});//รอปรับเพิ่มเติม
+
+                // Add the series of data
+                <!--Or_Skin[chart_series]-->
+                //chart.addSeries(" ยอดประจำเดือน - 2552",chartData1);
+                //chart.addSeries(" ยอดประจำเดือน - 2553",chartData2);
+                //chart.addSeries(" ยอดประจำเดือน - 2554",chartData3);
+
+                // Create the tooltip
+                var tip = new dojox.charting.action2d.Tooltip(chart,"default");
+
+                // Create the magnifier
+                var mag = new dojox.charting.action2d.Magnify(chart,"default");
+
+                // Render the chart!
+                chart.render();
+                // Create the legend
+                var legend = new dojox.charting.widget.Legend({ chart: chart }, "legend");
+
+            });
+
+        </script>
+    </head>
+    <body class="claro">
+        <h1><!--Or_Skin[title]--></h1>
+
+        <!-- create the chart -->
+        <div id="chartNode" style="width:1024px;height:400px;"></div>
+        <!-- create the DOM node for the legend -->
+        <div id="legend"></div>
+    </body>
+</html>

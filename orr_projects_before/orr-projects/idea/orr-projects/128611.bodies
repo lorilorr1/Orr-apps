@@ -1,0 +1,7 @@
+class OrMenu
+!!!130915.php!!!	__construct()
+  	parent::__construct();
+  	$dojo_request = 'dojo.require("dijit.form.Button");dojo.require("dijit.Menu");';
+  	$this->OP_[js_function]->set($dojo_request);
+!!!131043.php!!!	set_item()
+

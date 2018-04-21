@@ -1,0 +1,39 @@
+class OrSkin
+!!!161123.php!!!	OrSkin(inout skin_src : string) : null
+   	
+   	$this->property('skin_src','string',$skin_src);
+	$this->property('skin_tag','array');
+	
+!!!161251.php!!!	set_skin_tag(inout name : string, inout tag : mix) : null
+   	if(is_array($tag))
+   	{
+   		foreach($tag as $key=>$val)
+   		{
+   			$skin_tag .= $val;
+   		}
+	}else{
+			$skin_tag = $tag;
+	}
+		
+	$this->OP_[skin_tag]->set(array_merge($this->OP_[skin_tag]->get() , array($name => $skin_tag) ) );
+	return null;
+!!!161379.php!!!	get_tag() : null
+   	//echo "<b>debug</b> ".__FILE__." | ".__LINE__." | skin_src =".$this->OP_[skin_src]->get()."<br>";
+   	if(!fopen($this->OP_[skin_src]->get() , "r"))die('failed to open skin: No such file or directory in ' . $this->OP_[skin_src]->get());
+	$fp = fopen($this->OP_[skin_src]->get() , "r");
+	$skins = $this->OP_[skin_tag]->get();
+	$skin_tag = array();
+	while(!feof($fp))
+	{
+		$line = fgets($fp);
+		foreach($skins as $key=>$val)
+		{
+			$skin_key ='/<!--Or_Skin\[' . $key . '\]-->/';
+			//$line = ereg_replace($skin_key,$val,$line);
+                        $line = preg_replace($skin_key,$val,$line);
+		}
+		$skin_tag[] = $line;
+	}
+	fclose($fp);
+	
+	return $skin_tag;

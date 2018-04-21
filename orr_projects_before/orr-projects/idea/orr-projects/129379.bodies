@@ -1,0 +1,4 @@
+class OrDbFormListTotalFunction
+!!!136163.php!!!	__construct(inout field_name : , inout field_function :  = 'SUM')
+		$this->field_name = $field_name;
+		$this->field_function = $field_function;

@@ -1,0 +1,32 @@
+class OrTextarea
+!!!163939.php!!!	__construct(inout id : , inout name :  = null, inout idx :  = null)
+        parent:: __construct($id, $name , $idx );
+        //$this->OrControls($id, $name, $idx);
+        $this->property('rows', 'integer', 5);
+        $this->property('cols', 'integer', 50);
+        
+        $this->OP_[db_type]->set('text');
+!!!164067.php!!!	set_rowcol(inout rows : , inout cols : )
+	  $this->OP_[rows]->set($rows);
+	  $this->OP_[cols]->set($cols);
+	  return null;
+!!!164195.php!!!	get_tag(inout value :  = null)
+	  if($value != null)$this->OP_[value]->set($value);
+	  if($this->OP_[auto_post]->get())$this->auto_post();
+	  $id = $this->get_id_tag();
+	  $value = $this->OP_[value]->get();
+	  $rows = 'rows="' . $this->OP_[rows]->get() . '"';
+	  $cols = 'cols="' . $this->OP_[cols]->get() .  '"';
+	
+	  if($value == "")$value = $this->OP_[post_value]->get();
+	  if($value == "")$value = $this->OP_[default_value]->get();
+	 
+	  if($this->OP_[class_name]->get() == null)
+	  {
+		  $class = null;
+	  }else{
+		  $class = 'class="'.$this->OP_[class_name]->get().'"';
+	  }
+	  $this->clip_value($value);
+	  $title = 'title="' . $this->OP_[title]->get() . '"';
+	  return $tag= "<textarea $id $class $rows $cols $title>".$value."</textarea>\n";

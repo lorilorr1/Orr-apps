@@ -1,0 +1,8 @@
+class OrTextCalendar2
+!!!164963.php!!!	__construct(inout id : , inout name :  = null, inout idx :  = null)
+		parent:: __construct($id,$name , $idx );
+ 		$this->calendar2 =  new OrTextCalendar($id . '_II', "val_msg[" . $id . "_II]" , $idx );
+		$this->calendar2->auto_post(true);
+!!!165091.php!!!	get_tag() : string
+		$my_value = parent::get_tag() . ' - ' . $this->calendar2->get_tag();
+		return $my_value;

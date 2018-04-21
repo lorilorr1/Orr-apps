@@ -1,0 +1,24 @@
+class OrClip
+!!!165219.php!!!	__construct(inout name : string, inout type : string = 'string')
+		global $my_clip;
+		/*เริ่ม กำหนดคุณสมบัติของ Class*/
+		$this->property('name' , 'string' , $name);
+		$this->property('value' , $type);
+		/*จบ กำหนดคุณสมบัติของ Class*/
+		
+		$this->use_this($name);
+!!!165347.php!!!	use_this(inout name : string) : null
+		global $my_clip;
+		$this->OP_[name]->set($name);
+		$this->OP_[value]->set($my_clip[$name]);
+		return null;
+!!!165475.php!!!	update_this(inout value : string) : null
+		global $my_clip;
+		$this->OP_[value]->set($value);
+		$my_clip[$this->OP_[name]->get()]=$value;
+		return null;
+!!!165603.php!!!	delete_this() : null
+		global $my_clip;
+		$this->OP_[value]->set(null);
+		$my_clip[$this->OP_[name]->get()]=null;
+		return null;

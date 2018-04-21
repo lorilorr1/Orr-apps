@@ -1,0 +1,20 @@
+class OrContent
+!!!152419.php!!!	__construct(inout text :  = '')
+        $this->property('text', 'string', $text);
+!!!152547.php!!!	set_body(inout tag : $tag) : null
+        if (!is_array($tag)) {
+            $tag = array($tag);
+        }
+        $this->body = array_merge($this->body, $tag);
+        return null;
+!!!152675.php!!!	get_body() : null
+        foreach ($this->body as $line) {
+            $my_value .= $line;
+        }
+        return $my_value;
+!!!152803.php!!!	show()
+        header('Content-type: text/plain');
+        if($this->OP_[text]->get() != ''){
+            print($this->OP_[text]->get());
+        }
+        print($this->get_body());

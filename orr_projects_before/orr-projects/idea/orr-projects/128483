@@ -1,0 +1,3257 @@
+format 74
+"db" // orr_lib::db
+  revision 1
+  modified_by 99 "orr"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default show_stereotype_properties default
+  
+  deploymentview 128355 "db"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+    artifact 128995 "OrDb"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+ // end of OrDb
+?>
+"
+      associated_classes
+	class_ref 128867 // OrDb
+      end
+    end
+
+    artifact 129123 "OrDbForm"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+?>
+"
+      associated_classes
+	class_ref 129123 // OrDbForm
+      end
+    end
+
+    artifact 129251 "OrDbFormList"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+?>
+"
+      associated_classes
+	class_ref 129379 // OrDbFormListTotalFunction
+	class_ref 129507 // OrDbFormList
+      end
+    end
+
+    artifact 129379 "OrDbFrmCrossTab"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+?>
+"
+      associated_classes
+	class_ref 129763 // OrDbFrmCrossTab
+      end
+    end
+
+    artifact 129507 "OrDbFrmForm"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+?>
+"
+      associated_classes
+	class_ref 130019 // OrDbFrmForm
+      end
+    end
+
+    artifact 129635 "OrDbFrmList"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+?>
+"
+      associated_classes
+	class_ref 129891 // OrDbFrmList
+      end
+    end
+
+    artifact 129763 "OrDbFromAjax"
+      stereotype "source"
+      php_src "<?php
+
+/* * ****************************************************************
+ * @version php5
+ * @author Suchart Bunhachirat
+ * @copyright Copyright 2011
+ * คลาสเพื่อสร้างฟอร์มบันทึกแก้ไขข้อมูล ที่ทำงานร่ามกับ Dojo เพื่อส่งและรับข้อมูลแบบ Ajax ได้
+ * ตัวอย่างการเขียนเพื่อแสดงหน้าจอข้อมูลแบบรายงาน
+ * ***************************************************************** */
+?>
+"
+      associated_classes
+      end
+    end
+
+    artifact 129891 "OrDbPopupList"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+?>
+"
+      associated_classes
+	class_ref 130147 // OrDbPopupList
+      end
+    end
+
+    artifact 130019 "OrMysql"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+?>
+"
+      associated_classes
+	class_ref 130275 // OrMysql
+      end
+    end
+
+    artifact 130147 "OrMySqlThDate"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+ ?>
+"
+      associated_classes
+	class_ref 130403 // OrMysqlThDate
+      end
+    end
+
+    artifact 130275 "OrMySqlThDatetime"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+ ?>
+"
+      associated_classes
+	class_ref 130531 // OrMySqlThDatetime
+      end
+    end
+
+    artifact 130403 "OrSql"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+ ?>
+"
+      associated_classes
+	class_ref 130659 // OrSql
+      end
+    end
+
+    artifact 130531 "OrSqlCrossTab"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+?>
+"
+      associated_classes
+	class_ref 130787 // OrSqlCrossTab
+      end
+    end
+  end
+
+  classview 128483 "db"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 128867 "OrDb"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrDb.php - Copyright 
+@author Suchart Bunhachirat
+@version php4 - 5
+************************************************************************
+
+class OrDb
+Class เริ่มของระบบฐานข้อมูล
+property('database','string',$database);
+property('host','string',$host);
+property('user','string',$user);
+property('password','string',$password);
+property('sql','string');
+property('db_error','array');
+property('total_error','integer');"
+      classrelation 128611 // <generalisation>
+	relation 128611 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128611 // <generalisation>
+	  b parent class_ref 128995 // OrObj
+      end
+
+      attribute 128355 "record"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment " Aggregations: 
+ Compositions: 
+ Attributes: **
+
+@access ${visibility}"
+      end
+
+      attribute 128483 "result"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Object ของ connection
+
+@access ${visibility}"
+      end
+
+      attribute 128611 "conn"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "@access ${visibility}"
+      end
+
+      attribute 128739 "config"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "config จาก config_lib.inc
+
+@access ${visibility}"
+      end
+
+      operation 131299 "OrDb"
+	public explicit_return_type ""
+	nparams 4
+	  param inout name "database" explicit_type "string"
+	  param inout name "host" explicit_type "string"
+	    defaultvalue "null "
+	  param inout name "user" explicit_type "string"
+	    defaultvalue "null "
+	  param inout name "password" explicit_type "OrProperty"
+	    defaultvalue "null "
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "@param ${t0} database Database name
+@param ${t1} host Host name
+@param ${t2} user User name
+@param ${t3} password    
+@return 
+@access ${visibility}"
+      end
+
+      operation 131427 "set_error"
+	private explicit_return_type "null"
+	nparams 1
+	  param inout name "value" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function OrDb
+
+เก็บการเกิด Error Message
+
+@param ${t0} ${p0} Error Message
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 131555 "show_error"
+	public explicit_return_type "null"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function set_error
+
+แสดงรายงาน Error Message
+
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 131683 "is_error"
+	public explicit_return_type "boolean"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function show_error
+
+Retrue True if Error
+
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 131811 "reset_error"
+	public explicit_return_type "null"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function is_error
+
+
+@return ${type}
+@access ${visibility}"
+      end
+    end
+
+    class 129123 "OrDbForm"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrDbForm.php - Copyright 
+@author Suchart Bunhachirat
+@version php4 - 5
+************************************************************************
+
+class OrDbForm
+"
+      classrelation 128739 // <generalisation>
+	relation 128739 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128739 // <generalisation>
+	  b parent class_ref 129251 // OrDojoForm
+      end
+
+      attribute 128867 "db"
+	public explicit_type ""
+	init_value " null"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Object ฐานข้อมูล
+@access ${visibility}"
+      end
+
+      attribute 128995 "db_table"
+	public explicit_type ""
+	init_value " \"\""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "ชื่อ Table ที่ต้องการเพิ่ม แก้ไข ลบ ข้อมูล
+@access ${visibility}"
+      end
+
+      attribute 129123 "db_key"
+	public explicit_type ""
+	init_value " array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "ชื่อ kay field ของ Table ที่ต้องการเพิ่ม แก้ไข ลบ ข้อมูล
+@access ${visibility}"
+      end
+
+      operation 131939 "__construct"
+	package explicit_return_type ""
+	nparams 2
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "\"\""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 132067 "set_db"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "obj" explicit_type "object"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ตรวจสอบ กำหนด Object ฐานข้อมูล 
+@param ${t0} obj Object ฐานข้อมูล
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 132195 "fetch_record"
+	public explicit_return_type "null"
+	nparams 4
+	  param inout name "sql" explicit_type "string"
+	  param inout name "obj_filter" explicit_type "string"
+	    defaultvalue "''"
+	  param inout name "cmd_msg" explicit_type "string"
+	    defaultvalue "''"
+	  param inout name "reset" explicit_type "boolean"
+	    defaultvalue "false"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ดึงข้อมูลจากฐานข้อมูล 
+@param ${t0} sql คำสั่ง SQL
+@param ${t1} cmd_filter คำสั่ง Filter Record ที่ต้องการ
+@param ${t2} cmd_msg ข้อความ message ที่แสดง
+@param ${t3} reset สั่งเป็น true ถ้าต้องยกเลิกคำสั่งเดิมทั้งหมด
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 132323 "new_record"
+	private explicit_return_type "null"
+	nparams 1
+	  param inout name "auto_post" explicit_type "string"
+	    defaultvalue "false"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "เตรียมฟอร์มเพิ่มรายการใหม่
+@param ${t0} sql คำสั่ง SQL
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 132451 "reload"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "sql" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "Reload ข้อมูลตามหมายเลข record"
+      end
+
+      operation 132579 "next_rec"
+	private explicit_return_type "null"
+	nparams 1
+	  param inout name "sql" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "Next เลื่อนไปรายการถัดไป
+@param ${t0} sql คำสั่ง SQL
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 132707 "prev_rec"
+	private explicit_return_type "null"
+	nparams 1
+	  param inout name "sql" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "Prev เลื่อนไปรายการก่อนหน้า
+@param ${t0} sql คำสั่ง SQL
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 132835 "last_rec"
+	private explicit_return_type "null"
+	nparams 1
+	  param inout name "sql" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "Last เลื่อนไปรายการสุดท้าย
+@param ${t0} sql คำสั่ง SQL
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 132963 "first_rec"
+	private explicit_return_type "null"
+	nparams 1
+	  param inout name "sql" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "First เลื่อนไปรายการแรก
+@param ${t0} sql คำสั่ง SQL
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 133091 "update_controls"
+	package explicit_return_type ""
+	nparams 2
+	  param inout name "sql" explicit_type ""
+	  param inout name "limit" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ดึงข้อมูลจากฐานข้อมูล แสดงที่ Control value"
+      end
+
+      operation 133219 "set_db_key"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "key_name" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนด Kay field ที่ใช้ Update หรือ Delete"
+      end
+
+      operation 133347 "get_sec_user"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 133475 "add_record"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "จัดการบันทึกข้อมูลเพิ่มใน ฐานข้อมูล ต้องกำหนด table ที่ต้องการ"
+      end
+
+      operation 133603 "del_record"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "จัดการลบข้อมูลในฐานข้อมูล"
+      end
+
+      operation 133731 "is_data_field"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 133859 "save_record"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 133987 "get_where_key"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 134115 "set_db_table"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "value" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนด table ที่ใช้ในการ add update หรือ Deleteข้อมูล"
+      end
+
+      operation 134243 "set_class_name"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "id" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนด Class Name ให้ Control ตามเงื่อนไขข้อมูล
+@param ${t0} id Control
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 134371 "get_sql_value"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "id" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "function get_nav_tag(){
+return $this->OP_[nav]->get_tag().\" จำนวน \".$this->OP_[total_rec]->get().\" รายการ\";
+}
+ตรวจสอบค่าของ Control ตาม type เพื่อแปลงเป็นข้อมูลให้ Mysql"
+      end
+
+      operation 134499 "get_body_tag"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "สร้าง Tag ส่วนแสดงข้อมูล
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 134627 "get_navigator_tag"
+	public explicit_return_type "string"
+	nparams 1
+	  param inout name "skin_file" explicit_type "string"
+	    defaultvalue "'Or!Lib/db/form_navigator.html'"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คืนค่า tag แสดง navigator button
+@param ${t0} skin_file ที่อยู่ของ Skin file
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 134755 "get_status_tag"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คืนค่า tag แสดง status ของรายการ
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 134883 "get_total_row"
+	public explicit_return_type "string"
+	nparams 1
+	  param inout name "sql_count_row" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คืนค่า จำนวนรายการทั้งหมด
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 135011 "OE_on_load"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "EV_" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "Event on class "
+      end
+
+      operation 135139 "OE_new_record"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "EV_" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 135267 "OE_before_add"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "EV_" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 135395 "OE_after_add"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "EV_" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 135523 "OE_before_save"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "EV_" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 135651 "OE_after_save"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "EV_" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 135779 "OE_before_delete"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "EV_" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 135907 "OE_after_delete"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 136035 "OE_after_error"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "EV_" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 129379 "OrDbFormListTotalFunction"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrDbForm.php - Copyright 
+@author Suchart Bunhachirat
+@version php5-2550
+***********************************************************************
+
+Class Total Function
+Use In OrDbFormList"
+      attribute 129251 "field_name"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Field Name
+@access ${visibility}"
+      end
+
+      attribute 129379 "field_function"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Field Function
+@access ${visibility}"
+      end
+
+      operation 136163 "__construct"
+	package explicit_return_type ""
+	nparams 2
+	  param inout name "field_name" explicit_type ""
+	  param inout name "field_function" explicit_type ""
+	    defaultvalue "'SUM'"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 129507 "OrDbFormList"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "Class Database Form List
+คลาส สำหรับสร้างหน้าจอแสดงข้อมูล แบบรายงาน"
+      classrelation 128867 // <generalisation>
+	relation 128867 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128867 // <generalisation>
+	  b parent class_ref 129635 // OrForm
+      end
+
+      attribute 129507 "total_format_type"
+	private explicit_type ""
+	init_value "  'currency'"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 129635 "total_format_opt"
+	private explicit_type ""
+	init_value "  2"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 129763 "db"
+	public explicit_type ""
+	init_value "  null"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Object ฐานข้อมูล
+@access ${visibility}"
+      end
+
+      attribute 129891 "total_controls"
+	public explicit_type ""
+	init_value "  array ()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Controls function
+@access ${visibility}"
+      end
+
+      attribute 130019 "tbl_list"
+	public explicit_type ""
+	init_value "  null"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "ตารางรายการข้อมูล
+@access ${visibility}"
+      end
+
+      attribute 130147 "page_data"
+	public explicit_type ""
+	init_value "  array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "ข้อมูลในตารางรายการรูปแบบ Array
+@access ${visibility}"
+      end
+
+      attribute 130275 "total_function"
+	private explicit_type ""
+	init_value "  array ()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Total Funtion
+@access ${visibility}"
+      end
+
+      attribute 130403 "filter_name"
+	private explicit_type ""
+	init_value "  array ()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "field name ที่ต้องการเปลียนชื่อ
+@access ${visibility}"
+      end
+
+      attribute 130531 "filter_compare"
+	private explicit_type ""
+	init_value "  array ()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "default compare ที่ต้องการกำหนด
+@access ${visibility}"
+      end
+
+      operation 136291 "__construct"
+	public explicit_return_type "object"
+	nparams 3
+	  param inout name "id" explicit_type ""
+	  param inout name "name" explicit_type ""
+	    defaultvalue "''"
+	  param inout name "row_per_page" explicit_type "integer"
+	    defaultvalue "10"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ดึงข้อมูลจากฐานข้อมูล 
+@param ${t2} ${p2} จำนวนรายการที่แสดงในหนึ่งหน้า
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 136419 "set_db"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "obj" explicit_type "object"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ตรวจสอบ กำหนด Object ฐานข้อมูล 
+@param ${t0} obj Object ฐานข้อมูล
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 136547 "fetch_record"
+	public explicit_return_type "null"
+	nparams 4
+	  param inout name "sql" explicit_type "string"
+	  param inout name "obj_filter" explicit_type "string"
+	    defaultvalue "''"
+	  param inout name "cmd_msg" explicit_type "string"
+	    defaultvalue "''"
+	  param inout name "reset" explicit_type "boolean"
+	    defaultvalue "false"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "fetch_record ดึงข้อมูลตามที่กำหนด
+@param ${t0} cmd_sql คำสั่ง SQL
+@param ${t1} cmd_filter คำสั่ง Filter เพื่อกรองข้อมูล 
+@param ${t2} cmd_msg ข้อความ Message สำหรับแสดง
+@param ${t3} reset สั่งเป็น true ถ้าต้องยกเลิกคำสั่งเดิมทั้งหมด
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 136675 "set_total_format"
+	public explicit_return_type "null"
+	nparams 2
+	  param inout name "type" explicit_type "string"
+	  param inout name "opt" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนด Fornat Total Value
+@param ${t0} type 
+@param ${t1} opt 
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 136803 "set_total_function"
+	public explicit_return_type "null"
+	nparams 2
+	  param inout name "field_name" explicit_type "string"
+	  param inout name "field_function" explicit_type "string"
+	    defaultvalue "'SUM'"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนด Function ส่วน Footer
+@param ${t0} id field_name
+@param ${t1} function Function ค่าเริ่มต้นเป็น SUM
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 136931 "set_total_controls"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "sql" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนด Function ส่วน Footer
+@param ${t0} id field_name
+@param ${t1} function Function ค่าเริ่มต้นเป็น SUM
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 137059 "get_list_tag"
+	public explicit_return_type "null"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "สร้างรายการข้อมูล 
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 137187 "get_navigator_tag"
+	public explicit_return_type "string"
+	nparams 1
+	  param inout name "skin_file" explicit_type ""
+	    defaultvalue "'Or!Lib/db/list_navigator.html'"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "สร้างปุ่มสำหรับเลือกรายการข้อมูล
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 137315 "set_total_page"
+	package explicit_return_type ""
+	nparams 2
+	  param inout name "count_sql" explicit_type ""
+	  param inout name "sql" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 137443 "set_filter_name"
+	public explicit_return_type "null"
+	nparams 2
+	  param inout name "id" explicit_type "string"
+	  param inout name "name" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนดคำสั่งแทน field name
+@param ${t0} ${p0}
+@param ${t1} ${p1}
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 137571 "get_filter_name"
+	public explicit_return_type "string"
+	nparams 1
+	  param inout name "id" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ค่า Field name ที่ต้องการ
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 137699 "set_filter_compare"
+	public explicit_return_type "null"
+	nparams 2
+	  param inout name "id" explicit_type "string"
+	  param inout name "default_value" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนดเงื่อนไขเริ่มต้นที่ต้องการ
+@param ${t0} ${p0}
+@param ${t1} ${p1}
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 137827 "get_filter_compare"
+	public explicit_return_type "string"
+	nparams 1
+	  param inout name "id" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ค่า Default compare ที่ต้องการ
+@param ${t0} ${p0}
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 137955 "OE_current_record"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "EV_" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "Event on class "
+      end
+
+      operation 138083 "OE_on_load"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "EV_" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 138211 "OE_on_total"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "EV_" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 138339 "__destruct"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 129763 "OrDbFrmCrossTab"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "Created on Mar 11, 2007 OrDbFormCrossTab.php
+@version php5
+@author Suchart Bunhachirat
+@copyright Copyright &copy; 2007, orr
+Form แสดงข้อมูลแบบ CrossTab"
+      classrelation 128995 // <generalisation>
+	relation 128995 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128995 // <generalisation>
+	  b parent class_ref 129891 // OrDbFrmList
+      end
+
+      attribute 130659 "cross_tab"
+	private explicit_type ""
+	init_value "  null"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 130787 "data_format_type"
+	private explicit_type ""
+	init_value "  'currency'"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 130915 "data_format_opt"
+	private explicit_type ""
+	init_value "  2"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 138467 "__construct"
+	package explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type ""
+	  param inout name "db" explicit_type ""
+	  param inout name "skin" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 138595 "set_cross_tab"
+	package explicit_return_type "null"
+	nparams 3
+	  param inout name "col_field_name" explicit_type "string"
+	  param inout name "data_field_name" explicit_type ""
+	  param inout name "data_function" explicit_type "string"
+	    defaultvalue "'SUM'"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนด Field Name ที่ต้องการใน Cross Tab
+@param ${t0} ${p0} คอลัมน์ field
+@param ${t3} $data_filed_name ชื่อ Fied ข้อมูล
+@param ${t2} ${p2} Function ที่ใช้คำนวณ
+@return ${type}"
+      end
+
+      operation 138723 "set_data_format"
+	package explicit_return_type ""
+	nparams 2
+	  param inout name "type" explicit_type ""
+	  param inout name "opt" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 138851 "set_cross_controls"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 138979 "set_row_controls"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 139107 "fetch_record"
+	package explicit_return_type ""
+	nparams 4
+	  param inout name "sql" explicit_type ""
+	  param inout name "filter" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "filter_msg" explicit_type ""
+	    defaultvalue "''"
+	  param inout name "reset" explicit_type ""
+	    defaultvalue "false"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 139235 "get_list_tag"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 139363 "OE_current_record"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "EV_" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 129891 "OrDbFrmList"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrDbFrmList.php - Copyright 
+@author Suchart Bunhachirat
+@version php4 - 5
+************************************************************************
+
+Class OrDbFrmList
+สร้างหน้าจอมาตรฐานสำหรับบันทึกแก้ไขข้อมูล"
+      classrelation 129251 // <generalisation>
+	relation 129251 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 129251 // <generalisation>
+	  b parent class_ref 129507 // OrDbFormList
+      end
+
+      attribute 131939 "control_order_by"
+	public explicit_type ""
+	init_value " null"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "@access ${visibility}"
+      end
+
+      attribute 132067 "control_filter_by"
+	public explicit_type ""
+	init_value " null"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "@access ${visibility}"
+      end
+
+      attribute 132195 "caption_fields"
+	public explicit_type ""
+	init_value " array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Caption fields
+@access ${visibility}"
+      end
+
+      attribute 132323 "filter_controls"
+	public explicit_type ""
+	init_value " array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Object ของ filter_controls ใน form
+
+@access ${visibility}"
+      end
+
+      attribute 132451 "filter_value"
+	public explicit_type ""
+	init_value " array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "filter fields
+@access ${visibility}"
+      end
+
+      attribute 132579 "filter_use"
+	private explicit_type ""
+	init_value " array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "filter use mode
+@access ${visibility}"
+      end
+
+      attribute 132707 "form_mode"
+	public explicit_type ""
+	init_value " 'list'"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Caption fields
+@access ${visibility}"
+      end
+
+      operation 141027 "__construct"
+	public explicit_return_type "null"
+	nparams 3
+	  param inout name "id" explicit_type "string"
+	  param inout name "db" explicit_type "object"
+	  param inout name "skin" explicit_type "string"
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนดค่า สำหรับการติดต่อฐานข้อมูล
+@param ${t0} id ชื่อ Form
+@param ${t1} db Object ฐานข้อมูล คำสั่ง new OrMysql()
+@param ${t2} table ชื่อ table ที่ใช้
+@param ${t3} key  ชื่อ Field ที่เป็น key บันทึกแก้ไขข้อมูล
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 141155 "set_filter_controls"
+	public explicit_return_type "null"
+	nparams 2
+	  param inout name "obj" explicit_type "obj"
+	  param inout name "use" explicit_type ""
+	    defaultvalue "false"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนด filter control object ที่ใช้ใน form
+
+@param ${t0} obj ตัวแปร object
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 141283 "set_header"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "header_tag" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 141411 "set_footer"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "footer_tag" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 141539 "get_control_order"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "tag order by control
+@return ${type} tag html
+@access ${visibility}"
+      end
+
+      operation 141667 "get_control_filter"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 141795 "is_group_filter"
+	package explicit_return_type "boolean"
+	nparams 1
+	  param inout name "field_name" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ตรวจสอบการสร้างคำสั่ง filter กรณีมีการใช้ function และ Group By
+@param ${t0} ${p0} ชื่อ field ที่ต้องการตรวจสอบ
+@return ${type} คืนค่าจริง ถ้าเป็น function ที่ใช้คำสั่ง Having"
+      end
+
+      operation 141923 "fetch_record"
+	package explicit_return_type ""
+	nparams 4
+	  param inout name "sql" explicit_type ""
+	  param inout name "filter" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "filter_msg" explicit_type ""
+	    defaultvalue "''"
+	  param inout name "reset" explicit_type ""
+	    defaultvalue "false"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 142051 "get_form_query"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "get_form_query : html tag Query form
+@param array fields
+@return ${type} html tag"
+      end
+
+      operation 142179 "get_form_filter"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "get_form_query : html tag Query form
+@param array fields
+@return ${type} html tag"
+      end
+
+      operation 142307 "get_button_filter"
+	package explicit_return_type "string"
+	nparams 1
+	  param inout name "cmd_filter" explicit_type "string"
+	    defaultvalue "''"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "get_button_filter : html tag ของปุ่ม filtter
+@param ${t0} ${p0} คำสั่ง filter ข้อมูล
+@return ${type} html tag ของปุ่ม filter"
+      end
+
+      operation 142435 "get_tag"
+	public explicit_return_type "array"
+	nparams 1
+	  param inout name "navigator_skin_file" explicit_type ""
+	    defaultvalue "''"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "สร้าง และคืนค่า tag
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 142563 "OE_set_filter"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "EV_" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 142691 "OE_current_record"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "EV_" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 130019 "OrDbFrmForm"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrDbFrmForm.php - Copyright 
+@author Suchart Bunhachirat
+@version php4 - 5
+************************************************************************
+
+Class OrDbFrmForm
+สร้างหน้าจอมาตรฐานสำหรับบันทึกแก้ไขข้อมูล"
+      classrelation 129123 // <generalisation>
+	relation 129123 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 129123 // <generalisation>
+	  b parent class_ref 129123 // OrDbForm
+      end
+
+      attribute 131043 "control_order_by"
+	public explicit_type ""
+	init_value " null"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "@access ${visibility}"
+      end
+
+      attribute 131171 "control_filter_by"
+	public explicit_type ""
+	init_value " null"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "@access ${visibility}"
+      end
+
+      attribute 131299 "caption_fields"
+	public explicit_type ""
+	init_value " array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Caption fields
+@access ${visibility}"
+      end
+
+      attribute 131427 "filter_controls"
+	public explicit_type ""
+	init_value " array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Object ของ filter_controls ใน form
+
+@access ${visibility}"
+      end
+
+      attribute 131555 "filter_value"
+	public explicit_type ""
+	init_value " array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "filter fields
+@access ${visibility}"
+      end
+
+      attribute 131683 "filter_name"
+	private explicit_type ""
+	init_value " array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "field name ที่ต้องการเปลียนชื่อ
+@access ${visibility}"
+      end
+
+      attribute 131811 "form_mode"
+	public explicit_type ""
+	init_value " 'form'"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "Caption fields
+@access ${visibility}"
+      end
+
+      operation 139491 "__construct"
+	public explicit_return_type "null"
+	nparams 5
+	  param inout name "id" explicit_type "string"
+	  param inout name "db" explicit_type "object"
+	  param inout name "table" explicit_type "string"
+	  param inout name "key" explicit_type "string"
+	  param inout name "skin" explicit_type "string"
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}, ${p4}${v4}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนดค่า สำหรับการติดต่อฐานข้อมูล
+@param ${t0} ${p0} ชื่อ Form
+@param ${t1} ${p1} Object ฐานข้อมูล คำสั่ง new OrMysql()
+@param ${t2} ${p2} ชื่อ table ที่ใช้
+@param ${t3} ${p3}  ชื่อ Field ที่เป็น key บันทึกแก้ไขข้อมูล
+@param ${t4} ${p4} path ที่อยู่ของไฟล์ Skin
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 139619 "set_filter_controls"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "obj" explicit_type "obj"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนด control object ที่ใช้ใน form
+
+@param ${t0} obj ตัวแปร object
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 139747 "set_filter_name"
+	public explicit_return_type "null"
+	nparams 2
+	  param inout name "id" explicit_type "obj"
+	  param inout name "name" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนด control object ที่ใช้ใน form
+
+@param ${t0} obj ตัวแปร object
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 139875 "set_header"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "header_tag" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 140003 "get_filter_name"
+	public explicit_return_type "string"
+	nparams 1
+	  param inout name "id" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ค่า Field name ที่ต้องการ
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 140131 "get_control_order"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "tag order by control
+@return ${type} tag html
+@access ${visibility}"
+      end
+
+      operation 140259 "get_control_filter"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 140387 "fetch_record"
+	package explicit_return_type ""
+	nparams 4
+	  param inout name "sql" explicit_type ""
+	  param inout name "filter" explicit_type ""
+	    defaultvalue "null"
+	  param inout name "filter_msg" explicit_type ""
+	    defaultvalue "''"
+	  param inout name "reset" explicit_type ""
+	    defaultvalue "false"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 140515 "get_form_query"
+	package explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "get_form_query : html tag Query form
+@param array fields
+@return ${type} html tag"
+      end
+
+      operation 140643 "get_button_filter"
+	package explicit_return_type "string"
+	nparams 1
+	  param inout name "cmd_filter" explicit_type "string"
+	    defaultvalue "''"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "get_button_filter : html tag ของปุ่ม filtter
+@param ${t0} ${p0} คำสั่ง filter ข้อมูล
+@return ${type} html tag ของปุ่ม filter"
+      end
+
+      operation 140771 "get_tag"
+	public explicit_return_type "array"
+	nparams 1
+	  param inout name "navigator_skin_file" explicit_type ""
+	    defaultvalue "''"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "สร้าง และคืนค่า tag
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 140899 "OE_after_error"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "EV_" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "เหตุการณ์หลังเกิดความผิดพลาด
+  @param ${t1} $cmd_filter คำสั่ง filter ข้อมูล
+  @return ${type}"
+      end
+    end
+
+    class 130147 "OrDbPopupList"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment " 
+To change this template, choose Tools | Templates
+and open the template in the editor.
+
+
+Description of OrDbPopupList
+หน้าจอรายงานสำหรับเป็นป๊อปอัพ เลือกรายการใช้งานคู่กับ OrDojoTextSearch
+@author     Suchart Bunhachirat <suchartbu@gmail.com>
+@copyright 
+@license
+@version
+"
+      classrelation 129379 // <generalisation>
+	relation 129379 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 129379 // <generalisation>
+	  b parent class_ref 129891 // OrDbFrmList
+      end
+
+      operation 142819 "__construct"
+	package explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type ""
+	  param inout name "db" explicit_type ""
+	  param inout name "skin" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 142947 "OE_current_record"
+	public explicit_return_type "array"
+	nparams 1
+	  param inout name "EV_" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "เพิ่มปุ่มเพิ่มคืนค่าที่เลือกรายการ
+@return ${type}
+@access ${visibility}"
+      end
+    end
+
+    class 130275 "OrMysql"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "Created on 11-Mar-06
+
+To change the template for this generated file go to
+Window - Preferences - PHPeclipse - PHP - Code Templates
+
+
+OrMysql.php - Copyright 
+@author Suchart Bunhachirat
+@version php4 - php5
+*************************************************************************
+
+class OrMysql
+Class Connect to MySQL database
+property('database','string',$database);
+property('host','string',$host);
+property('user','string',$user);
+property('password','string',$password);
+property('sql','string');
+property('db_error','array');
+property('total_error','integer');"
+      classrelation 129507 // <generalisation>
+	relation 129507 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 129507 // <generalisation>
+	  b parent class_ref 128867 // OrDb
+      end
+
+      operation 143075 "OrMysql"
+	public explicit_return_type ""
+	nparams 4
+	  param inout name "database" explicit_type "string"
+	  param inout name "host" explicit_type "string"
+	    defaultvalue "null"
+	  param inout name "user" explicit_type "string"
+	    defaultvalue "null"
+	  param inout name "password" explicit_type "string"
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนดค่าเริ่มต้นการเชื่อมต่อฐานข้อมูล
+ตัวอย่างการเรียกใช้ฐานข้อมูล my_sec มีคำสั่งดังนี้ 
+$my_db = new OrMysql('my_sec');
+@param ${t0} database Database name
+@param ${t1} host Host name
+@param ${t2} user User name
+@param ${t3} password    
+@return 
+@access ${visibility}"
+      end
+
+      operation 143203 "get_host_conn"
+	public explicit_return_type "connection"
+	nparams 2
+	  param inout name "database" explicit_type "string"
+	    defaultvalue "null"
+	  param inout name "pconnect" explicit_type "boolean"
+	    defaultvalue "false"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function OrMysql
+
+Connecting Database
+
+@param ${t0} database Database name
+@param ${t1} pconnect
+@return ${type} Database connect
+@access ${visibility}"
+      end
+
+      operation 143331 "get_query"
+	public explicit_return_type "result"
+	nparams 1
+	  param inout name "sql" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function get_host_conn
+
+Query Database
+สอบถามข้อมูลโดยคำสั่ง SQL
+
+@param ${t0} sql SQL string
+@return ${type} Query result
+@access ${visibility}"
+      end
+
+      operation 143459 "get_record"
+	public explicit_return_type "array"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function get_query
+
+get record array
+
+@return ${type} record result
+@access ${visibility}"
+      end
+
+      operation 143587 "get_total_row"
+	public explicit_return_type "array"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function get_record
+
+get record array
+
+@return ${type} record result
+@access ${visibility}"
+      end
+
+      operation 143715 "get_field_name"
+	public explicit_return_type "string"
+	nparams 1
+	  param inout name "field_index" explicit_type "int"
+	    defaultvalue "0"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function get_total_row
+
+get field name from index
+
+@param ${t0} field_index number to get field name
+@return ${type} field name
+@access ${visibility}"
+      end
+
+      operation 143843 "get_insert_id"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function get_field_name
+
+get id number from add record
+
+@return ${type} last add id
+@access ${visibility}"
+      end
+
+      operation 143971 "close_conn"
+	public explicit_return_type "boolean"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function get_insert_id
+
+close database connection
+
+@return ${type}
+@access ${visibility}"
+      end
+    end
+
+    class 130403 "OrMysqlThDate"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrMySqlThDate.php - Copyright 
+@author Suchart Bunhachirat
+@version php4 - 5
+************************************************************************
+
+Class OrMySqlThDate
+แปลงตรวจสอบข้อมูลวันที่ MySql กับ วันที่ไทย"
+      classrelation 129635 // <generalisation>
+	relation 129635 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 129635 // <generalisation>
+	  b parent class_ref 128995 // OrObj
+      end
+
+      attribute 132835 "get_date"
+	package explicit_type ""
+	init_value " array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "จัดการข้อมูลวันที่เวลาไทย กับวันที่ของ Mysql"
+      end
+
+      attribute 132963 "is_date"
+	package explicit_type ""
+	init_value " false"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 144099 "OrMysqlThDate"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "date" explicit_type ""
+	    defaultvalue "\"\""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 144227 "get_is_mysql_date"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "date" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 144355 "get_is_th_date"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "date" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 144483 "get_th_str"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "date" explicit_type ""
+	    defaultvalue "\"\""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 144611 "get_mysql_str"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "date" explicit_type ""
+	    defaultvalue "\"\""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 144739 "get_as400_str"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "date" explicit_type ""
+	    defaultvalue "\"\""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 130531 "OrMySqlThDatetime"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrMySqlThDatetime.php - Copyright 
+@author Suchart Bunhachirat
+@version php4 - 5
+************************************************************************
+
+Class OrMySqlThDatetime
+แปลงตรวจสอบวันที่เวลา MySQL กับ วันที่ เวลา ไทย"
+      attribute 133091 "get_date"
+	package explicit_type ""
+	init_value " array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "จัดการข้อมูลวันที่เวลาไทย กับวันที่เวลาของ Mysql"
+      end
+
+      attribute 133219 "is_datetime"
+	package explicit_type ""
+	init_value " false"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 144867 "OrMySqlThDatetime"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "datetime" explicit_type ""
+	    defaultvalue "\"\""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 144995 "get_is_mysql_datetime"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "datetime" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 145123 "get_is_th_datetime"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "datetime" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 145251 "get_th_str"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "datetime" explicit_type ""
+	    defaultvalue "\"\""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 145379 "get_mysql_str"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "datetime" explicit_type ""
+	    defaultvalue "\"\""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 145507 "check_time"
+	package explicit_return_type ""
+	nparams 3
+	  param inout name "h" explicit_type ""
+	  param inout name "m" explicit_type ""
+	  param inout name "s" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 130659 "OrSql"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrSql.php - Copyright 
+@author Suchart Bunhachirat
+@version php4 - 5
+************************************************************************
+
+Class SQL"
+      classrelation 129763 // <generalisation>
+	relation 129763 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 129763 // <generalisation>
+	  b parent class_ref 128995 // OrObj
+      end
+
+      operation 145635 "__construct"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "sql" explicit_type ""
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 145763 "get_cmd_sql"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 145891 "set_cmd_sql"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "sql" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 146019 "set_cmd_where"
+	package explicit_return_type ""
+	nparams 2
+	  param inout name "cmd_where" explicit_type ""
+	  param inout name "logical" explicit_type ""
+	    defaultvalue "'AND'"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 146147 "set_cmd_having"
+	public explicit_return_type "null"
+	nparams 2
+	  param inout name "cmd_having" explicit_type "string"
+	  param inout name "logical" explicit_type "string"
+	    defaultvalue "'AND'"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "set_cmd_order : กำหนด Field ที่ต้องการเรียงลำดับ
+@param ${t0} ${p0} คำสั่งเงื่อนไขตาม SQL
+@param ${t1} ${p1} AND/OR
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 146275 "set_cmd_order"
+	public explicit_return_type "null"
+	nparams 2
+	  param inout name "field_name" explicit_type "string"
+	  param inout name "sort" explicit_type "string"
+	    defaultvalue "'ASC'"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "set_cmd_order : กำหนด Field ที่ต้องการเรียงลำดับ
+@param ${t0} ${p0} ชื่อฟิลด์ที่ต้องการเรียงลำดับ
+@param ${t1} ${p1} วิธีการเรียงลำดับปกติเป็น ASC
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 146403 "set_cmd_filter"
+	public explicit_return_type "null"
+	nparams 5
+	  param inout name "field_name" explicit_type "string"
+	  param inout name "compare" explicit_type "string"
+	  param inout name "value" explicit_type "string"
+	  param inout name "logical" explicit_type "string"
+	    defaultvalue "'AND' "
+	  param inout name "new_filter" explicit_type "bool"
+	    defaultvalue "false"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}, ${p4}${v4}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "function set_cmd_filter
+ใช้เพื่อสร้างคำสั่ง filter ข้อมูล
+@param ${t0} field_name ชื่อ field ที่กำหนดเงื่อนไข
+@param ${t1} compaer เงื่อนไข = <> > < LIKE เป็นต้น
+@param ${t2} value ค่าที่เปรียบเทียบ
+@param ${t3} logical [option] ถ้าไม่กำหนดจะเป็น AND
+@param ${t4} new filter เพิ่มกลุ่ม filter ใหม่ เป็น True
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 146531 "set_cmd_group_filter"
+	public explicit_return_type "null"
+	nparams 4
+	  param inout name "field_name" explicit_type "string"
+	  param inout name "compare" explicit_type "string"
+	  param inout name "value" explicit_type "string"
+	  param inout name "logical" explicit_type "string"
+	    defaultvalue "'AND'"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "function set_cmd_filter_group
+ใช้เพื่อสร้างคำสั่ง filter ข้อมูล ในคำสั่ง Having
+@param ${t0} field_name ชื่อ field ที่กำหนดเงื่อนไข
+@param ${t1} compaer เงื่อนไข = <> > < LIKE เป็นต้น
+@param ${t2} value ค่าที่เปรียบเทียบ
+@param ${t3} logical [option] ถ้าไม่กำหนดจะเป็น AND
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 146659 "get_like_filter"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "str_filter" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "function get_like_filter
+แปลงรูปแบบข้อมูลให้เหมาะสมกับการใช้ LIKE ค้นหาข้อมูล
+โดยใส่ % ให้กับข้อมูล
+@param ${t0} ${p0} คำที่ใช้ค้นหา
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 146787 "get_between_filter"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "str_filter" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "function get_between_filter
+แปลงรูปแบบข้อมูลให้เหมาะสมกับการใช้ BETWEEN ค้นหาข้อมูล
+โดยใส่ AND ให้กับข้อมูล
+@param ${t0} ${p0} คำที่ใช้ค้นหา
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 146915 "get_in_filter"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "str_filter" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "function set_in_filter
+แปลงรูปแบบข้อมูลให้เหมาะสมกับการใช้ BETWEEN ค้นหาข้อมูล
+โดยใส่ AND ให้กับข้อมูล
+@param ${t0} ${p0} คำที่ใช้ค้นหา
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 147043 "get_filter_value"
+	public explicit_return_type "string"
+	nparams 1
+	  param inout name "value" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "function set_in_filter
+ตรวจสอบแปลงรูปแบบข้อมูล ให้ถูกต้อง ตามคำสั่ง SQL
+@param ${t1} $str_filter คำที่ใช้ค้นหา
+@return ${type} ค่าที่ตรวจสอบแก้ไข
+@access ${visibility}"
+      end
+    end
+
+    class 130787 "OrSqlCrossTab"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "Created on Mar 10, 2007 OrSqlCrossTab.php
+@version php5
+@author Suchart Bunhachirat
+@copyright Copyright &copy; 2007, orr
+Class สำหรับสร้างคำสั่ง SQL เพื่อทำ CrossTab Form"
+      classrelation 129891 // <generalisation>
+	relation 129891 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 129891 // <generalisation>
+	  b parent class_ref 130659 // OrSql
+      end
+
+      operation 147171 "__construct"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 147299 "get_sql"
+	package explicit_return_type ""
+	nparams 2
+	  param inout name "db" explicit_type ""
+	  param inout name "sql" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    classdiagram 128227 "db"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+  end
+end

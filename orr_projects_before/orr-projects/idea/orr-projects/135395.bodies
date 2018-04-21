@@ -1,0 +1,29 @@
+class OrSysvalue
+!!!169827.php!!!	OrSysvalue()
+  	global $val_controls, $val_msg, $val_filter , $val_compare , $evt_form_db, $evt_list_navigator;
+  	if(is_array($val_controls))
+  	{
+  		$this->controls = $val_controls;
+	}
+	
+	if(is_array($val_msg))
+  	{
+  		$this->message = $val_msg;
+	}
+	
+	if(is_array($val_filter))
+  	{
+  		$this->filter = $val_filter;
+		debug_mode(__FILE__ , __LINE__ , $val_filter , 'val_filter');
+	}
+	
+	if(is_array($val_compare))
+  	{
+  		$this->compare = $val_compare;
+	}
+	
+	if(is_array($evt_form_db))
+  	{
+  		$this->db_event = $evt_form_db;
+	}
+		

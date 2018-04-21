@@ -1,0 +1,33 @@
+class OrObj
+!!!165987.php!!!	property(inout id : string, inout type : string, inout value : string = null)
+	  if(array_key_exists($id,$this->OP_))
+	  {
+	  	echo "<b>debug</b> ".__FILE__." | ".__LINE__." | Property exists Name ". $id ."<br>";
+	  }
+	  $this->OP_[$id] = new OrProperty($id  , $this->class_name , $type , $value);
+	  return null;
+!!!166115.php!!!	__clone()
+	  foreach ($this->OP_ as $id => $val){
+		  $this->OP_[$id] = clone($val);
+	  }
+!!!166243.php!!!	event(inout id : )
+	  $this->OE_[$id] = new OrProperty($id  , $this->class_name , 'string' );
+!!!166371.php!!!	is_OP(inout obj : object, inout property_name : string)
+  	$exist=false;
+  	if(is_object($obj))
+  	{
+  		$obj_vars = get_object_vars($obj);
+  		foreach ($obj_vars as $name => $o_val)
+  		{
+  			if($name=="OP_" AND is_array($o_val))
+  			{
+  				foreach($o_val as $key=>$val)
+  				{
+  					if($key==$property_name)$exist=true;
+  					if($exist)break;
+  				}
+  			}
+			if($exist)break;
+  		}
+	}
+	return $exist;

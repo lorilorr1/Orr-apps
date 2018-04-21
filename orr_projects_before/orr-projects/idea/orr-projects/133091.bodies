@@ -1,0 +1,15 @@
+class OrFieldProperty
+!!!154723.php!!!	OrFieldProperty(inout id : string, inout property : string, inout idx : int = null) : null
+	  if($idx != ""){
+		  $name="val_controls[properties][$id][$idx][$property]";
+	  }else{
+		  $name="val_controls[properties][$id][$property]";
+	  }
+	  $this->OrControls($id,$name,$idx);
+!!!154851.php!!!	get_tag() : mix
+	  $id = 'id="'.$this->OP_[id]->get().'"';
+	  $name='name="'.$this->OP_[name]->get().'"';
+	  $value='value="'.$this->OP_[value]->get().'"';
+	  $type='type="hidden"';
+	  $my_value = "<input $id $name $type $value>";
+	  return $my_value;

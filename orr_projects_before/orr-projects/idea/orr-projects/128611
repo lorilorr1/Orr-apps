@@ -1,0 +1,1258 @@
+format 74
+"sys" // orr_lib::sys
+  revision 1
+  modified_by 99 "orr"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default show_stereotype_properties default
+  
+  classview 128611 "sys"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 128995 "OrObj"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "property.php - Copyright 
+@author Suchart Bunhachirat
+@version php4 - 5
+************************************************************************
+
+class OrObj
+Class เริ่มของการสร้าง Class ใน Or!Lib"
+      attribute 137443 "class_name"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "@access ${visibility}"
+      end
+
+      attribute 137571 "OP_"
+	public explicit_type ""
+	init_value "  array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "ตัวแปรสำหรับเก็บ Property ของ Object ที่สร้าง
+@access ${visibility}"
+      end
+
+      attribute 137699 "OE_"
+	public explicit_type ""
+	init_value "  array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "ตัวแปรสำหรับเก็บ Event ของ Object ที่สร้าง
+@access ${visibility}"
+      end
+
+      operation 165987 "property"
+	public explicit_return_type ""
+	nparams 3
+	  param inout name "id" explicit_type "string"
+	  param inout name "type" explicit_type "string"
+	  param inout name "value" explicit_type "string"
+	    defaultvalue "null "
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "@param ${t0} class_name    
+@return 
+@access ${visibility}
+
+function OrObj( $class_name )
+{
+$this->class_name = $class_name;
+} // end of member function OrObj
+
+กำหนด property ของ object ใน class
+
+@param ${t1} id ชื่อของ property
+@param ${t2} type ประเภทข้อมูล
+@param ${t3} value ค่าเริ่มต้นของ property
+@return 
+@access public"
+      end
+
+      operation 166115 "__clone"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function property"
+      end
+
+      operation 166243 "event"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "id" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนด event ของ object ใน class
+กำหนดคำสั่งเพื่อสั่งให้ทำงาน ตามเหตุการณ์
+@return 
+@access ${visibility}"
+      end
+
+      operation 166371 "is_OP"
+	public explicit_return_type ""
+	nparams 2
+	  param inout name "obj" explicit_type "object"
+	  param inout name "property_name" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function event
+
+ตรวจสอบการกำหนด Object Property คืนค่า true ถ้ามี Property ที่ค้นหา
+
+@param ${t0} obj Object ที่จะตรวจสอบ
+@param ${t1} property_name
+@return 
+@access ${visibility}"
+      end
+    end
+
+    class 134883 "OrClip"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrClip.php - Copyright
+Class สร้างตัวแปร Session ส่งระหว่างโปรแกรม 
+@author Suchart Bunhachirat
+@version php4 - php5
+************************************************************************"
+      classrelation 134499 // <generalisation>
+	relation 134499 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 134499 // <generalisation>
+	  b parent class_ref 128995 // OrObj
+      end
+
+      operation 165219 "__construct"
+	public explicit_return_type ""
+	nparams 2
+	  param inout name "name" explicit_type "string"
+	  param inout name "type" explicit_type "string"
+	    defaultvalue "'string'"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "@param ${t0} name ชื่อ clip
+@param ${t1} type ประเภทข้อมูล
+@access ${visibility}"
+      end
+
+      operation 165347 "use_this"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "name" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนด Clip ที่ใช้งาน
+@param ${t0} name ชื่อ clip
+@access ${visibility}
+@return ${type}"
+      end
+
+      operation 165475 "update_this"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "value" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "update ค่า Clip ที่ใช้งาน
+@param ${t0} value ค่าที่ Update
+@access ${visibility}
+@return ${type}"
+      end
+
+      operation 165603 "delete_this"
+	public explicit_return_type "null"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "delete ค่า Clip ที่ใช้งาน
+@access ${visibility}
+@return ${type}"
+      end
+    end
+
+    class 135011 "OrFormat"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrFormat.php - Copyright 
+@author Suchart Bunhachirat
+@version php4 - php5
+************************************************************************"
+      classrelation 134627 // <generalisation>
+	relation 134627 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 134627 // <generalisation>
+	  b parent class_ref 128995 // OrObj
+      end
+
+      operation 165731 "OrFormat"
+	package explicit_return_type ""
+	nparams 2
+	  param inout name "type" explicit_type ""
+	  param inout name "opt" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "Function การกำหนด"
+      end
+
+      operation 165859 "get_format"
+	public explicit_return_type "string"
+	nparams 1
+	  param inout name "value" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คืนค่าเดิม แสดงที่ controls
+@param ${t0} value ค่าที่กำหนดรูปแบบ
+@return ${type} รูปแบบที่กำหนด
+@access ${visibility}"
+      end
+    end
+
+    class 135139 "OrProperty"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrProperty.php - Copyright 
+@author Suchart Bunhachirat
+@version php5 ปี 2550
+************************************************************************
+
+class OrProperty
+Class ต้นแบบของ Property ในระบบ"
+      attribute 137827 "id"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "ชื่อเรียกของ Property
+@access ${visibility}"
+      end
+
+      attribute 137955 "value"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "@access ${visibility}"
+      end
+
+      attribute 138083 "type"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "@access ${visibility}"
+      end
+
+      attribute 138211 "class_name"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "@access ${visibility}"
+      end
+
+      attribute 138339 "value_get"
+	public explicit_type ""
+	init_value "  0"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "จำนวนครั้งที่อ่านข้อมูล
+@access ${visibility}"
+      end
+
+      attribute 138467 "value_set"
+	public explicit_type ""
+	init_value "  0"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "จำนวนที่เขียนข้อมูล
+@access ${visibility}"
+      end
+
+      attribute 138595 "value_update"
+	public explicit_type ""
+	init_value "  false"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "สถานะข้อมูลถ้ามีการแก้ไขหลังจาก get ล่าสุด แล้วมีการ set ใหม่จะเป็น true
+@access ${visibility}"
+      end
+
+      operation 166499 "__construct"
+	public explicit_return_type ""
+	nparams 4
+	  param inout name "id" explicit_type "string"
+	  param inout name "class_name" explicit_type "string"
+	  param inout name "type" explicit_type "string"
+	    defaultvalue "null"
+	  param inout name "value" explicit_type "mix"
+	    defaultvalue "null"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนดชื่อ ประเภท และค่าเริ่มต้น ของ property
+@param ${t0} id ชื่อ property
+@param ${t1} class_name ชื่อ class ที่กำหนด property
+@param ${t2} type ประเภทข้อมูล
+@param ${t3} value ค่าของ property
+@return 
+@access ${visibility}"
+      end
+
+      operation 166627 "set"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "value" explicit_type "mix"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function OrProperty
+
+กำหนดค่าที่ต้องการให้ property
+
+@param ${t0} value ค่าที่ต้องการกำหนดให้ property
+@return 
+@access ${visibility}"
+      end
+
+      operation 166755 "get"
+	public explicit_return_type "mix"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function set
+
+รับค่าปัจจุบันของ property
+
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 166883 "set_type"
+	protected explicit_return_type ""
+	nparams 2
+	  param inout name "type" explicit_type "string"
+	  param inout name "value" explicit_type "int"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function get
+
+ตรวจสอบ และกำหนดประเภทของข้อมูล
+
+@param ${t0} type ประเภทข้อมูล
+@param ${t1} value ค่าที่กำหนด
+@return 
+@access ${visibility}"
+      end
+
+      operation 167011 "check_value"
+	protected explicit_return_type ""
+	nparams 1
+	  param inout name "value" explicit_type "mix"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function set_type
+
+ตรวจสอบแก้ไขค่า ของข้อมูลให้ถุกต้องตามประเภทข้อมูล
+
+@param ${t0} value ค่าข้อมูลที่ต้องการตรวจสอบแก้ไข
+@return 
+@access ${visibility}"
+      end
+
+      operation 167139 "check_update"
+	protected explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " end of member function check_value
+
+ตรวจสอบแก้ไขค่า ของข้อมูลให้ถุกต้องตามประเภทข้อมูล
+
+@param mix value ค่าข้อมูลที่ต้องการตรวจสอบแก้ไข
+@return 
+@access ${visibility}"
+      end
+    end
+
+    class 135267 "OrSec"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment " OrSec.php
+Created on 2-Apr-06
+@author Suchart Bunhachirat
+@version php4 - php5
+
+
+class OrSec
+Class ควบคุมสิทธิ์การใช้งาน"
+      classrelation 134755 // <generalisation>
+	relation 134755 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 134755 // <generalisation>
+	  b parent class_ref 128995 // OrObj
+      end
+
+      attribute 138723 "info"
+	private explicit_type ""
+	init_value " false"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 167267 "__construct"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "check" explicit_type "boolean"
+	    defaultvalue "true"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "กำหนดค่าเริ่มต้นของ Class
+@param ${t0} check
+@return
+@access ${visibility}"
+      end
+
+      operation 167395 "set_info"
+	public explicit_return_type "null"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ข้อมูลที่เกี่ยวข้อง จากฐานข้อมูล
+@param
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 167523 "login_check"
+	public explicit_return_type "null"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ตรวจสอบการบันทึกเข้าใช้งาน
+@param
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 167651 "login"
+	public explicit_return_type "null"
+	nparams 2
+	  param inout name "user" explicit_type "string"
+	  param inout name "pass" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "บันทึกเข้าใช้งาน
+@param ${t0} user
+@param ${t1} pass
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 167779 "get_protect"
+	public explicit_return_type "null"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ตรวจสอบการลงทะเบียนโปรแกรม
+@param boolean check
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 167907 "logout"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "location" explicit_type "string"
+	    defaultvalue "''"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "คำสั่งบันทึกออกจากการใช้งาน
+@param ${t0} location
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 168035 "get_group_list"
+	public explicit_return_type "null"
+	nparams 1
+	  param inout name "user" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "รายการกลุ่มของผู้ใช้งาน
+@param ${t0} user
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 168163 "chk_aut_group"
+	public explicit_return_type "boolean"
+	nparams 1
+	  param inout name "sec_user" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ตรวจสอบสิทธิ์การใช้ข้อมูลกลุ่ม ของเจ้าของข้อมูลกับ กับผู้ใช้งาน
+คืนค่าเป็น true ถ้าเป็นกลุ่มเดียวกัน
+@param ${t0} sec_user
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 168291 "get_authority"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ตรวจสอบสิทธิ์การใช้ข้อมูล
+0=ไม่มีสิทธิ์ใช้ข้อมูล;1=มีสิทธิ์อ่านข้อมูล;2=มีสิทธิ์อ่านเขียนข้อมูล;3=มีสิทธิ์อ่านเขียนลบข้อมูล
+@param string sec_user
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 168419 "can_use"
+	public explicit_return_type "boolean"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "ตรวจสอบสิทธิ์การเข้าใช้โปรแกรม
+คืนค่าเป็น true ถ้าสามารถใช้งานได้
+@return ${type}
+@access ${visibility}"
+      end
+
+      operation 168547 "can_use_group"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "sys_id" explicit_type ""
+	    defaultvalue "''"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 168675 "can_read"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 168803 "can_save"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 168931 "can_del"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 169059 "get_status"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 169187 "activity"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "description" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 169315 "get_user_list"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 169443 "get_user_text"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 169571 "get_sys_list"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 169699 "OE_login"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "EV_" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "Event on class"
+      end
+    end
+
+    class 135395 "OrSysvalue"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "OrDbForm.php - Copyright 
+@author Suchart Bunhachirat
+@version php5-2550
+************************************************************************
+
+class OrSysvalue
+Class จัดการข้อมูลค่าต่างๆ ที่ต้องใช้งานร่วมกัน
+"
+      attribute 138851 "controls"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment " Aggregations: 
+ Compositions: 
+ Attributes: **
+
+ค่า controls ที่รับมา
+@access ${visibility}"
+      end
+
+      attribute 138979 "message"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "ค่า message ที่รับมา
+@access ${visibility}"
+      end
+
+      attribute 139107 "filter"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "ค่า Event ที่รับมา
+@access ${visibility}"
+      end
+
+      attribute 139235 "compare"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "ค่า Event ที่รับมา
+@access ${visibility}"
+      end
+
+      attribute 139363 "db_event"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "ค่า Event ที่รับมา
+@access ${visibility}"
+      end
+
+      operation 169827 "OrSysvalue"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "@return 
+@access ${visibility}"
+      end
+    end
+
+    class 135523 "OrThdate"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "Created on 6-Sep-06
+
+To change the template for this generated file go to
+Window - Preferences - PHPeclipse - PHP - Code Templates"
+      attribute 139491 "th_date"
+	package explicit_type ""
+	init_value " array()"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 169955 "OrThdate"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "value" explicit_type ""
+	    defaultvalue "0"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 170083 "get_date"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "format" explicit_type ""
+	    defaultvalue "0"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 170211 "get_day"
+	package explicit_return_type ""
+	nparams 2
+	  param inout name "num_day" explicit_type ""
+	  param inout name "format" explicit_type ""
+	    defaultvalue "0"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "แปลงเลขวันเป็น ชื่อวัน"
+      end
+
+      operation 170339 "get_month"
+	package explicit_return_type ""
+	nparams 2
+	  param inout name "num_month" explicit_type ""
+	  param inout name "format" explicit_type ""
+	    defaultvalue "0"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "แปลงเลขเดือนเป็น ชื่อเดือน	"
+      end
+
+      operation 170467 "get_year"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "num_year" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "แปลงเลขปี ค.ศ. ปี พ.ศ.	"
+      end
+
+      operation 170595 "get_th_str"
+	package explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+  end
+
+  deploymentview 128739 "sys"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+    artifact 135139 "OrClip"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+?>
+"
+      associated_classes
+	class_ref 134883 // OrClip
+      end
+    end
+
+    artifact 135267 "OrFormat"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+?>
+"
+      associated_classes
+	class_ref 135011 // OrFormat
+      end
+    end
+
+    artifact 135395 "OrObj"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+ // end of OrObj
+
+?>
+"
+      associated_classes
+	class_ref 128995 // OrObj
+      end
+    end
+
+    artifact 135523 "OrProperty"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+ // end of OrProperty
+?>
+"
+      associated_classes
+	class_ref 135139 // OrProperty
+      end
+    end
+
+    artifact 135651 "OrSec"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+?>"
+      associated_classes
+	class_ref 135267 // OrSec
+      end
+    end
+
+    artifact 135779 "OrSysvalue"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+ // end of OrSysvalue
+?>
+"
+      associated_classes
+	class_ref 135395 // OrSysvalue
+      end
+    end
+
+    artifact 135907 "OrThdate"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+?>
+"
+      associated_classes
+	class_ref 135523 // OrThdate
+      end
+    end
+  end
+end

@@ -1,0 +1,11 @@
+body {margin: 5px  5px; padding: 0px  0px;  background-image: url( image/background.png); color:#000000; font-size: 14px; font-family: sans-serif}
+a { color: #009900; text-decoration: none}
+a:visited { color: #0000ff; text-decoration: none}
+a:active { color: #ffff00; text-decoration: underline}
+a:hover { color: #ff0000; text-decoration: none}
+
+img {border: 0px solid; vertical-align: top}
+input { margin: 1px  2px 1px  2px; font-size: 12px ;  padding-left: 2px; padding-right: 2px; padding-top: 1px; padding-bottom: 1px;  background-color: #EEEEEE ; border : 1px solid #FF9900}
+select { margin: 1px  2px 1px  2px; font-size: 12px ;  padding-left: 2px; padding-right: 0px; padding-top: 1px; padding-bottom: 1px;  background-color: #EEEEEE ; border : 1px solid #FF9900}
+
+.button { padding-left: 2px; padding-right: 2px; padding-top: 1px; padding-bottom: 1px; text-align: center; font-size: 12px; color: #FFFFFF; background-color : #996633; border : 1px solid #EEEEEE}

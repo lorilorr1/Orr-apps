@@ -1,0 +1,22 @@
+<script type="text/javascript">
+function setContent () {
+	var strContent = document.frmSelect.tbTextArea.value;
+	strContent = replaceString(strContent,"\n",":");
+	window.opener.document.frmTest.tbTest.value=strContent;
+	window.close();
+}
+
+function replaceString (strString,strFind,strReplace) {
+	while (strString.indexOf(strFind)>-1) {
+		intPosition= strString.indexOf(strFind);
+		strString = "" + (strString.substring(0, intPosition) + strReplace + 
+		strString.substring((intPosition + strFind.length), strString.length));
+	}
+	return strString;
+}
+</script>
+
+<form id="frmSelect" name="frmSelect" method="post" action="">
+<textarea name="tbTextArea" cols="50" rows="5" id="tbTextArea"></textarea><br />
+<input type="button" name="button" id="button" value="Set Value" onclick="setContent()"/>
+</form>

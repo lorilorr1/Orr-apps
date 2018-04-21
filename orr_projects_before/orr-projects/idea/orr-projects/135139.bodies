@@ -1,0 +1,60 @@
+class OrProperty
+!!!166499.php!!!	__construct(inout id : string, inout class_name : string, inout type : string = null, inout value : mix = null)
+	  $this->id = $id;
+	  $this->class_name = $class_name;
+	  $this->set_type($type,$value);
+!!!166627.php!!!	set(inout value : mix)
+	if(gettype($value) == $this->type ){
+		$this->value = $value;
+	}else{
+		$this->check_value($value);
+	}
+		$this->value_set +=1;
+		$this->value_update = true;
+	return null;
+!!!166755.php!!!	get() : mix
+	  $this->value_get += 1;
+	  $this->value_update = false;
+	  return $this->value;
+!!!166883.php!!!	set_type(inout type : string, inout value : int)
+	  /*echo "<b>debug</b> ".__FILE__." | ".__LINE__." | type =".$type."<br>";
+	  echo "<b>debug</b> ".__FILE__." | ".__LINE__." | value =".$value."<br>";*/
+	  if(settype($value , $type)){
+		  $this->type=$type;
+		  $this->value=$value;
+	  }else{
+		 $this->type=$type;
+		 $this->check_value($value);
+		//die("Property  ". $this->id . ' set_type ' . $type . "=type is error!");
+	  }
+	return null;
+!!!167011.php!!!	check_value(inout value : mix)
+	  switch($this->type){
+			case 'integer' :
+			if(is_numeric($value) or $value == '' or $value == null){
+				$this->value = $value * 1;
+			}else{
+				die("<b>Error</b> ".__FILE__." | ".__LINE__." | Function check_value Property  ". $this->class_name . ' : ' . $this->id . " set value is ".$value." cannot use type " . $this->type ."<br>");
+			}
+			break;
+			case 'string' :
+			if(is_numeric($value) or is_bool($value) or $value == '' or $value == null){
+				$this->value = $value; //ถ้าเป็นตัวเลขสามารถปล่อยให้กำหนดค่าได้
+			}else{
+				die("<b>Error</b> ".__FILE__." | ".__LINE__." | Function check_value Property  ". $this->class_name . ' : ' . $this->id .  " set value is ".$value." cannot use type " . $this->type ."<br>");
+			}
+			break;
+			case 'array' :
+			if(is_string($value) OR is_numeric($value) OR $value == ''){
+				$this->value = array($value);
+			}else{
+				die("<b>Error</b> ".__FILE__." | ".__LINE__." | Function check_value Property  ". $this->class_name . ' : ' . $this->id .  " set value is ".$value." cannot use type " . $this->type ."<br>");
+			}
+			break;
+			
+			default :
+			echo("<b>Error</b> ".__FILE__." | ".__LINE__." | Function check_value Property  ". $this->class_name . ' : ' . $this->id .  " set value is ".$value." cannot use  type " . $this->type ."<br>");
+		}
+		return null;
+!!!167139.php!!!	check_update()
+	  return $this->value_update;

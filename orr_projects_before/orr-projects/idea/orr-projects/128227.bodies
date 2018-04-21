@@ -1,0 +1,106 @@
+class OrHtml
+!!!156515.php!!!	__construct(inout title : string = '') : null
+ 		
+                 /*
+		*การกำหนดคุณสมบัติ ของคลาส ใช้คำสั่ง
+		* $this->property('ชื่อ' , 'ประเภทข้อมูล' ,'ค่าเริ่มต้น');
+		*/
+		$this->property('title','string',$title);
+		//$this->property('body','array');
+		//$this->property('script','array');
+		//$this->property('script_src','array');
+		//$this->property('ccs_src','array');
+		//$this->property('meta','array');
+		//$this->property('style','array');
+		//$this->property('script_event_body','string');
+		/*
+		*การกำหนดเหตุการณ์ ของคลาส ใช้คำสั่ง
+		* $this->event('ชื่อเหตุการณ์');
+		*/
+			//$this->event('on_load');
+		/**
+                *กำหนด skin ที่ใช้สร้าง HTML
+		**/
+		$this->set_skin('../../orr_lib/gui/OrSkinHtml.html');
+              
+!!!156643.php!!!	set_skin(inout skin_src : string) : null
+                $this->skin = new OrSkin($skin_src);
+                return null;
+!!!156771.php!!!	set_meta(inout tag : string) : null
+                if(!is_array($tag)){
+                        $tag = array($tag);
+                }
+                $this->meta = array_merge($this->meta , $tag);
+                return null;
+!!!156899.php!!!	set_script(inout tag : mix) : null
+                if(!is_array($tag)){
+                        $tag = array($tag);
+                }
+                $this->script = array_merge($this->script , $tag);
+                return null;
+!!!157027.php!!!	set_script_src(inout tag : mix) : null
+                if(!is_array($tag)){
+                        $tag = array($tag);
+                }
+                $this->script_src = array_merge($this->script_src , $tag);
+                return null;
+!!!157155.php!!!	set_ccs_src(inout tag : mix) : null
+                if(!is_array($tag)){
+                        $tag = array($tag);
+                }
+                $this->ccs_src = array_merge($this->ccs_src , $tag);
+                return null;
+!!!157283.php!!!	set_style(inout tag : mix) : null
+                if(!is_array($tag)){
+                        $tag = array($tag);
+                }
+                $this->style = array_merge($this->style , $tag);
+                return null;
+!!!157411.php!!!	set_body(inout tag : mix) : null
+                if(!is_array($tag)){
+                        $tag = array($tag);
+                }
+                $this->body = array_merge($this->body,$tag);
+                return null;
+!!!157539.php!!!	get_meta() : string
+                foreach($this->meta as $line){
+                        $my_value .= "<meta " . $line . ">\n";
+                }
+                return $my_value;
+!!!157667.php!!!	get_script_src() : string
+                foreach($this->script_src as $line){
+                        $my_value .= "<script language=\"JavaScript\" src=\"" .  $line ."\"></script>\n";
+                }
+                return $my_value;
+!!!157795.php!!!	get_script() : string
+                foreach($this->script as $line){
+                        $my_value .= $line ;
+                }
+                return $my_value;
+!!!157923.php!!!	get_ccs_src() : string
+                foreach($this->ccs_src as $line){
+                        $my_value .= "<link rel=\"stylesheet\" type=\"text/css\" href=\"" .  $line ."\">\n";
+                }
+                return $my_value;
+!!!158051.php!!!	get_style() : string
+                foreach($this->style as $line){
+                        $my_value .= $line ;
+                }
+                return $my_value;
+!!!158179.php!!!	get_body() : string
+                foreach($this->body as $line){
+                        $my_value .= $line ;
+                }
+                return $my_value;
+!!!158307.php!!!	show() : null
+                 $this->skin->set_skin_tag('meta',$this->get_meta());
+                 $this->skin->set_skin_tag('title',$this->OP_[title]->get());
+                 $this->skin->set_skin_tag('script_src',$this->get_script_src());
+                 $this->skin->set_skin_tag('script',$this->get_script());
+                 $this->skin->set_skin_tag('ccs_src',$this->get_ccs_src());
+                 $this->skin->set_skin_tag('style',$this->get_style());
+                 $this->skin->set_skin_tag('body',$this->get_body());
+                 //$this->html->get_tag();
+                  foreach($this->skin->get_tag() as $line){
+                          echo $line;
+                  }

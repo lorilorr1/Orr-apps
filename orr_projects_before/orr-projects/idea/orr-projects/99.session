@@ -1,0 +1,11 @@
+window_sizes 1680 1026 564 1110 578 362
+diagrams
+  active  classdiagram_ref 128227 // db
+    1110 578 100 4 0 0
+end
+show_stereotypes
+selected class_ref 128867 // OrDb
+open
+  classview_ref 128483 // db
+end
+end

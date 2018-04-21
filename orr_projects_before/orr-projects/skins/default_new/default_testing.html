@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title><!--Or_Skin[title]--></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+        <!--Or_Skin[meta]-->
+        <!--Or_Skin[ccs_src]-->
+        <LINK REL="stylesheet" TYPE="text/css" HREF="../../lib/dojo/dijit/themes/tundra/tundra.css" />
+        <LINK REL="stylesheet" TYPE="text/css" HREF="../../lib/dojo/dojo/resources/dojo.css" />
+        <LINK REL="stylesheet" type="text/css" HREF="../../lib/calendar/calendar.css">
+        <style type="text/css">
+            a:link,a:visited
+            {
+                color:#000000;
+                text-align:center;
+                padding:6px;
+                text-decoration:none;
+            }
+            a:hover,a:active
+            {
+                color:#FF0000;
+            }
+            body, html { font-family:helvetica,arial,sans-serif; font-size:90%; }
+            html, body { width: 100%; height: 100%; margin: 0;}
+            <!--Or_Skin[style]-->
+        </style>
+        <script language="JavaScript" src="../../lib/OrScript.js"></script>
+        <script language="JavaScript" src="../../lib/calendar/calendar.js"></script>
+        <script type="text/javascript" src="../../lib/dojo/dojo/dojo.js" charset="utf-8" djconfig="parseOnLoad: true"></script>
+        <!--Or_Skin[script_src]-->
+        <script language="JavaScript">
+            <!--
+            dojo.require("dijit.layout.BorderContainer");
+            dojo.require("dijit.layout.TabContainer");
+            dojo.require("dijit.layout.AccordionContainer");
+            dojo.require("dijit.layout.ContentPane");
+            dojo.require("dijit.TitlePane");
+            dojo.require("dijit.form.Form");
+            dojo.require("dijit.form.Button");
+            dojo.require("dijit.form.ValidationTextBox");
+            dojo.require("dijit.form.FilteringSelect");
+            dojo.require("dijit.form.DropDownButton");
+            dojo.require("dijit.TooltipDialog");
+            dojo.require("dijit.Editor");
+
+            dojo.require("dijit.MenuBar");
+            dojo.require("dijit.PopupMenuBarItem");
+            dojo.require("dijit.Menu");
+            dojo.require("dijit.MenuItem");
+            dojo.require("dijit.PopupMenuItem");
+            dojo.require("dijit.Dialog");
+
+
+            dojo.require("dojo.fx");
+            dojo.addOnLoad(function(){
+            // create On Load funtion
+            //dojo.fx.wipeIn({node: "animDiv",duration: 1000}).play();
+            //dojo.fx.slideTo({node: "animDiv",duration: 1000, left: 300, top: 0}).play();
+            });
+
+            //-->
+            <!--Or_Skin[script]-->
+        </script>
+    </head>
+    <body class="tundra">
+        <div dojoType="dijit.layout.BorderContainer" style="height: 100%; margin-left: auto ; margin-right: auto; background-color: #784e0c">
+            <div  dojoType="dijit.layout.ContentPane" region="top" style="height: 40px; background-color: #CC6633">
+                <div id="my-header" style="width: 999px; margin-left: auto ; margin-right: auto;">
+                    <div id="my_logo" style="float:left; padding:6px; font-size: large; color: #494949 ; font-weight: bold"><!--Or_Skin[my_caption]--></div>
+                    <div id="my_user_info" style="float:right; border-style: none ;  padding:6px">
+
+                    </div>
+                </div>
+            </div>
+            <div dojoType="dijit.layout.ContentPane" splitter="true" region="leading" style="width: 250px;">
+                <div id="my_form_status" style="border-style: none; margin-left: auto; margin-right: auto; text-align: left">
+                    <div id="external" dojoType="dijit.Dialog" title="My external dialog">
+                        <!--Or_Skin[my_dialog]-->
+                        <iframe title="Test IFrame" src="ex_page_list.php" style="width:600px; height: 400px;"></iframe>
+                    </div>
+                    <p>
+                        ไดอะล็อกบ็อกซ์
+                    </p>
+                    <input dojoType="dijit.form.TextBox" type="text" name="txt_name" id="txt_name">
+                    <button dojoType="dijit.form.Button" onClick="popUpWindow('test_gui.php','ทดสอบการใช้งาน',600,400,'yes');" type="button">
+                        popUpWindow 1 ...
+                    </button>
+                    <button dojoType="dijit.form.Button" onClick="winopen('ex_page_popup.php','ทดสอบการใช้งาน',600,400,'yes');" type="button">
+                        popUpWindow 2 ...
+                    </button>
+                    <button dojoType="dijit.form.Button" onClick="dijit.byId('external').show();" type="button">
+                        Dialog...
+                    </button>
+                </div>
+            </div>
+            <div dojoType="dijit.layout.ContentPane" region="center"  href="ex_page_list.php" style="background-color: #f9e2b5; border-style: solid">
+                <div id="my_form"><!--Or_Skin[my_form]--></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

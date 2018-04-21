@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><title><!--Or_Skin[title]--></title>
+
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--Or_Skin[meta]--><!--Or_Skin[ccs_src]-->
+
+
+        <link rel="stylesheet" type="text/css" href="../../lib/dojo/dijit/themes/tundra/tundra.css">
+        <link rel="stylesheet" type="text/css" href="../../lib/dojo/dojo/resources/dojo.css">
+        <link rel="stylesheet" type="text/css" href="../../lib/calendar/calendar.css">
+        <style type="text/css">
+            a:link,a:visited
+            {
+                color:#000000;
+                text-decoration:none;
+            }
+            a:hover,a:active
+            {
+                color:#FF0000;
+            }
+            div.tooltip{
+                font-family:Verdana, Geneva, sans-serif;
+                font-size:1.125em; /* 18px/16=1.125 em */
+                padding: 0.125em 0.3125em;
+                margin: 0px;
+            }
+
+            body, html { font-family:helvetica,arial,sans-serif; font-size:100%; }
+            html, body { width: 100%; height: 100%; margin: 0;}
+            <!--Or_Skin[style]-->
+        </style>
+        <script language="JavaScript" src="../../lib/OrScript.js"></script>
+        <script language="JavaScript" src="../../lib/calendar/calendar.js"></script>
+        <script type="text/javascript" src="../../lib/dojo/dojo/dojo.js" charset="utf-8" djconfig="parseOnLoad: true"></script>
+
+        <!--Or_Skin[script_src]-->
+
+        <script language="JavaScript">
+            <!--
+            var urlPage = "../../my_projects/Or!Home/my_note_content.php";
+            var idValue = "my_sec_key"; //คีย์ตรวจสอบข้อมูล
+            var idContent = "my_note_content";
+            
+
+            dojo.require("dijit.layout.BorderContainer");
+            //dojo.require("dijit.layout.TabContainer");
+            dojo.require("dijit.layout.AccordionContainer");
+            dojo.require("dijit.layout.ContentPane");
+            dojo.require("dijit.TitlePane");
+            dojo.require("dijit.form.Form");
+            dojo.require("dijit.form.Button");
+            dojo.require("dijit.form.ValidationTextBox");
+            dojo.require("dijit.form.FilteringSelect");
+            dojo.require("dijit.form.DropDownButton");
+            dojo.require("dijit.TooltipDialog");
+            //dojo.require("dijit.Editor");
+
+            dojo.require("dijit.MenuBar");
+            dojo.require("dijit.PopupMenuBarItem");
+            dojo.require("dijit.Menu");
+            dojo.require("dijit.MenuItem");
+            dojo.require("dijit.PopupMenuItem");
+            dojo.require("dijit.Dialog");
+
+            dojo.require("dojox.fx");
+            dojo.require('dojox.timing');
+            t = new dojox.timing.Timer(30000);
+            t.onTick = function() {
+                var idNote = dojo.byId("my_note_id");
+                //var noteDialog = dijit.byId('note_dialog');
+                var btnInformation = dijit.byId('btn_information');
+                
+                content_refresh(urlPage, idValue, idContent);
+                if(idNote.value > 0 ){
+                  btnInformation.openDropDown();
+                    //if(noteDialog.open == false){
+                        //noteDialog.show();
+                        scrl = ' <<< ประกาศใหม่ๆ มาแล้วจ้า +++ ';
+                        scrlsts();
+                    //}else{
+                        //stoper();
+                        //scrl = ' +++ อ่านประกาศด้วยจ้า <<<< ';
+                        //scrlsts();
+                    //}
+                }else{
+                    clearTimeout(timer);
+                    document.title = my_title;
+                }
+                
+                //dijit.byId('note_dialog').show();
+                //console.info("One second elapsed");
+            }
+            t.onStart = function() {
+                //ตรวจสอบค่าเริ่มต้นของระบบ
+                //console.info("Starting timer");
+            }
+            t.start();
+
+            dojo.addOnLoad(function(){
+                // create On Load funtion
+                //dojo.fx.wipeIn({node: "animDiv",duration: 1000}).play();
+                //dojo.fx.slideTo({node: "animDiv",duration: 1000, left: 300, top: 0}).play();
+                //ตรวจสอบประกาศที่ยังไม่ได้อ่าน
+                //var noteDialog = dijit.byId('note_dialog');
+                content_refresh(urlPage, idValue, idContent);
+            });
+            dojo.ready(function(){
+                //dijit.byId('my_info').open = false;
+            });
+
+            //-->
+            <!--Or_Skin[script]-->
+        </script></head>
+    <body class="tundra">
+        <div dojoType="dijit.layout.BorderContainer" style="width: 100%; height: 100%;">
+            <div dojoType="dijit.layout.ContentPane" region="top" >
+                <div dojoType="dijit.form.DropDownButton">
+                    <span>ระบบของเรา</span>
+                    <div dojoType="dijit.layout.AccordionContainer" style="width: 400px; margin: 0 auto;">
+                        <div dojoType="dijit.layout.AccordionPane" title="<!--Or_Skin[category_1]-->">
+                            <ul>
+                                <!--Or_Skin[category_menu_1]-->
+                            </ul>
+                        </div>
+                        <div dojoType="dijit.layout.AccordionPane" title="<!--Or_Skin[category_2]-->">
+                            <ul>
+                                <!--Or_Skin[category_menu_2]-->
+                            </ul>
+                        </div>
+                        <div dojoType="dijit.layout.AccordionPane" title="<!--Or_Skin[category_0]-->">
+                            <ul>
+                                <!--Or_Skin[category_menu_0]-->
+                                <li>เวอร์ชั่น 5610-1</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div dojoType="dijit.form.DropDownButton"">
+                    <span><!--Or_Skin[my_caption]--></span>
+                    <!--Or_Skin[my_main_menu]-->
+                </div>
+                <div id="note_dialog" dojoType="dijit.Dialog" title="ประกาศใหม่ๆ">
+                    <div style="width: 600px; height: 400px; overflow: auto;">
+                        
+                    </div>
+                </div>
+                <div id="btn_information" dojoType="dijit.form.DropDownButton">
+                    <span><!--Or_Skin[my_user_info]--></span>
+                    <div dojoType="dijit.TooltipDialog">
+                        <div class="tooltip">
+                            <!--Or_Skin[my_login]-->
+                            <hr>
+                            <input id="my_sec_key" type="hidden" value="ถาาำนปาาน--ตด่ฟ่ำำยพาด่าไำต/">                            
+                            <span id="my_note_content"></span>
+                        </div>
+                    </div>
+                </div>
+                <span id="my_home_info"style="padding: 0em;margin:0px;"><a href="../../my_projects/Or!Home/"><img src="../../skins/simple/image/home.png" alt="thepwiki" width="24" height="18"></a></span>
+                <div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'my_home_info',position:['below']">
+                <span id="home_content">กลับไปหน้าหลัก เทพวิกิ</span>
+                </div>
+                <span id="my_system_info"><img src="../../skins/simple/image/icon/timeanddate.png" alt="Info" width="30" height="18"></span>
+                <div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'my_system_info',position:['below']">
+                <span id="timeanddate_content"><iframe src="http://www.timeanddate.com/worldclock/fullscreen.html?n=28" width="400" height="300" frameborder="0"></iframe></span>
+                </div>
+            </div>            
+            <div dojoType="dijit.layout.BorderContainer" region="center">
+                <!--Or_Skin[my_subform]-->
+            </div>
+        </div>
+    </body>
+</html>

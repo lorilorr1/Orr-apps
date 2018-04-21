@@ -1,0 +1,52 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title>ตัวอย่าง Ajax</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../../lib/dojo/dojo/dojo.js" charset="utf-8" djconfig="parseOnLoad: true"></script>
+        <script>
+            // Function that refreshes the SPAN node
+            function refreshContent(strUrl) {
+                // Using dojo.xhrGet, as very little information is being sent
+                dojo.xhrGet({
+                    // The URL of the request
+                    //url: "get-content.php",
+                    url: strUrl,
+                    // The success callback with result from server
+                    load: function(newContent) {
+                        dojo.byId("contentNode").innerHTML = newContent;
+                    },
+                    // The error handler
+                    error: function() {
+                        // Do nothing -- keep old content there
+                    }
+                });
+            }
+
+            // When the DOM is ready....
+            dojo.ready(function(){
+                // Populate content initially
+                refreshContent("ajax_content.html");
+                // Connect button
+                //dojo.connect(dojo.byId("refreshButton"),"onclick",refreshContent("ajax_content.php?user_text=ทดสอบ"));
+            });
+        </script>
+    </head>
+    <body>
+        ทดสอบการส่งข้อมูล AJAX โดย Dojo
+
+        <h1>Demo: Refresh a Node's Content</h1>
+
+        <p>Click the button below to refresh the content.</p>
+
+        <input type="text" id="user_text" size="50" /> <button id="refreshButton">Refresh Content</button>
+        <br />
+        <br />
+        <p id="contentNode"></p>
+
+    </body>
+</html>

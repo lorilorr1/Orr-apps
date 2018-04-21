@@ -1,0 +1,28 @@
+class OrFieldHidden
+!!!154467.php!!!	__construct(inout id : , inout name :  = null, inout idx :  = null)
+        parent:: __construct($id, $name, $idx);
+        //$this->OrControls($id ,$name ,$idx);
+        $this->OP_[type]->set('hidden');
+        $this->OP_[read_only]->set(true);
+!!!154595.php!!!	get_tag(inout value : mix = null) : mix
+	 $param = array();
+	 $this->OE_get_tag($param);
+	 
+	  if($value != null){
+		  $this->OP_[value]->set($value);
+	  }else if(is_numeric($value)){
+		  $this->OP_[value]->set($value);
+	  }
+	  if($this->OP_[auto_post]->get())$this->auto_post();
+	  $id = $this->get_id_tag();
+	  $value=$this->OP_[value]->get();
+	  
+	  $type='type="'.$this->OP_[type]->get().'"';
+	  
+	  if($value== null  AND !is_numeric($value))$value=$this->OP_[post_value]->get();
+	  if($value== null  AND !is_numeric($value))$value=$this->OP_[default_value]->get();
+	  
+	  $this->clip_value($value);
+	  $value='value="'.$value.'"';
+	  $my_value = "<input $id $type $value>".$this->get_properties_tag();
+	  return $my_value;

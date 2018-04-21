@@ -1,0 +1,742 @@
+format 74
+"orr_lib" // orr_lib
+  revision 1
+  modified_by 99 "orr"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default show_stereotype_properties default
+  
+  deploymentview 128099 "orr_lib"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+    artifact 128099 "config_lib.inc"
+      stereotype "source"
+      php_src "<?php
+//ค่าเชื่อมต่อฐานข้อมูลเริ่มต้น
+$my_cfg_db[host] = 'localhost';
+$my_cfg_db[user] = 'orr-projects';
+$my_cfg_db[password] = '';
+$my_cfg_db[charset] = 'utf8'; //utf8 tis620for mysql5
+
+//ค่าระบบการควบคุมสิทธิ์
+$my_cfg_sec[db] = 'or!config';
+$my_cfg_sec[ki] = 'linux';
+
+//ค่าตัวเลือกอื่นๆ
+$my_cfg_opt[global_register] = 'off'; //on  off
+$my_cfg_opt[login_page] = '';//page เริ่มต้นกรณีไม่ได้ login
+$my_cfg_opt[error_page] = ''; //page ที่ต้องการข้อผิดพลาด
+$my_cfg_opt[after_login_page] = 'welcome.php'; //page ที่ต้องการแสดงหลังการ Login
+//$my_cfg_opt[error_page] = 'error.php';//page ที่ต้องการแสดงกรณีเกิดข้อผิดพลาด
+$my_cfg_opt[language] = 'thai'; //ภาษาที่ใช้ในระบบ
+$my_cfg_opt[charset] = 'UTF-8'; //UTF-8 , TIS-620
+$my_cfg_opt[debug] = 'off'; //on off
+?>
+"
+      associated_classes
+      end
+    end
+
+    artifact 128227 "default_page.cls_"
+      stereotype "source"
+      php_src "<?php
+ /**
+ * my_page.cls.php
+ *
+ * PHP versions 4 and 5
+ *
+ * LICENSE: This source file is subject to version 3.0 of the PHP license
+ * that is available through the world-wide-web at the following URI:
+ * http://www.php.net/license/3_0.txt.  If you did not receive a copy of
+ * the PHP License and are unable to obtain it through the web, please
+ * send a note to license@php.net so we can mail you a copy immediately.
+ *
+ * @package    Or!Lib
+ * @author     Suchart Bunhachirat <suchart_bu@yahoo.com>
+ * @copyright  1997-2005 The PHP Group
+ * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
+ * @version    2550
+ */
+ 
+require_once('../../orr_lib/Or.php');
+require_once('config.inc.php');
+
+${definition}
+
+
+?>
+"
+      associated_classes
+	class_ref 128099 // my_page
+      end
+    end
+
+    artifact 128355 "Or"
+      stereotype "source"
+      php_src "<?php
+/*Class ส่วนการจัดการพื้นฐาน ของระบบ*/
+/*ผู้สร้าง : สุชาติ บุญหชัยรัตน์ : 2/12/2545*/
+/*Version 1.1.1(13 พฤษภาคม 2547) ดูรายละเอียดที่ Change. log.txt*/
+if($_SERVER['REMOTE_ADDR']==\"10.1.16.4\")
+{
+  ini_set('display_errors','On');
+}
+else
+{
+  ini_set('display_errors','Off');
+}
+ ini_set('display_errors','On'); //ต้องการแสดง Error
+error_reporting(E_ALL ^ E_NOTICE); //แก้ไข การแสดง Error เม่ื่อใช้ร่วมกับ phplot เพื่อทำกราฟ
+session_start();
+/*เริ่มการกำหนดตัวแปร สภาวะของระบบ*/
+require_once('config_lib.inc.php');
+
+/*เริ่ม เตรียมตัวแปรกลาง สำหรับใช้ร่วมในโปรแกรม*/
+if($my_cfg_opt[global_register]=='on'){
+	session_register('my_sec_user');
+	session_register('my_sec_key');
+	session_register('my_clip');
+}else if($my_cfg_opt[global_register]=='off'){
+	$my_sec_user = &$_SESSION['my_sec_user'];
+	$my_sec_key = &$_SESSION['my_sec_key'];
+	$my_clip = &$_SESSION['my_clip'];
+}else{
+	die('การกำหนด my_cfg_sec = '.$my_cfg_sec[global_register].'ไม่ถูกต้อง');
+}
+
+
+if (!defined('PMA_GRAB_GLOBALS_INCLUDED')) {
+    define('PMA_GRAB_GLOBALS_INCLUDED', 1);
+
+    function PMA_gpc_extract($array, &$target) {
+        if (!is_array($array)) {
+            return FALSE;
+        }
+        $is_magic_quotes = get_magic_quotes_gpc();
+        reset($array);
+        while (list($key, $value) = each($array)) {
+            if (is_array($value)) {
+                PMA_gpc_extract($value, $target[$key]);
+            } else if ($is_magic_quotes) {
+                $target[$key] = stripslashes($value);
+            } else {
+                $target[$key] = $value;
+            }
+        }
+        reset($array);
+        return TRUE;
+    }
+
+    if (!empty($_GET)) {
+        PMA_gpc_extract($_GET, $GLOBALS);
+    } else if (!empty($HTTP_GET_VARS)) {
+        PMA_gpc_extract($HTTP_GET_VARS, $GLOBALS);
+    } // end if
+
+    if (!empty($_POST)) {
+        PMA_gpc_extract($_POST, $GLOBALS);
+    } else if (!empty($HTTP_POST_VARS)) {
+        PMA_gpc_extract($HTTP_POST_VARS, $GLOBALS);
+    } // end if
+
+    if (!empty($_FILES)) {
+        while (list($name, $value) = each($_FILES)) {
+            $$name = $value['tmp_name'];
+            ${$name . '_name'} = $value['name'];
+        }
+    } else if (!empty($HTTP_POST_FILES)) {
+        while (list($name, $value) = each($HTTP_POST_FILES)) {
+            $$name = $value['tmp_name'];
+            ${$name . '_name'} = $value['name'];
+        }
+    } // end if
+    if (!empty($_SERVER)) {
+	/*foreach($_SERVER as $id=>$val){
+		echo \"<b>debug</b> \".__FILE__.\" | \".__LINE__.\" | \".$id.\" = \".$val.\"<br>\";
+	}*/
+        if (isset($_SERVER['PHP_SELF'])) {
+            $PHP_SELF = $_SERVER['PHP_SELF'];
+        }
+		if (isset($_SERVER['REMOTE_ADDR'])) {
+            $REMOTE_ADDR = $_SERVER['REMOTE_ADDR'];
+        }
+		if (isset($_SERVER['SCRIPT_FILENAME'])) {
+            $SCRIPT_FILENAME = $_SERVER['SCRIPT_FILENAME'];
+	    }else if (isset($_SERVER['SCRIPT_NAME'])){
+		$SCRIPT_FILENAME = $_SERVER['SCRIPT_NAME'];// for windows 2k
+	}
+        if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+            $HTTP_ACCEPT_LANGUAGE = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+        }
+    } else if (!empty($HTTP_SERVER_VARS)) {
+        if (isset($HTTP_SERVER_VARS['PHP_SELF'])) {
+            $PHP_SELF = $HTTP_SERVER_VARS['PHP_SELF'];
+        }
+		if (isset($HTTP_SERVER_VARS['REMOTE_ADDR'])) {
+            $REMOTE_ADDR = $HTTP_SERVER_VARS['REMOTE_ADDR'];
+        }
+		if (isset($HTTP_SERVER_VARS['SCRIPT_FILENAME'])) {
+            $SCRIPT_FILENAME = $HTTP_SERVER_VARS['SCRIPT_FILENAME'];
+        }
+        if (isset($HTTP_SERVER_VARS['HTTP_ACCEPT_LANGUAGE'])) {
+            $HTTP_ACCEPT_LANGUAGE = $HTTP_SERVER_VARS['HTTP_ACCEPT_LANGUAGE'];
+        }
+    } // end if
+}
+/*จบ เตรียมตัวแปรกลาง สำหรับใช้ร่วมในโปรแกรม*/
+function debug_mode($file , $line , $value , $description ){
+	global $my_cfg_opt;
+	if($my_cfg_opt[debug] == 'on')
+	{
+		if(is_array($value))
+		{
+			foreach($value as $id => $val)
+			{
+				$str_value .= '[' . $id . '] = ' . $val . ' , ';
+			}
+			$value = $str_value;
+		}
+		echo \"<b>Debug_mode</b> \" . $file . \" | \" . $line . \" | \" . $description . \" | value [\" . $value . \" ] <br> \" ;
+	}
+	return null;
+}
+//sys
+require_once('sys/OrSysvalue.php');
+require_once('sys/OrProperty.php');
+require_once('sys/OrObj.php');
+require_once('sys/OrSec.php');
+require_once('sys/OrClip.php');
+require_once('sys/OrFormat.php');
+require_once('sys/OrThdate.php');
+
+//gui
+require_once('gui/OrGui.php');
+require_once('gui/OrPicture.php');
+require_once('gui/OrAjax.php');
+require_once('gui/OrAccordionAjax.php');
+require_once('gui/OrGraph.php');
+require_once('gui/OrHtml.php');
+require_once('gui/OrSkin.php');
+require_once('gui/OrForm.php');
+require_once('gui/OrControls.php');
+require_once('gui/OrTextbox.php');
+require_once('gui/OrTextCalendar.php');
+require_once('gui/OrTextCalendar2.php');
+require_once('gui/OrTextarea.php');
+require_once('gui/OrLabel.php');
+require_once('gui/OrImage.php');
+require_once('gui/OrButton.php');
+require_once('gui/OrSelectbox.php');
+require_once('gui/OrCheckbox.php');
+require_once('gui/OrFieldHidden.php');
+require_once('gui/OrFieldProperty.php');
+require_once('gui/OrJs.php');
+require_once('gui/OrJsMenu.php');
+require_once('gui/OrJsCalendar.php');
+require_once('gui/OrTable.php');
+require_once('gui/OrLabelAjax.php');
+require_once('gui/OrSelectboxAjax.php');
+require_once('gui/OrContent.php');
+
+//ajax
+require_once('ajax/OrPage.php');
+require_once('ajax/OrMenu.php');
+
+//Dojo
+require_once('dojo/OrDojoForm.php');
+require_once('dojo/OrDojoTextbox.php');
+require_once('dojo/OrDojoTextarea.php');
+require_once('dojo/OrDojoSelectbox.php');
+require_once('dojo/OrDojoButton.php');
+require_once('dojo/OrDojoTextSearch.php');
+require_once('dojo/OrDojoChart.php');
+
+//db
+require_once('db/OrDb.php');
+require_once('db/OrDbForm.php');
+require_once('db/OrDbFrmForm.php');
+require_once('db/OrDbFormList.php');
+require_once('db/OrDbFrmList.php');
+require_once('db/OrDbPopupList.php');
+require_once('db/OrDbFrmCrossTab.php');
+require_once('db/OrMysql.php');
+require_once('db/OrSql.php');
+require_once('db/OrSqlCrossTab.php');
+require_once('db/OrMySqlThDate.php');
+require_once('db/OrMySqlThDatetime.php');
+
+?>
+"
+      associated_classes
+      end
+    end
+
+    artifact 128483 "php_info"
+      stereotype "source"
+      php_src "<?php
+/*
+ * Created on 13-Aug-06
+ *
+ * To change the template for this generated file go to
+ * Window - Preferences - PHPeclipse - PHP - Code Templates
+ */
+phpinfo();
+?>
+"
+      associated_classes
+      end
+    end
+  end
+
+  classview 128099 "orr_lib"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 128099 "my_page"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+Class สำหรับสร้างหน้าจอมาตรฐาน
+@package    Or!Lib
+@author     Suchart Bunhachirat <suchart.orr@gmail.com>
+@copyright  1997-2005 The PHP Group
+@license    http://www.php.net/license/3_0.txt  PHP License 3.0
+@version    2554
+"
+      classrelation 128099 // <generalisation>
+	relation 128099 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128099 // <generalisation>
+	  b parent class_ref 128227 // OrHtml
+      end
+
+      attribute 128099 "caption"
+	public explicit_type ""
+	init_value " null"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 128099 "__construct"
+	package explicit_return_type ""
+	nparams 1
+	  param inout name "title" explicit_type ""
+	    defaultvalue "''"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "public $skin = null;
+
+การใช้ Class my_page
+
+
+"
+      end
+
+      operation 128227 "set_skin_ccs"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "file_name" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+set_skin_ccs : กำหนดไฟล์ Styles Sheet
+@param ${t0} ${p0} ชื่อไฟล์ที่อยู่ใน skin path
+@return ${type}
+"
+      end
+
+      operation 128355 "set_caption"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+set_caption : กำหนดหัวเรื่องโปรแกรม
+@param ${t0} ${p0} ชื่อโปรแกรม
+@return ${type}
+"
+      end
+
+      operation 128483 "set_title"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+set_caption : กำหนดชื่อระบบ
+@param ${t0} ${p0} ชื่อระบบ
+@return ${type}
+"
+      end
+
+      operation 128611 "set_form"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+set_form : กำหนด Form
+@param ${t0} ${p0} คำสั่ง HTML ของ Form
+@return ${type}
+"
+      end
+
+      operation 128739 "set_login"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+set_form : กำหนด Form เพื่อ Login
+@param ${t0} ${p0} คำสั่ง HTML ของ Form
+@return ${type}
+"
+      end
+
+      operation 128867 "set_leading"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+set_form : กำหนด Form เพื่อ Login
+@param ${t0} ${p0} คำสั่ง HTML ของ Form
+@return ${type}
+"
+      end
+
+      operation 128995 "set_subpage"
+	package explicit_return_type "null"
+	nparams 3
+	  param inout name "url" explicit_type "string"
+	  param inout name "width" explicit_type ""
+	    defaultvalue "'100%'  "
+	  param inout name "height" explicit_type ""
+	    defaultvalue "'99%'"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+set_subpage : กำหนด Sub Page
+@param ${t0} ${p0} Address ของ Page
+@return ${type}
+"
+      end
+
+      operation 129123 "set_status"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+set_status : กำหนด สถานะการทำงาน
+@param ${t0} ${p0} ข้อความแจ้งสถานะ
+@return ${type}
+"
+      end
+
+      operation 129251 "set_filter_msg"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+set_filter : กำหนด สถานะการ Filter
+@param ${t0} ${p0} ข้อความแจ้ง เงื่อนไขการคัดกรองข้อมูล
+@return ${type}
+"
+      end
+
+      operation 129379 "set_my_message"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+set_my_message : กำหนด ข้อความแจ้งผู้ใช้ระบบ
+@param ${t0} ${p0} ข้อความแจ้ง ข้อมูล
+@return ${type}
+"
+      end
+
+      operation 129507 "set_footer"
+	package explicit_return_type "null"
+	nparams 1
+	  param inout name "tag" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+set_footer : กำหนด Footer
+@param ${t0} ${p0} ข้อความส่วน Footer
+@return ${type}
+"
+      end
+
+      operation 129635 "get_frame"
+	package explicit_return_type "string"
+	nparams 1
+	  param inout name "page_url" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+get_frame : html tag iframe
+@param ${t0} Url of page in frame
+@return ${type} html tag
+"
+      end
+
+      operation 129763 "get_skins_path"
+	package explicit_return_type "string"
+	nparams 1
+	  param inout name "file_name" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+get_skins_path : ค่า path และ file_name ตาม $my_cfg[skins_path]
+@param ${t0} ${p0} ชื่อไฟล์
+@return ${type} ค่า path + ชื่อไฟล์
+"
+      end
+
+      operation 129891 "get_my_db"
+	package explicit_return_type "object"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+get_my_db : ค่า DB Object ฐานข้อมูลที่กำหนดจาก $my_cfg[db]
+@return ${type} DB Object จาก Class OrMysql
+"
+      end
+
+      operation 130019 "get_text"
+	package explicit_return_type "string"
+	nparams 1
+	  param inout name "file_name" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+get_text : ค่า ข้อความจากไฟล์
+@param ${t0} ชื่อไฟล์
+@return ${type} ข้อความในไฟล์	
+"
+      end
+
+      operation 130147 "get_button_filter"
+	package explicit_return_type "string"
+	nparams 1
+	  param inout name "cmd_filter" explicit_type "string"
+	    defaultvalue "''"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+get_button_filter : html tag ของปุ่ม filtter
+@param ${t0} ${p0} คำสั่ง filter ข้อมูล
+@return ${type} html tag ของปุ่ม filter
+"
+      end
+
+      operation 130275 "get_filter"
+	package explicit_return_type "string"
+	nparams 1
+	  param inout name "str_filter" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+get_fitter : sql filter สร้างคำสั่งค้นหาข้อมูล
+@param ${t0} ${p0}	ข้อความที่ต้องการ filter
+@return ${type} sql filter
+"
+      end
+
+      operation 130403 "show"
+	package explicit_return_type "null"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+show : คำสั่งแสดงหน้าจอ Html
+@return ${type}
+"
+      end
+    end
+
+  end
+
+  package_ref 128227 // gui
+
+  package_ref 128355 // ajax
+
+  package_ref 128483 // db
+
+  package_ref 128611 // sys
+
+  package_ref 128739 // dojo
+end

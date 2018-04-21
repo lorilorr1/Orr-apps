@@ -1,0 +1,25 @@
+class OrLabelAjax
+!!!159715.php!!!	__construct(inout id : string, inout name : string = null, inout idx : int = null)
+		parent:: __construct($id,$name,$idx);
+!!!159843.php!!!	set_ajax_tooltip(inout url : string, inout style :  = null) : null
+ 		$this->tooltip_url = $url;
+ 		if(!is_null($style)){
+ 			$this->tooltip_style = $style;
+ 		}
+ 		return null;
+!!!159971.php!!!	get_ajax_tooltip(inout connectId : string) : string
+ 		if(!is_null($this->tooltip_url)){
+ 			$str_ajax = '<span dojoType="tooltip" connectId="'. $connectId . '" href="'. $this->tooltip_url . '" executeScripts="true" style="' . $this->tooltip_style . '"></span>';
+ 		}
+ 		return $str_ajax;
+!!!160099.php!!!	get_tag(inout value :  = null, inout title :  = null)
+
+		$value = $this->get_control_value($value);
+		$text = $this->get_control_text($value);
+		$title = $this->get_control_title($title);
+		$class = $this->get_control_class();
+		$id = $this->get_id_tag();
+		$field = new OrFieldHidden($this->OP_[id]->get(), $this->OP_[name]->get());
+		$span_id = 'id="label_' . $this->OP_[id]->get() . '"';
+		$ajax_tooltip = $this->get_ajax_tooltip('label_' . $this->OP_[id]->get());
+		return "<SPAN $span_id $title $class>" . $text . "</SPAN>" . $ajax_tooltip . $field->get_tag($value) . $this->get_properties_tag();

@@ -1,0 +1,64 @@
+class OrDojoChart
+!!!147683.php!!!	__construct(inout title : string = '')
+        parent::__construct($title);
+        $this->set_skin('../../orr_lib/dojo/default_chart.html'); //รูปแบบหน้าแสดงกราฟ
+        $this->dojo_require(); //กำหนดคำสั่ง require
+!!!147811.php!!!	set_dojo_require(inout tag : tag) : null
+        $tag = $tag;
+        if (!is_array($tag)) {
+            $tag = array($tag);
+        }
+        $this->dojo_require_script = array_merge($this->dojo_require_script, $tag);
+        return null;
+!!!147939.php!!!	dojo_require() : null
+        $this->set_dojo_require('dojo.require("dojox.charting.Chart2D");');
+        $this->set_dojo_require('dojo.require("dojox.charting.widget.Legend");');
+        $this->set_dojo_require('dojo.require("dojox.charting.action2d.Tooltip");');
+        $this->set_dojo_require('dojo.require("dojox.charting.action2d.Magnify");');
+        $this->set_dojo_require('dojo.require("dojox.charting.themes.Claro");');
+        return null;
+!!!148067.php!!!	get_dojo_require()
+        foreach ($this->dojo_require_script as $line) {
+            $my_value .= $line;
+        }
+        return $my_value;
+!!!148195.php!!!	set_chart_series(inout name : $name, inout data : $data) : null
+        $my_tag = 'chart.addSeries("' . $name . '",' . $data . ');';
+        $my_tag = array($my_tag);
+        $this->chart_series = array_merge($this->chart_series, $my_tag);
+        return null;
+!!!148323.php!!!	get_chart_series()
+        foreach ($this->chart_series as $line) {
+            $my_value .= $line;
+        }
+        return $my_value;
+!!!148451.php!!!	set_axis_lable(inout value : $value, inout text : $text) : null
+        $my_tag = '{value: ' . $value . ', text: "' . $text . '"}';
+        $my_tag = array($my_tag);
+        $this->axis_labels = array_merge($this->axis_labels, $my_tag);
+        return null;
+!!!148579.php!!!	set_axis_thmonth(inout format : $format = 1) : null
+        $th_month = new OrThdate();
+        for ($i = 1; $i <= 12; $i++) {
+            $this->set_axis_lable($i, $th_month->get_month($i,$format));
+        }
+        return null;
+!!!148707.php!!!	set_axis_thday(inout format : $format = 1) : null
+        $th_month = new OrThdate();
+        for ($i = 0; $i <= 6; $i++) {
+            $this->set_axis_lable($i, $th_month->get_day($i,$format));
+        }
+        return null;
+!!!148835.php!!!	get_axis_lable()
+        foreach ($this->axis_labels as $line) {
+            $my_value .= $line . ', ';
+        }
+        if($my_value != ''){
+            $my_value = 'labels: [' . $my_value .']';
+        }
+        return $my_value;
+!!!148963.php!!!	show() : null
+        $this->skin->set_skin_tag('dojo_require', $this->get_dojo_require());
+        $this->skin->set_skin_tag('chart_series', $this->get_chart_series());
+        $this->skin->set_skin_tag('chart_axis_x', 'chart.addAxis("x",{' . $this->get_axis_lable() . '});');
+        parent::show();

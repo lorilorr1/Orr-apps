@@ -1,0 +1,203 @@
+<html>
+    <head>
+        <title><!--Or_Skin[title]--></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+        <link rel="stylesheet" type="text/css" href="lib/ext/resources/css/ext-all.css" />
+        
+        <!-- GC -->
+        <!-- LIBS -->
+        <script type="text/javascript" src="lib/ext/adapter/ext/ext-base.js"></script>
+        <!-- ENDLIBS -->
+
+        <script type="text/javascript" src="lib/ext/ext-all.js"></script>
+        
+        <!--<script language="javascript" src="../grid/PropsGrid.js"></script>-->
+        <style type="text/css">
+            html, body {
+                font:normal 12px verdana;
+                margin:0;
+                padding:0;
+                border:0 none;
+                overflow:hidden;
+                height:100%;
+            }
+            p {
+                margin:5px;
+            }
+            .settings {
+                background-image:url(../shared/icons/fam/folder_wrench.png);
+            }
+            .nav {
+                background-image:url(../shared/icons/fam/folder_go.png);
+            }
+        </style>
+        <script type="text/javascript">
+            function myhref(){
+                //แก้ไขปัญหา Reload ใน opera
+            }
+           
+            Ext.onReady(function(){
+
+                Ext.state.Manager.setProvider(new Ext.state.CookieProvider());
+                var north = new Ext.BoxComponent({
+                    region:'north',
+                    el: 'north',
+                    height:32
+                });
+                
+                var south = new Ext.Panel({
+                    region:'south',
+                    contentEl: 'south',
+                    split:true,
+                    height: 100,
+                    minSize: 100,
+                    maxSize: 200,
+                    collapsible: true,
+                    title:'ข้อมูล ข่าวสาร',
+                    margins:'0 0 0 0'
+                });
+           
+                var nav1 = new Ext.Panel({
+                    contentEl: 'west',
+                    title:'ระบบงาน',
+                    border:false,
+                    iconCls:''
+                });
+                
+                var nav2 = new Ext.Panel({
+                    contentEl: 'nav2',
+                    title:'ผู้ใช้ระบบ',
+                    border:false,
+                    iconCls:''
+                });
+                
+                var nav3 = new Ext.Panel({
+                    contentEl: 'nav3',
+                    title:'สิทธิการใช้',
+                    border:false,
+                    iconCls:''
+                });
+                
+                var nav4 = new Ext.Panel({
+                    contentEl: 'nav4',
+                    title:'การดูแลระบบ',
+                    border:false,
+                    iconCls:''
+                });
+                
+                var west = new Ext.Panel({
+                    region:'west',
+                    id:'west-panel',
+                    title:'รายการ',
+                    split:true,
+                    width: 200,
+                    minSize: 175,
+                    maxSize: 400,
+                    collapsible: true,
+                    margins:'0 0 0 5',
+                    layout:'accordion',
+                    layoutConfig:{
+                        animate:true
+                    },
+                    items: [nav1, nav2, nav3, nav4]
+                });
+                
+                var com1 = new Ext.Panel({
+                    html: "Hi. I'm the com1 panel.",
+                    title: 'รับส่งข้อความ',
+                    autoScroll:true
+                });
+                
+                var com2 = new Ext.Panel({
+                    html: "Hi. I'm the com2 panel.",
+                    title: 'รับส่งจดหมาย',
+                    autoScroll:true
+                });
+                
+                var east_tab = new Ext.TabPanel({
+                    border:false,
+                    activeTab:0,
+                    tabPosition:'bottom',
+                    items:[com1,com2]
+                });
+                
+                var east = new Ext.Panel({
+                    region:'east',
+                    title: 'ติดต่อ สื่อสาร',
+                    collapsible: true,
+                    split:true,
+                    width: 225,
+                    minSize: 175,
+                    maxSize: 400,
+                    layout:'fit',
+                    margins:'0 5 0 0',
+                    items:[east_tab]
+                });
+                
+                var center = new Ext.TabPanel({
+                    region:'center',
+                    deferredRender:false,
+                    activeTab:0,
+                    items:[{
+                            contentEl:'center1',
+                            title: 'คำแนะนำ',
+                            closable:true,
+                            autoScroll:true
+                        },{
+                            contentEl:'center2',
+                            title: 'INTRANET',
+                            autoScroll:true
+                        }]
+                });
+                
+                var viewport = new Ext.Viewport({
+                    layout:'border',
+                    items: [ north, south, west, east, center]
+                });
+           
+                function addTab(TabName,TabUrl){
+                    center.add({
+                        title: TabName,
+                        iconCls: '',
+                        html:'<iframe name="frm_sub_center2" frameborder="0" height="100%" width="100%" scrolling="auto" src="'+TabUrl+'" > #</iframe>',
+                        closable:true
+                    }).show();
+                }
+                
+                <!--Or_Skin[var_main_menu]-->
+                
+            });
+        
+        </script>
+    </head>
+    <body>
+        <div id="west">
+            <!--Or_Skin[tag_main_menu]-->
+       </div>
+        <div id="nav2">
+            <p>Hi. I'm the nav2 west panel.</p>
+        </div>
+        <div id="nav3">
+            <p><a id="tab_my_user" href="javascript:myhref()">ผู้ใช้ระบบ</a></p>
+        </div>
+        <div id="nav4">
+            <p><a id="tab_adsl" href="http://192.168.1.254/" target="blank">ADSL Router</a></p>
+            <p><a id="tab_phpmyadmin" href="http://10.1.0.12/phpMyAdmin/" target="blank">PhpMyAdmin</a></p>
+            <p><a id="tab_samba" href="http://10.1.0.8:10000/" target="blank">Samba</a></p>
+        </div>
+        <div id="north">
+            <p>north - generally for menus, toolbars and/or advertisements</p>
+        </div>
+        <div id="center2">
+            <iframe name="frm_sub_center2" frameborder="0" height="100%" width="100%" scrolling="auto" src="http://localhost/" > #</iframe>
+        </div>
+        <div id="center1">
+            <p>ข้อมูลคำแนะนำ ข่าวสารต่างๆ</p>
+        </div>
+        <div id="props-panel" style="width:200px;height:200px;overflow:hidden;">
+        </div>
+        <div id="south">
+            <p>south - generally for informational stuff, also could be for status bar</p>
+        </div>
+    </body>
+</html>
