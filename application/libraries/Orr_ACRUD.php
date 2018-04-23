@@ -38,16 +38,19 @@ class Orr_ACRUD extends Grocery_CRUD {
             $ci = &get_instance();
             $ci->load->model('Authorize_orr');
             $this->auth_model = new Authorize_orr();
+            $sign_data = $this->auth_model->get_sign_data();
+            if ($sign_data['status'] === NULL) {
+                redirect(site_url("Signin"));
+            }
             //redirect(site_url("Welcome/sign_in_page"));
             /**
              * @todo Check in singin
              */
-            $ci_input = new CI_Input();
             /**
              * @todo Default field for orr-apps
              */
             $this->field_type('id', 'readonly')->field_type('sec_time', 'readonly')->field_type('sec_ip', 'readonly')->field_type('sec_script', 'readonly');
-            $this->default_as(['sec_ip' => $ci_input->ip_address(), 'sec_time' => date("Y-m-d H:i:s")]);
+            $this->default_as(['sec_ip' => $this->auth_model->get_sign_ip_address(), 'sec_time' => date("Y-m-d H:i:s")]);
         } catch (Exception $e) {
             show_error($e->getMessage() . ' --- ' . $e->getTraceAsString());
         }
