@@ -33,7 +33,7 @@ and open the template in the editor.
                         </p>
                     </div></div>
                 <div class="panel-body">
-                    <form action="<?= site_url("Signin/set"); ?>" method="post" >
+                    <form action="<?= site_url("Mark/signin"); ?>" method="post" >
                         <div class="form-group">
                             <label for="username">Username:</label>
                             <input type="text" class="form-control" id="username" name="username" placeholder="Username">

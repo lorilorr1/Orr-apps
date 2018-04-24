@@ -31,29 +31,16 @@ class Orr_ACRUD extends Grocery_CRUD {
      */
     public function __construct() {
         parent::__construct();
-        try {
-            /**
-             * Initial Authorize_orr model
-             */
-            $ci = &get_instance();
-            $ci->load->model('Authorize_orr');
-            $this->auth_model = new Authorize_orr();
-            $sign_data = $this->auth_model->get_sign_data();
-            if ($sign_data['status'] === NULL) {
-                redirect(site_url("Signin"));
-            }
-            //redirect(site_url("Welcome/sign_in_page"));
-            /**
-             * @todo Check in singin
-             */
-            /**
-             * @todo Default field for orr-apps
-             */
-            $this->field_type('id', 'readonly')->field_type('sec_time', 'readonly')->field_type('sec_ip', 'readonly')->field_type('sec_script', 'readonly');
-            $this->default_as(['sec_ip' => $this->auth_model->get_sign_ip_address(), 'sec_time' => date("Y-m-d H:i:s")]);
-        } catch (Exception $e) {
-            show_error($e->getMessage() . ' --- ' . $e->getTraceAsString());
+        $ci = &get_instance();
+        $ci->load->model('Authorize_orr');
+        $this->auth_model = new Authorize_orr();
+        $sign_data = $this->auth_model->get_sign_data();
+        $uri_data = $this->auth_model->get_uri_data();
+        if ($sign_data['status'] !== 'Online') {
+            redirect(site_url('Mark'));
         }
+        $this->field_type('id', 'readonly')->field_type('sec_time', 'readonly')->field_type('sec_ip', 'readonly')->field_type('sec_script', 'readonly');
+        $this->default_as(['sec_ip' => $this->auth_model->get_sign_ip_address(), 'sec_time' => date("Y-m-d H:i:s")]);
     }
 
     /**

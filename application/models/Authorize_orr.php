@@ -8,12 +8,18 @@
  * @version 2561
  */
 class Authorize_orr extends CI_Model {
-    
+
     /**
      * List of all sign data
      * @var array 
      */
     protected $sign_data = ['id' => 0, 'user' => NULL, 'ip_address' => NULL, 'key' => NULL, 'status' => NULL];
+
+    /**
+     * List of all uri data
+     * @var array
+     */
+    protected $uri_data = ['uri_to' => NULL];
 
     /**
      * Constructor
@@ -22,9 +28,42 @@ class Authorize_orr extends CI_Model {
         parent::__construct();
         $this->load->library('session');
         $this->load->database('orr-projects');
+        //$this->uri_data = $this->get_uri_data();
+        /**
+          if ($this->session->has_userdata('uri_data')) {
+
+          } else {
+
+          $this->session->set_userdata("uri_data", $this->uri_data);
+          }
+         * 
+         */
+    }
+
+    /**
+     * คืนค่าสถานะการลงชื่อใช้งาน
+     * @return Array
+     */
+    public function get_sign_data() {
         if ($this->session->has_userdata('sign_data')) {
             $this->set_sign();
         }
+        return $this->sign_data;
+    }
+
+    public function get_uri_data() {
+        $uri_data = NULL;
+        if ($this->session->has_userdata('uri_data')) {
+            $uri_data = $this->session->userdata('uri_data');
+            /**
+             * @todo ทำต่อไป
+             */
+            echo $uri_data['uri_to'];
+        }else{
+            $uri_data['uri_to'] = uri_string();
+            $this->session->set_userdata('uri_data', $uri_data);
+        }
+        return $uri_data;
     }
 
     /**
@@ -54,7 +93,7 @@ class Authorize_orr extends CI_Model {
              */
             $this->sign_data['status'] = $this->get_sign_status(TRUE);
             $data = json_encode($this->sign_data);
-            $this->session->set_userdata("sign_data", $data);
+            $this->session->set_userdata('sign_data', $data);
         } else {
             $this->sign_out();
         }
@@ -76,6 +115,20 @@ class Authorize_orr extends CI_Model {
         } else {
             die('Data record is abnormal.');
         }
+    }
+
+    /**
+     * คืนค่าเป็นจริง ถ้ามีลงชื่อเข้าระบบแล้ว
+     * @return boolean
+     */
+    public function get_sign() {
+        if ($this->session->has_userdata('sign_data')) {
+            $this->set_sign();
+            $val = TRUE;
+        } else {
+            $val = FALSE;
+        }
+        return $val;
     }
 
     /**
@@ -106,10 +159,6 @@ class Authorize_orr extends CI_Model {
     public function get_sign_ip_address() {
         $ci_input = new CI_Input();
         return $this->sign_data['ip_address'] = $ci_input->ip_address();
-    }
-
-    public function get_sign_data() {
-        return $this->sign_data;
     }
 
     public function sign_out() {

@@ -28,6 +28,7 @@ class Welcome extends CI_Controller {
      */
     public function index() {
         $sign_data = $this->authorize_orr->get_sign_data();
+        $uri_data = $this->authorize_orr->get_uri_data();
         $this->page_value = array('sign_status' => $sign_data['user'] . " - " . $sign_data['status'], 'title' => "Orr projects", 'topic' => "Welcome...");
         $this->set_view();
     }
