@@ -16,12 +16,6 @@ class Authorize_orr extends CI_Model {
     protected $sign_data = ['id' => 0, 'user' => NULL, 'ip_address' => NULL, 'key' => NULL, 'status' => NULL];
 
     /**
-     * List of all uri data
-     * @var array
-     */
-    protected $uri_data = ['uri_to' => NULL];
-
-    /**
      * Constructor
      */
     public function __construct() {
@@ -49,21 +43,6 @@ class Authorize_orr extends CI_Model {
             $this->set_sign();
         }
         return $this->sign_data;
-    }
-
-    public function get_uri_data() {
-        $uri_data = NULL;
-        if ($this->session->has_userdata('uri_data')) {
-            $uri_data = $this->session->userdata('uri_data');
-            /**
-             * @todo ทำต่อไป
-             */
-            echo $uri_data['uri_to'];
-        }else{
-            $uri_data['uri_to'] = uri_string();
-            $this->session->set_userdata('uri_data', $uri_data);
-        }
-        return $uri_data;
     }
 
     /**

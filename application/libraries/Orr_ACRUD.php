@@ -24,6 +24,10 @@ class Orr_ACRUD extends Grocery_CRUD {
     protected $default_as = [];
 
     /**
+     * 
+     */
+
+    /**
      * Initial 
      * Constructor
      *
@@ -35,7 +39,6 @@ class Orr_ACRUD extends Grocery_CRUD {
         $ci->load->model('Authorize_orr');
         $this->auth_model = new Authorize_orr();
         $sign_data = $this->auth_model->get_sign_data();
-        $uri_data = $this->auth_model->get_uri_data();
         if ($sign_data['status'] !== 'Online') {
             redirect(site_url('Mark'));
         }

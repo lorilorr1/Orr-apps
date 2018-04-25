@@ -14,7 +14,7 @@
 class Mark extends CI_Controller {
 
     private $page_value = NULL;
-
+    
     public function __construct() {
         parent::__construct();
         $this->load->helper('url');
@@ -37,7 +37,6 @@ class Mark extends CI_Controller {
 
     /**
      * ตรวจสอบรหัสผู้ใช้งาน จากหน้าจอเข้าระบบ
-     * 
      */
     public function signin() {
         $this->authorize_orr->sign_in($this->input->post('username'), $this->input->post('password'));
