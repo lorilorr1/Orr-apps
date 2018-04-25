@@ -9,7 +9,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author suchart bunhachirat
  */
 class Project extends CI_Controller {
-
+    
+    private $page_value = ['title' => NULL, 'sign_status' => NULL, 'topic' => NULL];
+    
     /**
      * Project Page for this controller.
      * @todo Home Page for Orr projects.
@@ -27,6 +29,10 @@ class Project extends CI_Controller {
     }
 
     private function set_view($output) {
+        /**
+         * return (object) array();
+         */
+        var_dump(key($output));
         $this->load->view('project_home.php', (array) $output);
     }
 
@@ -76,7 +82,7 @@ class Project extends CI_Controller {
 
             $crud->columns('user', 'fname', 'lname', 'status');
 
-            //$crud->default_as('status', '0');
+            $crud->default_as('status', '0');
 
             $crud->field_type('val_pass', 'invisible')->field_type('password', 'password')->field_type('status', 'dropdown', $this->status_set);
 
