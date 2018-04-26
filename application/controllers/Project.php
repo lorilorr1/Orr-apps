@@ -24,21 +24,8 @@ class Project extends ORR_Controller {
         parent::__construct();
         $this->load->database('orr-projects');
         $this->load->helper('url');
-        $this->load->library('grocery_CRUD');
-        $this->load->library('orr_ACRUD');
     }
-
-    private function set_view($output) {
-        /**
-         * Prepare (object) array();
-         */
-        if (!is_array($output)) {
-            $output = is_object($output) ? get_object_vars($output) : array();
-        }
-        $output['page_value'] = $this->page_value;
-        $this->load->view('project_home.php', (array) $output);
-    }
-
+    
     public function index() {
         $this->set_view((object) array('output' => '', 'js_files' => array(), 'css_files' => array()));
     }
