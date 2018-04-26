@@ -26,6 +26,7 @@ class Orr_ACRUD extends Grocery_CRUD {
     /**
      * 
      */
+    protected $sign_data = [];
 
     /**
      * Initial 
@@ -38,12 +39,17 @@ class Orr_ACRUD extends Grocery_CRUD {
         $ci = &get_instance();
         $ci->load->model('Authorize_orr');
         $this->auth_model = new Authorize_orr();
-        $sign_data = $this->auth_model->get_sign_data();
-        if ($sign_data['status'] !== 'Online') {
+        $this->sign_data = $this->auth_model->get_sign_data();
+        if ($this->sign_data['status'] !== 'Online') {
             redirect(site_url('Mark'));
         }
-        $this->field_type('id', 'readonly')->field_type('sec_time', 'readonly')->field_type('sec_ip', 'readonly')->field_type('sec_script', 'readonly');
-        $this->default_as(['sec_ip' => $this->auth_model->get_sign_ip_address(), 'sec_time' => date("Y-m-d H:i:s")]);
+        $this->field_type('id', 'readonly')->field_type('sec_time', 'invisible')->field_type('sec_ip', 'invisible')->field_type('sec_script', 'invisible');
+        //$this->set_relation('sec_user', 'my_user', '{user}  -  {fname} {lname}');
+        //$this->default_as(['sec_user' => $sign_data['id'], 'sec_ip' => $this->auth_model->get_sign_ip_address(), 'sec_time' => date("Y-m-d H:i:s"), 'sec_script' => $this->auth_model->get_sign_script()]);
+        /**
+         * Events
+         */
+        //$this->callback_before_insert(array($this, '_sec_fileds'));
     }
 
     /**
@@ -66,6 +72,21 @@ class Orr_ACRUD extends Grocery_CRUD {
         return $this;
     }
 
+    /**
+     * 
+     * @param Array Post values
+     * @return Array
+     */
+    public function _sec_fileds($post_array) {
+       
+        $post_array['sec_ip'] = $this->sign_data['ip_address'];
+        $post_array['sec_user'] = $this->sign_data['id'];
+        $post_array['sec_user'] = 'TEST2';
+        $post_array['sec_time'] = date("Y-m-d H:i:s");
+
+        return $post_array;
+    }
+    
     /**
      * Return default value when field value is null.
      * @param object $field_info

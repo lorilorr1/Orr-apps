@@ -8,9 +8,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @link Orr-projects/index.php/Project/
  * @author suchart bunhachirat
  */
-class Project extends CI_Controller {
+class Project extends ORR_Controller {
 
-    private $page_value = ['title' => NULL, 'sign_status' => NULL, 'topic' => NULL];
+    //private $page_value = ['title' => NULL, 'sign_status' => NULL, 'topic' => NULL];
 
     /**
      * Project Page for this controller.
@@ -93,26 +93,25 @@ class Project extends CI_Controller {
 
         $crud->field_type('val_pass', 'invisible')->field_type('password', 'password')->field_type('status', 'dropdown', $this->status_set);
 
-        $crud->callback_before_insert(array($this, '_md5_password'));
-        $crud->callback_before_update(array($this, '_md5_password'));
-
+        $crud->callback_before_insert(array($this, '_md5_val_pass'));
+        $crud->callback_before_update(array($this, '_md5_val_pass'));
+        
         $output = $crud->render();
 
         $this->set_view($output);
     }
 
     /**
-     * Encode password before insert or update
+     * Encode password before insert or update (use in callback need access public)
+     * @access public
      * @param array $post_array
      * @return Array
      */
-    function _md5_password($post_array) {
-        if ($post_array['password'] != "") {
+    public function _md5_val_pass($post_array) {
+        if (!empty($post_array['password'])) {
             $post_array['val_pass'] = md5($post_array['password']);
-        } else {
-            
         }
-        $post_array['password'] = "";
+        unset($post_array['password']);
         return $post_array;
     }
 

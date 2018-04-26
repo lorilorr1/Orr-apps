@@ -13,7 +13,7 @@ class Authorize_orr extends CI_Model {
      * List of all sign data
      * @var array 
      */
-    protected $sign_data = ['id' => 0, 'user' => NULL, 'ip_address' => NULL, 'key' => NULL, 'status' => NULL];
+    protected $sign_data = ['id' => 0, 'user' => NULL, 'ip_address' => NULL, 'script' => NULL, 'key' => NULL, 'status' => NULL];
 
     /**
      * Constructor
@@ -88,6 +88,8 @@ class Authorize_orr extends CI_Model {
         if ($query->num_rows() === 1) {
             if ($this->sign_data['key'] === $this->get_sign_key($query->row()->sec_time)) {
                 $this->sign_data['status'] = $this->get_sign_status(TRUE);
+                $this->sign_data['ip_address'] = $this->get_sign_ip_address();
+                $this->sign_data['script'] = $this->get_sign_script();
             } else {
                 $this->sign_data['status'] = $this->get_sign_status(FALSE);
             }
@@ -134,10 +136,20 @@ class Authorize_orr extends CI_Model {
         }
         return $this->sign_data['status'];
     }
-
+    
+    /**
+     * IP Address for sec_ip
+     * @access public
+     * @return String
+     */
     public function get_sign_ip_address() {
         $ci_input = new CI_Input();
         return $this->sign_data['ip_address'] = $ci_input->ip_address();
+    }
+    
+    public function get_sign_script(){
+        $ci_uri = new CI_URI();
+        return $this->sign_data['script'] = $ci_uri->slash_segment(1).$ci_uri->segment(2);
     }
 
     public function sign_out() {
