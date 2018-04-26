@@ -9,9 +9,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author suchart bunhachirat
  */
 class Project extends CI_Controller {
-    
+
     private $page_value = ['title' => NULL, 'sign_status' => NULL, 'topic' => NULL];
-    
+
     /**
      * Project Page for this controller.
      * @todo Home Page for Orr projects.
@@ -30,9 +30,12 @@ class Project extends CI_Controller {
 
     private function set_view($output) {
         /**
-         * return (object) array();
+         * Prepare (object) array();
          */
-        var_dump(key($output));
+        if (!is_array($output)) {
+            $output = is_object($output) ? get_object_vars($output) : array();
+        }
+        $output['page_value'] = $this->page_value;
         $this->load->view('project_home.php', (array) $output);
     }
 
@@ -72,29 +75,30 @@ class Project extends CI_Controller {
      * Orr-projects User
      */
     public function my_user() {
-        try {
-            $crud = new Orr_ACRUD();
-            /**
-             * 
-             */
-            $crud->set_subject('ผู้ใช้งาน');
-            $crud->set_table('my_user');
+        /**
+         * กำหนดค่าที่เกี่ยวกับหน้าจอ
+         */
+        $this->page_value['title'] = "ผู้ใช้งาน";
+        
+        $crud = new Orr_ACRUD();
+        /**
+         * 
+         */
+        $crud->set_subject('ผู้ใช้งาน');
+        $crud->set_table('my_user');
 
-            $crud->columns('user', 'fname', 'lname', 'status');
+        $crud->columns('user', 'fname', 'lname', 'status');
 
-            $crud->default_as('status', '0');
+        $crud->default_as('status', '0');
 
-            $crud->field_type('val_pass', 'invisible')->field_type('password', 'password')->field_type('status', 'dropdown', $this->status_set);
+        $crud->field_type('val_pass', 'invisible')->field_type('password', 'password')->field_type('status', 'dropdown', $this->status_set);
 
-            $crud->callback_before_insert(array($this, '_md5_password'));
-            $crud->callback_before_update(array($this, '_md5_password'));
+        $crud->callback_before_insert(array($this, '_md5_password'));
+        $crud->callback_before_update(array($this, '_md5_password'));
 
-            $output = $crud->render();
+        $output = $crud->render();
 
-            $this->set_view($output);
-        } catch (Exception $e) {
-            show_error($e->getMessage() . ' --- ' . $e->getTraceAsString());
-        }
+        $this->set_view($output);
     }
 
     /**
