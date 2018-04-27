@@ -23,7 +23,7 @@ class Project extends ORR_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->database('orr-projects');
-        $this->load->helper('url');
+        
     }
     
     public function index() {
@@ -67,20 +67,22 @@ class Project extends ORR_Controller {
          */
         $this->page_value['title'] = "ผู้ใช้งาน";
         
-        $crud = new Orr_ACRUD();
+        //$crud = new Orr_ACRUD();
+        $crud = $this->get_acrud(['table' => 'my_user' , 'subject' => 'ผู้ใช้งาน']);
         /**
          * 
          */
-        $crud->set_subject('ผู้ใช้งาน');
-        $crud->set_table('my_user');
+        //$crud->set_subject('ผู้ใช้งาน');
+        //$crud->set_table('my_user');
 
         $crud->columns('user', 'fname', 'lname', 'status');
 
         $crud->default_as('status', '0');
 
         $crud->field_type('val_pass', 'invisible')->field_type('password', 'password')->field_type('status', 'dropdown', $this->status_set);
-
-        $crud->callback_before_insert(array($this, '_md5_val_pass'));
+        
+        
+        
         $crud->callback_before_update(array($this, '_md5_val_pass'));
         
         $output = $crud->render();
@@ -100,6 +102,20 @@ class Project extends ORR_Controller {
         }
         unset($post_array['password']);
         return $post_array;
+    }
+    
+    /**
+     * Encode password before insert or update (use in callback need access public)
+     * @access public
+     * @param array $post_array
+     * @return Array
+     */
+    public function EV_before_insert($EV_post) {
+        if (!empty($EV_post['password'])) {
+            $EV_post['val_pass'] = md5($EV_post['password']);
+        }
+        unset($EV_post['password']);
+        return parent::EV_before_insert($EV_post);
     }
 
 }
