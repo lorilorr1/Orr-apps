@@ -39,7 +39,7 @@ class Orr_ACRUD extends Grocery_CRUD {
         $ci = &get_instance();
         $ci->load->model('Authorize_orr');
         $this->auth_model = new Authorize_orr();
-        $this->sign_data = $this->auth_model->get_sign_data();
+        $this->sign_data = $this->get_sign_data();
         if ($this->sign_data['status'] !== 'Online') {
             redirect(site_url('Mark'));
         }
@@ -70,21 +70,6 @@ class Orr_ACRUD extends Grocery_CRUD {
             $this->default_as[$field_name] = $default_as;
         }
         return $this;
-    }
-
-    /**
-     * 
-     * @param Array Post values
-     * @return Array
-     */
-    public function _sec_fileds($post_array) {
-       
-        $post_array['sec_ip'] = $this->sign_data['ip_address'];
-        $post_array['sec_user'] = $this->sign_data['id'];
-        $post_array['sec_user'] = 'TEST2';
-        $post_array['sec_time'] = date("Y-m-d H:i:s");
-
-        return $post_array;
     }
     
     /**
@@ -130,6 +115,10 @@ class Orr_ACRUD extends Grocery_CRUD {
      */
     protected function get_integer_input($field_info, $value) {
         return parent::get_integer_input($field_info, $this->get_value($field_info, $value));
+    }
+    
+    public function get_sign_data(){
+        return $this->auth_model->get_sign_data();
     }
 
 }

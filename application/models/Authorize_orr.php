@@ -22,16 +22,9 @@ class Authorize_orr extends CI_Model {
         parent::__construct();
         $this->load->library('session');
         $this->load->database('orr-projects');
-        //$this->uri_data = $this->get_uri_data();
-        /**
-          if ($this->session->has_userdata('uri_data')) {
 
-          } else {
-
-          $this->session->set_userdata("uri_data", $this->uri_data);
-          }
-         * 
-         */
+        $this->sign_data['ip_address'] = $this->get_sign_ip_address();
+        $this->sign_data['script'] = 'authorize_orr';
     }
 
     /**
@@ -59,13 +52,13 @@ class Authorize_orr extends CI_Model {
         $sql = "SELECT * FROM  `my_user`  WHERE  user = ? AND val_pass LIKE  ? AND`status` = 0 ";
         $pass = "%" . md5($pass) . "%";
         $query = $this->db->query($sql, array($user, $pass));
+
         if ($query->num_rows() === 1) {
             /**
              * Create sing key with ip,user,sec_time
              */
             $this->sign_data['id'] = $query->row()->id;
             $this->sign_data['user'] = $query->row()->user;
-            $this->sign_data['ip_address'] = $this->get_sign_ip_address();
             $this->sign_data['key'] = $this->get_sign_key($query->row()->sec_time);
             /**
              * Create property
@@ -73,7 +66,12 @@ class Authorize_orr extends CI_Model {
             $this->sign_data['status'] = $this->get_sign_status(TRUE);
             $data = json_encode($this->sign_data);
             $this->session->set_userdata('sign_data', $data);
+            $txt = 'User ' . $user . ' is signin.';
+            $this->add_activity($txt);
         } else {
+            $this->sign_data['user'] = '_ERR';
+            $txt = 'User ' . $user . ' is error.';
+            $this->add_activity($txt);
             $this->sign_out();
         }
     }
@@ -136,7 +134,7 @@ class Authorize_orr extends CI_Model {
         }
         return $this->sign_data['status'];
     }
-    
+
     /**
      * IP Address for sec_ip
      * @access public
@@ -146,13 +144,21 @@ class Authorize_orr extends CI_Model {
         $ci_input = new CI_Input();
         return $this->sign_data['ip_address'] = $ci_input->ip_address();
     }
-    
-    public function get_sign_script(){
+
+    public function get_sign_script() {
         $ci_uri = new CI_URI();
-        return $this->sign_data['script'] = $ci_uri->slash_segment(1).$ci_uri->segment(2);
+        return $this->sign_data['script'] = $ci_uri->slash_segment(1) . $ci_uri->segment(2);
+    }
+
+    protected function add_activity($var) {
+        $data = ['description' => $var, 'sec_user' => $this->sign_data['user'], 'sec_time' => date("Y-m-d H:i:s"), 'sec_ip' => $this->sign_data['ip_address'], 'sec_script' => $this->sign_data['script']];
+        $this->db->insert('my_activity', $data);
     }
 
     public function sign_out() {
+        $this->sign_data['user'] = '_INF';
+        $txt = 'User ' . $this->sign_data['user'] . ' is signout.';
+        $this->add_activity($txt);
         $this->session->sess_destroy();
     }
 

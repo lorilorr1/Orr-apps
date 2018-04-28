@@ -10,8 +10,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Project extends ORR_Controller {
 
-    //private $page_value = ['title' => NULL, 'sign_status' => NULL, 'topic' => NULL];
-
     /**
      * Project Page for this controller.
      * @todo Home Page for Orr projects.
@@ -81,10 +79,6 @@ class Project extends ORR_Controller {
 
         $crud->field_type('val_pass', 'invisible')->field_type('password', 'password')->field_type('status', 'dropdown', $this->status_set);
         
-        
-        
-        $crud->callback_before_update(array($this, '_md5_val_pass'));
-        
         $output = $crud->render();
 
         $this->set_view($output);
@@ -107,7 +101,7 @@ class Project extends ORR_Controller {
     /**
      * Encode password before insert or update (use in callback need access public)
      * @access public
-     * @param array $post_array
+     * @param Array $post_array
      * @return Array
      */
     public function EV_before_insert($EV_post) {
@@ -117,5 +111,14 @@ class Project extends ORR_Controller {
         unset($EV_post['password']);
         return parent::EV_before_insert($EV_post);
     }
-
+    
+     /**
+     * Encode password before update (use in callback need access public)
+     * @access public
+     * @param Array $post_array
+     * @return Array
+     */
+    public function EV_before_update($EV_post) {
+        return parent::EV_before_update($this->EV_before_insert($EV_post));
+    }
 }
