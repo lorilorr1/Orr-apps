@@ -15,7 +15,7 @@
  */
 class Orr_ACRUD extends Grocery_CRUD {
 
-    public $auth_model = null;
+    protected $auth_model = null;
 
     /**
      * default value of input field
@@ -43,13 +43,8 @@ class Orr_ACRUD extends Grocery_CRUD {
         if ($this->sign_data['status'] !== 'Online') {
             redirect(site_url('Mark'));
         }
-        $this->field_type('id', 'readonly')->field_type('sec_time', 'invisible')->field_type('sec_ip', 'invisible')->field_type('sec_script', 'invisible');
-        //$this->set_relation('sec_user', 'my_user', '{user}  -  {fname} {lname}');
-        //$this->default_as(['sec_user' => $sign_data['id'], 'sec_ip' => $this->auth_model->get_sign_ip_address(), 'sec_time' => date("Y-m-d H:i:s"), 'sec_script' => $this->auth_model->get_sign_script()]);
-        /**
-         * Events
-         */
-        //$this->callback_before_insert(array($this, '_sec_fileds'));
+        $this->field_type('sec_owner', 'invisible')->field_type('sec_user', 'invisible')->field_type('sec_time', 'invisible')->field_type('sec_ip', 'invisible')->field_type('sec_script', 'invisible');
+        $this->display_as('sec_owner', 'เจ้าของรายการ')->display_as('sec_user', 'เพิ่มแก้ไขโดย')->display_as('sec_time', 'เพิ่มแก้ไขเมื่อ')->display_as('sec_ip', 'เลขไอพี')->display_as('sec_script', 'เพิ่มแก้ไขจาก');
     }
 
     /**
@@ -71,7 +66,7 @@ class Orr_ACRUD extends Grocery_CRUD {
         }
         return $this;
     }
-    
+
     /**
      * Return default value when field value is null.
      * @param object $field_info
@@ -116,8 +111,8 @@ class Orr_ACRUD extends Grocery_CRUD {
     protected function get_integer_input($field_info, $value) {
         return parent::get_integer_input($field_info, $this->get_value($field_info, $value));
     }
-    
-    public function get_sign_data(){
+
+    public function get_sign_data() {
         return $this->auth_model->get_sign_data();
     }
 

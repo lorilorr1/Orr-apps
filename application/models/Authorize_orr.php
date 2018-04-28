@@ -145,9 +145,13 @@ class Authorize_orr extends CI_Model {
         return $this->sign_data['ip_address'] = $ci_input->ip_address();
     }
 
+    /**
+     * Create sing_data with format project:function.
+     * @return String
+     */
     public function get_sign_script() {
         $ci_uri = new CI_URI();
-        return $this->sign_data['script'] = $ci_uri->slash_segment(1) . $ci_uri->segment(2);
+        return $this->sign_data['script'] = $ci_uri->segment(1) . ':' . $ci_uri->segment(2);
     }
 
     protected function add_activity($var) {
