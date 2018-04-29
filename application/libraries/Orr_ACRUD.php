@@ -120,5 +120,9 @@ class Orr_ACRUD extends Grocery_CRUD {
     public function get_sign_data() {
         return $this->auth_model->get_sign_data();
     }
+    
+    public function add_activity($txt){
+        $this->auth_model->add_activity($txt);
+    }
 
 }

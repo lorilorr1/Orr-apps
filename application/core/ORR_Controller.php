@@ -35,7 +35,9 @@ class ORR_Controller extends CI_Controller {
         $acrud->set_subject($vars['subject']);
 
         $acrud->callback_before_insert(array($this, 'EV_before_insert'));
+        $acrud->callback_after_insert(array($this, 'EV_after_insert'));
         $acrud->callback_before_update(array($this, 'EV_before_update'));
+        $acrud->callback_after_update(array($this, 'EV_after_update'));
 
         return $this->acrud;
     }
@@ -65,6 +67,14 @@ class ORR_Controller extends CI_Controller {
         $EV_post['sec_ip'] = $sign_['ip_address'];
         $EV_post['sec_script'] = $sign_['script'];
         return $EV_post;
+    }
+    
+    public function EV_after_insert($EV_post,$EV_primary_key) {
+        /**
+         * @todo ใส่รายละเอียดเพิ่มให้ครบ
+         */
+        $txt = 'After insert Key : ' .print_r($EV_primary_key) . 'Post : ' . print_r($EV_post);
+        $this->acrud->add_activity($txt);
     }
 
     /**

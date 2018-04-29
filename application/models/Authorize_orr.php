@@ -164,8 +164,8 @@ class Authorize_orr extends CI_Model {
         return $this->sign_data['script'] = $ci_uri->segment(1) . ':' . $ci_uri->segment(2);
     }
 
-    protected function add_activity($var) {
-        $data = ['description' => $var, 'sec_user' => $this->sign_data['user'], 'sec_time' => date("Y-m-d H:i:s"), 'sec_ip' => $this->sign_data['ip_address'], 'sec_script' => $this->sign_data['script']];
+    public function add_activity($txt) {
+        $data = ['description' => $txt, 'sec_user' => $this->sign_data['user'], 'sec_time' => date("Y-m-d H:i:s"), 'sec_ip' => $this->sign_data['ip_address'], 'sec_script' => $this->sign_data['script']];
         $this->db->insert('my_activity', $data);
     }
 

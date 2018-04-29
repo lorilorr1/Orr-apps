@@ -74,6 +74,23 @@ class Project extends ORR_Controller {
     }
     
     /**
+     * Orr-apps my_datafield
+     */
+    public function my_datafield(){
+         /**
+         * กำหนดค่าที่เกี่ยวกับหน้าจอ
+         */
+        $this->page_value['title'] = "คำจำกัดความข้อมูล";
+        $crud = $this->get_acrud(['table' => 'my_datafield', 'subject' => 'คำจำกัดความข้อมูล']);
+        $crud->columns('field_id', 'name', 'description');
+        $crud->unique_fields(array('name'));
+         /**
+         * End of function
+         */
+        $this->set_view($crud->render());     
+    }
+
+        /**
      * MD5 Encode password
      * @param Array Post array
      * @return Array
