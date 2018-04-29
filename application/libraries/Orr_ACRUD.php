@@ -42,9 +42,14 @@ class Orr_ACRUD extends Grocery_CRUD {
         $this->sign_data = $this->get_sign_data();
         if ($this->sign_data['status'] !== 'Online') {
             redirect(site_url('Mark'));
+        }else if(!$this->auth_model->get_sys_exist()){
+            /**
+             * @todo นำไปหน้าที่ตั้งค่าโปรแกรม
+             */
+            die('ไม่พบโปรแกรม ' . $this->sign_data['script']);
         }
         $this->field_type('sec_owner', 'invisible')->field_type('sec_user', 'invisible')->field_type('sec_time', 'invisible')->field_type('sec_ip', 'invisible')->field_type('sec_script', 'invisible');
-        $this->display_as('sec_owner', 'เจ้าของรายการ')->display_as('sec_user', 'เพิ่มแก้ไขโดย')->display_as('sec_time', 'เพิ่มแก้ไขเมื่อ')->display_as('sec_ip', 'เลขไอพี')->display_as('sec_script', 'เพิ่มแก้ไขจาก');
+        $this->display_as('sec_owner', 'เจ้าของ')->display_as('sec_user', 'แก้ไขโดย')->display_as('sec_time', 'แก้ไขเมื่อ')->display_as('sec_ip', 'เลขไอพี')->display_as('sec_script', 'แก้ไขจาก');
     }
 
     /**

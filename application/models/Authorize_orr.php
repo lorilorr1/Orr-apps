@@ -38,6 +38,17 @@ class Authorize_orr extends CI_Model {
         return $this->sign_data;
     }
 
+    public function get_sys_exist() {
+        $sql = "SELECT *  FROM `my_sys` WHERE `sys_id` = ?";
+        $query = $this->db->query($sql, array($this->sign_data['script']));
+        if ($query->num_rows() === 1) {
+            $var = TRUE;
+        } else {
+            $var = FALSE;
+        }
+        return $var;
+    }
+
     /**
      * Checking user password when signin
      * 
@@ -52,7 +63,6 @@ class Authorize_orr extends CI_Model {
         $sql = "SELECT * FROM  `my_user`  WHERE  user = ? AND val_pass LIKE  ? AND`status` = 0 ";
         $pass = "%" . md5($pass) . "%";
         $query = $this->db->query($sql, array($user, $pass));
-
         if ($query->num_rows() === 1) {
             /**
              * Create sing key with ip,user,sec_time
