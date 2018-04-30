@@ -48,8 +48,12 @@ class Orr_ACRUD extends Grocery_CRUD {
              */
             die('ไม่พบโปรแกรม ' . $this->sign_data['script']);
         }
+        $language = 'thai';
+        $this->set_language($language);
         $this->field_type('sec_owner', 'invisible')->field_type('sec_user', 'invisible')->field_type('sec_time', 'invisible')->field_type('sec_ip', 'invisible')->field_type('sec_script', 'invisible');
-        $this->display_as('sec_owner', 'เจ้าของ')->display_as('sec_user', 'แก้ไขโดย')->display_as('sec_time', 'แก้ไขเมื่อ')->display_as('sec_ip', 'เลขไอพี')->display_as('sec_script', 'แก้ไขจาก');
+        $sec_fields = ['sec_owner','sec_user','sec_time','sec_ip','sec_script'];
+        $this->set_label_as($sec_fields);
+         //$this->display_as('sec_owner', 'เจ้าของ')->display_as('sec_user', 'แก้ไขโดย')->display_as('sec_time', 'แก้ไขเมื่อ')->display_as('sec_ip', 'เลขไอพี')->display_as('sec_script', 'แก้ไขจาก');
     }
 
     /**
@@ -123,6 +127,15 @@ class Orr_ACRUD extends Grocery_CRUD {
     
     public function add_activity($txt){
         $this->auth_model->add_activity($txt);
+    }
+    
+    public function set_label_as(array $fields){
+        $rows = $this->auth_model->get_fields_label($fields);
+        foreach ($rows as $field_) {
+            $this->display_as($field_['field_id'], $field_['name']);
+        }
+        
+        //$this->display_as('sec_owner', 'เจ้าของ')->display_as('sec_user', 'แก้ไขโดย')->display_as('sec_time', 'แก้ไขเมื่อ')->display_as('sec_ip', 'เลขไอพี')->display_as('sec_script', 'แก้ไขจาก');
     }
 
 }

@@ -175,5 +175,16 @@ class Authorize_orr extends CI_Model {
         $this->add_activity($txt);
         $this->session->sess_destroy();
     }
+    
+    /**
+     * 
+     * @param Array Fields
+     * @return Array
+     */
+    public function get_fields_label(array $fields) {
+        $sql = "SELECT `field_id` , `name` , `description` FROM  `my_datafield`  WHERE `field_id` IN ?";
+        $query = $this->db->query($sql, array($fields));
+        return $query->result_array();
+    }
 
 }

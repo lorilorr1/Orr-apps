@@ -25,14 +25,14 @@ class ORR_Controller extends CI_Controller {
 
     /**
      * Create acrud object
-     * @param Array $vars
+     * @param Array $vals
      * @return Object
      */
-    protected function get_acrud(array $vars) {
+    protected function get_acrud(array $vals) {
         $this->acrud = new Orr_ACRUD();
         $acrud = $this->acrud;
-        $acrud->set_table($vars['table']);
-        $acrud->set_subject($vars['subject']);
+        $acrud->set_table($vals['table']);
+        $acrud->set_subject($vals['subject']);
 
         $acrud->callback_before_insert(array($this, 'EV_before_insert'));
         $acrud->callback_after_insert(array($this, 'EV_after_insert'));
