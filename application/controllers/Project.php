@@ -62,11 +62,10 @@ class Project extends ORR_Controller {
 
         $crud = $this->get_acrud(['table' => 'my_user', 'subject' => 'ผู้ใช้งาน']);
         $crud->columns('user', 'fname', 'lname', 'status');
-        $crud->unique_fields(array('user'));
         $crud->required_fields(array('user', 'fname', 'lname', 'status'));
         $crud->default_as('status', '0');
         $crud->field_type('val_pass', 'invisible')->field_type('password', 'password')->field_type('status', 'dropdown', $this->status_set);
-        $crud->unset_delete();
+        //$crud->unset_delete();
         /**
          * End of function
          */
@@ -83,14 +82,28 @@ class Project extends ORR_Controller {
         $this->page_value['title'] = "คำจำกัดความข้อมูล";
         $crud = $this->get_acrud(['table' => 'my_datafield', 'subject' => 'คำจำกัดความข้อมูล']);
         $crud->columns('field_id', 'name', 'description');
+        $crud->required_fields(array('field_id', 'name'));
         $crud->unique_fields(array('name'));
          /**
          * End of function
          */
         $this->set_view($crud->render());     
     }
-
+    
+    public function my_activity(){
         /**
+         * กำหนดค่าที่เกี่ยวกับหน้าจอ
+         */
+        $this->page_value['title'] = "กิจการของระบบ";
+        $crud = $this->get_acrud(['table' => 'my_activity', 'subject' => 'กิจกรรมของระบบ']);
+        $crud->unset_add()->unset_clone()->unset_edit()->unset_delete();
+         /**
+         * End of function
+         */
+        $this->set_view($crud->render());     
+    }
+
+    /**
      * MD5 Encode password
      * @param Array Post array
      * @return Array

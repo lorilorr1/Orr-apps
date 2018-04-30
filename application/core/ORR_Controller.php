@@ -38,6 +38,7 @@ class ORR_Controller extends CI_Controller {
         $acrud->callback_after_insert(array($this, 'EV_after_insert'));
         $acrud->callback_before_update(array($this, 'EV_before_update'));
         $acrud->callback_after_update(array($this, 'EV_after_update'));
+        $acrud->callback_after_delete(array($this, 'EV_after_delete'));
 
         return $this->acrud;
     }
@@ -68,13 +69,15 @@ class ORR_Controller extends CI_Controller {
         $EV_post['sec_script'] = $sign_['script'];
         return $EV_post;
     }
-    
-    public function EV_after_insert($EV_post,$EV_primary_key) {
-        /**
-         * @todo ใส่รายละเอียดเพิ่มให้ครบ
-         */
-        $txt = 'After insert Key : ' .print_r($EV_primary_key) . 'Post : ' . print_r($EV_post);
-        $this->acrud->add_activity($txt);
+
+    public function EV_after_delete($EV_primary_key) {
+        $EV_log = 'PKEY:' . $EV_primary_key;
+        $this->add_activity_post_log($EV_log, 'After_delete');
+    }
+
+    public function EV_after_insert($EV_post, $EV_primary_key) {
+        $EV_log = array_merge($EV_post, ['PKEY' => $EV_primary_key]);
+        $this->add_activity_post_log($EV_log, 'After_insert');
     }
 
     /**
@@ -89,6 +92,27 @@ class ORR_Controller extends CI_Controller {
         $EV_post['sec_ip'] = $sign_['ip_address'];
         $EV_post['sec_script'] = $sign_['script'];
         return $EV_post;
+    }
+
+    /**
+     * 
+     * @param type $EV_post
+     * @return type
+     */
+    public function EV_after_update($EV_post, $EV_primary_key) {
+        $EV_log = array_merge($EV_post, ['PKEY' => $EV_primary_key]);
+        $this->add_activity_post_log($EV_log, 'After_update');
+    }
+
+    protected function add_activity_post_log($EV_log, $EV_name) {
+        if (is_array($EV_log)) {
+            foreach ($EV_log as $key => $val) {
+                $txt_log .= $key . ':' . $val . ";";
+            }
+        } else {
+            $txt_log = $EV_log;
+        }
+        $this->acrud->add_activity($EV_name . '=;' . $txt_log);
     }
 
 }

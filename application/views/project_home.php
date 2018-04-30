@@ -22,6 +22,7 @@
             <a href='<?php echo site_url('Project/my_can') ?>'>สิทธิ์การใช้งาน</a> | 
             <a href='<?php echo site_url('Project/my_datafield') ?>'>คำจำกัดความ ข้อมูล</a> |		 
             <a href='<?php echo site_url('Project/my_registration') ?>'>การลงทะเบียนใช้งาน</a> |
+            <a href='<?php echo site_url('Project/my_activity') ?>'>กิจกรรมของระบบ</a> |
             <a href='<?php echo site_url('Project/my_menu') ?>'>เมนูโครงการ</a>
         </div>
         <div style='height:20px;'></div>  
